@@ -1,0 +1,476 @@
+# Translation of Themes - Neve FSE in French (France)
+# This file is distributed under the same license as the Themes - Neve FSE package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2023-06-26 16:58:51+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: GlotPress/4.0.1\n"
+"Language: fr\n"
+"Project-Id-Version: Themes - Neve FSE\n"
+
+#. Description of the theme
+#: style.css
+#, gp-priority: high
+msgid "Neve FSE is an experimental sister theme of Neve, for the ones that are ready to go full speed on full site editing, without backwards compatibility code.Neve FSE is a modern, minimalistic theme that is fully compatible with full-site-editing, it offers a range of patterns that make it perfect for simple design is suitable for a wide range of purposes, including blogs, small businesses, startups, agencies, firms, e-commerce shops, personal portfolio sites, and more. It also comes with several style variations to suit your unique aesthetic."
+msgstr "Neve FSE est un thème expérimental frère de Neve, pour les personnes prêtes à passer à toute vitesse sur l’édition complète de site, sans code de rétrocompatibilité. Neve FSE est un thème moderne, minimaliste qui est entièrement compatible avec l’édition complète de site, il offre une gamme de compositions qui le rendent parfait pour un design simple et adapté à un large éventail d’objectifs, comme les blogs, les petites entreprises, les startups, les agences, les entreprises, les boutiques de commerce électronique, les sites de portfolio personnels, et plus encore. Il est également livré avec plusieurs variations de style pour s’adapter à vos propres besoins esthétiques."
+
+#. Theme Name of the theme
+#: style.css
+#, gp-priority: high
+msgid "Neve FSE"
+msgstr "Neve FSE"
+
+#: styles/s7-greenlight.json
+msgctxt "Style variation name"
+msgid "Greenlight"
+msgstr "Vert clair"
+
+#: styles/s6-vivid-red-tangelo.json
+msgctxt "Style variation name"
+msgid "Vivid Red-Tangelo"
+msgstr "Rouge vif-Tangelo"
+
+#: styles/s5-aztec-gold.json
+msgctxt "Style variation name"
+msgid "Aztec Gold"
+msgstr "Or aztèque"
+
+#: styles/s4-dark-pastel-red.json
+msgctxt "Style variation name"
+msgid "Dark Pastel Red"
+msgstr "Rouge pastel foncé"
+
+#: styles/s3-zomp.json
+msgctxt "Style variation name"
+msgid "Zomp"
+msgstr "Zomp"
+
+#: styles/s2-majorelle-blue.json
+msgctxt "Style variation name"
+msgid "Majorelle Blue"
+msgstr "Bleu Majorelle"
+
+#: styles/s1-crayola.json
+msgctxt "Style variation name"
+msgid "Crayola"
+msgstr "Crayola"
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Footer Variation - 5 Columns"
+msgstr "Variation du pied de page - 5 colonnes"
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Footer Variation - 4 Columns"
+msgstr "Variation du pied de page - 4 colonnes"
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Footer Variation - 3 Columns"
+msgstr "Variation du pied de page - 3 colonnes"
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Footer Variation - Site Logo"
+msgstr "Variation du pied de page - Logo du site"
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Footer"
+msgstr "Pied de page"
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Header Variation - Hamburger Menu"
+msgstr "Variation d’en-tête - Menu Hamburger"
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Header Variation - Button"
+msgstr "Variation d’en-tête - Bouton"
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Header Variation - Centered"
+msgstr "Variation d’en-tête - Centré"
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Header"
+msgstr "En-tête"
+
+#: styles/s1-crayola.json styles/s2-majorelle-blue.json styles/s3-zomp.json
+#: styles/s4-dark-pastel-red.json styles/s5-aztec-gold.json
+#: styles/s6-vivid-red-tangelo.json styles/s7-greenlight.json theme.json
+msgctxt "Color name"
+msgid "Accent"
+msgstr "Contraste"
+
+#: styles/s1-crayola.json styles/s2-majorelle-blue.json styles/s3-zomp.json
+#: styles/s4-dark-pastel-red.json styles/s5-aztec-gold.json
+#: styles/s6-vivid-red-tangelo.json styles/s7-greenlight.json theme.json
+msgctxt "Color name"
+msgid "Foreground Alt"
+msgstr "Alt de premier plan"
+
+#: styles/s1-crayola.json styles/s2-majorelle-blue.json styles/s3-zomp.json
+#: styles/s4-dark-pastel-red.json styles/s5-aztec-gold.json
+#: styles/s6-vivid-red-tangelo.json styles/s7-greenlight.json theme.json
+msgctxt "Color name"
+msgid "Background Dark"
+msgstr "Arrière-plan sombre"
+
+#: styles/s1-crayola.json styles/s2-majorelle-blue.json styles/s3-zomp.json
+#: styles/s4-dark-pastel-red.json styles/s5-aztec-gold.json
+#: styles/s6-vivid-red-tangelo.json styles/s7-greenlight.json theme.json
+msgctxt "Color name"
+msgid "Background Alt"
+msgstr "Alt d’arrière-plan"
+
+#: styles/s1-crayola.json styles/s2-majorelle-blue.json styles/s3-zomp.json
+#: styles/s4-dark-pastel-red.json styles/s5-aztec-gold.json
+#: styles/s6-vivid-red-tangelo.json styles/s7-greenlight.json theme.json
+msgctxt "Color name"
+msgid "Foreground"
+msgstr "Premier plan"
+
+#: styles/s1-crayola.json styles/s2-majorelle-blue.json styles/s3-zomp.json
+#: styles/s4-dark-pastel-red.json styles/s5-aztec-gold.json
+#: styles/s6-vivid-red-tangelo.json styles/s7-greenlight.json theme.json
+msgctxt "Color name"
+msgid "Background"
+msgstr "Arrière-plan"
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Figtree"
+msgstr "Figuier"
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Open Sans"
+msgstr "Open Sans"
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Montserrat"
+msgstr "Montserrat"
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Source Sans Pro"
+msgstr "Source Sans Pro"
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Playfair Display"
+msgstr "Playfair Display"
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Spline Sans"
+msgstr "Spline Sans"
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Outfit"
+msgstr "Habillage"
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Hanken Grotesk"
+msgstr "Hanken Grotesk"
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Fraunces"
+msgstr "Fraunces"
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Albert Sans"
+msgstr "Albert Sans"
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Inter"
+msgstr "Inter"
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Huge"
+msgstr "Énorme"
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Extra Large"
+msgstr "Très grand"
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Large"
+msgstr "Grande"
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Medium"
+msgstr "Moyenne"
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Normal"
+msgstr "Normal"
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Small"
+msgstr "Petite"
+
+#: inc/patterns/templates/single-post-cover.php:18
+msgid "Single Post 3 (Cover)"
+msgstr "Publication unique 3 (couverture)"
+
+#: inc/patterns/templates/single-post-cover-boxed.php:18
+msgid "Single Post 2 (Cover Boxed)"
+msgstr "Publication unique 2 (couverture encadrée)"
+
+#: inc/patterns/templates/archive-list.php:18
+msgid "Archive List"
+msgstr "Liste d’archives"
+
+#: inc/patterns/templates/archive-cover.php:18
+msgid "Archive (Cover)"
+msgstr "Archive (couverture)"
+
+#: inc/patterns/page_titles/page-title-5.php:20
+msgid "Page Title - Cover Boxed"
+msgstr "Titre de page - Couverture encadrée"
+
+#: inc/patterns/page_titles/page-title-4.php:20
+msgid "Page Title - Cover"
+msgstr "Titre de page - Couverture"
+
+#: inc/patterns/page_titles/page-title-3.php:16
+msgid "Page Title - Light"
+msgstr "Titre de page - Clair"
+
+#: inc/patterns/page_titles/page-title-2.php:16
+msgid "Page Title - Dark"
+msgstr "Titre de page - Sombre"
+
+#: inc/patterns/page_titles/page-title-1.php:16
+msgid "Page Title - Simple"
+msgstr "Titre de page - Simple"
+
+#: inc/patterns/loops/post-loop-9.php:16
+msgid "Post Covers"
+msgstr "Couvertures de publication"
+
+#: inc/patterns/loops/post-loop-8.php:16
+msgid "Posts"
+msgstr "Publications"
+
+#: inc/patterns/loops/post-loop-7.php:16
+msgid "Post cards 2"
+msgstr "Cartes de publication 2"
+
+#: inc/patterns/loops/post-loop-4.php:16 inc/patterns/loops/post-loop-5.php:16
+msgid "Post rows"
+msgstr "Rangées de publication"
+
+#: inc/patterns/loops/post-loop-3.php:16
+msgid "Post cards"
+msgstr "Cartes de publication"
+
+#: inc/patterns/loops/post-loop-2.php:16
+msgid "Posts loop grid inverted"
+msgstr "Grille de boucle de publication inversée"
+
+#: inc/patterns/loops/post-loop-1.php:16 inc/patterns/loops/post-loop-6.php:16
+msgid "Posts loop grid simple"
+msgstr "Grille de boucle de publication simple"
+
+#: inc/patterns/layout/team-members-columns.php:22
+msgid "Columns with Team members"
+msgstr "Colonnes avec membres d’équipe"
+
+#: inc/patterns/layout/pricing-columns.php:18
+msgid "Columns with Pricing"
+msgstr "Colonnes avec tarifs"
+
+#: inc/patterns/layout/portfolio-columns.php:21
+msgid "Columns with portfolio items"
+msgstr "Colonnes avec éléments de portfolio"
+
+#: inc/patterns/layout/page-cover-with-buttons.php:20
+msgid "Page Cover with Buttons"
+msgstr "Couverture de page avec boutons"
+
+#: inc/patterns/layout/page-cover-bg-image.php:20
+msgid "Page Cover with background image"
+msgstr "Couverture de page avec image d’arrière-plan"
+
+#: inc/patterns/layout/full-width-columns-content-image.php:20
+#: inc/patterns/layout/full-width-quote.php:18
+msgid "Full-width columns with image and content"
+msgstr "Colonnes en pleine largeur avec image et contenu"
+
+#: inc/patterns/layout/cta-dark.php:18
+msgid "Call to Action with Background Color"
+msgstr "Appel à action avec couleur d’arrière-plan"
+
+#: inc/patterns/layout/content-with-images.php:22
+msgid "Content with images"
+msgstr "Contenu avec images"
+
+#: inc/patterns/layout/columns-with-services.php:22
+msgid "Columns with Services"
+msgstr "Colonnes avec services"
+
+#: inc/patterns/layout/columns-with-icons.php:22
+msgid "Columns with icons"
+msgstr "Colonnes avec icônes"
+
+#: inc/patterns/layout/columns-with-cards.php:22
+msgid "Columns with cards"
+msgstr "Colonnes avec cartes"
+
+#: inc/patterns/layout/columns-text-image.php:20
+msgid "Columns with text and image"
+msgstr "Colonnes avec texte et image"
+
+#: inc/patterns/layout/columns-testimonials.php:22
+msgid "Three Columns with Testimonials"
+msgstr "Trois colonnes avec témoignages"
+
+#: inc/patterns/layout/columns-image-and-text.php:20
+msgid "Columns with image and text"
+msgstr "Colonnes avec image et texte"
+
+#: inc/patterns/layout/columns-image-and-text-inv.php:20
+msgid "Columns with image and text inverted"
+msgstr "Colonnes avec image et texte inversés"
+
+#: inc/patterns/layout/columns-content-images.php:21
+msgid "Columns with content and images"
+msgstr "Colonnes avec contenu et images"
+
+#: inc/patterns/layout/boxed-features-1.php:18
+#: inc/patterns/layout/boxed-features-2.php:18
+msgid "Columns with feature boxes"
+msgstr "Colonnes avec boîtes de fonctionnalités"
+
+#: inc/Core.php:89
+msgid "Primary Menu"
+msgstr "Menu principal"
+
+#: inc/Block_Patterns.php:68
+msgid "Full-page layouts that can be used as templates"
+msgstr "Mises en page en pleine page pouvant être utilisées comme modèles"
+
+#: inc/Block_Patterns.php:67
+msgid "Neve FSE Layouts"
+msgstr "Mises en page Neve FSE"
+
+#: inc/Block_Patterns.php:64
+msgid "Patterns for several sections and components"
+msgstr "Compositions pour plusieurs sections et composants"
+
+#: inc/Block_Patterns.php:63
+msgid "Neve FSE Patterns"
+msgstr "Compositions Neve FSE"
+
+#: inc/Admin.php:88 inc/Admin.php:310
+msgid "Learn More"
+msgstr "En savoir plus"
+
+#. translators: %s: Otter Blocks
+#: inc/Admin.php:305
+msgid "Install & Activate %s"
+msgstr "Installer et activer %s"
+
+#. translators: %s: Otter Blocks
+#: inc/Admin.php:303
+msgid "Activate %s"
+msgstr "Activation de %s"
+
+#: inc/Admin.php:293
+msgid "Otter is a Gutenberg Blocks page builder plugin that adds extra functionality to the WordPress Block Editor (also known as Gutenberg) for a better page building experience without the need for traditional page builders."
+msgstr "Otter est un extension de constructeur de pages Gutenberg Blocks qui ajoute des fonctionnalités supplémentaires à l’éditeur de blocs WordPress (également connu sous le nom de Gutenberg) pour une meilleure expérience de construction de pages sans avoir besoin de constructeurs de pages traditionnels."
+
+#. translators: %s: Otter Blocks
+#: inc/Admin.php:289
+msgid "Power up your website building experience with %s!"
+msgstr "Améliorez votre expérience de création de sites avec %s !"
+
+#: inc/Admin.php:283
+msgid "Otter Blocks preview"
+msgstr "Prévisualisation des blocs Otter"
+
+#: inc/Admin.php:275
+msgid "Done"
+msgstr "Terminé"
+
+#: inc/Admin.php:274
+msgid "Installing"
+msgstr "Installation"
+
+#: inc/Admin.php:273
+msgid "Activating"
+msgstr "Activation"
+
+#: inc/Admin.php:229
+msgid "Maybe later"
+msgstr "Peut-être plus tard"
+
+#: inc/Admin.php:225
+msgid "Take the survey"
+msgstr "Répondre à l’enquête"
+
+#: inc/Admin.php:220
+msgid "Thank you for trying Neve FSE. We would love to hear your thoughts on how we can enhance and improve the theme even further. Would you mind taking a moment to share your insights through a quick survey?"
+msgstr "Merci d’essayer Neve FSE. Nous aimerions connaître votre avis sur la manière dont nous pouvons encore améliorer le thème. Pourriez-vous prendre un moment pour nous faire part de vos idées à via une petite enquête ?"
+
+#: inc/Admin.php:218
+msgid "We value your feedback"
+msgstr "Vos retours nous intéressent"
+
+#: inc/Admin.php:216
+msgid "Neve FSE Logo"
+msgstr "Logo Neve FSE"
+
+#. translators: %s: commands to run the theme
+#: functions.php:105
+msgid "You appear to be running the Neve FSE theme from source code. Please finish installation by running %s."
+msgstr "Vous semblez exécuter le thème Neve FSE à partir du code source. Veuillez terminer l‘installation en exécutant %s."
+
+#: functions.php:57
+msgid "upgrading PHP to the latest version"
+msgstr "mise à niveau de PHP vers la dernière version"
+
+#. translators: %s message to upgrade PHP to the latest version
+#: functions.php:53
+msgid "Hey, we've noticed that you're running an outdated version of PHP which is no longer supported. Make sure your site is fast and secure, by %1$s. Neve FSE's minimal requirement is PHP%2$s."
+msgstr "Bonjour, nous avons remarqué que vous utilisez une version obsolète de PHP qui n’est plus prise en charge. Assurez-vous que votre site est rapide et sécurisé, en %1$s. La version minimale nécessaire pour Neve FSE est PHP %2$s."
+
+#. Author URI of the theme
+#: style.css
+#, gp-priority: low
+msgid "https://themeisle.com"
+msgstr "https://themeisle.com"
+
+#. Author of the theme
+#: style.css
+#, gp-priority: low
+msgid "ThemeIsle"
+msgstr "Themeisle"
+
+#. Theme URI of the theme
+#: style.css
+#, gp-priority: low
+msgid "https://themeisle.com/themes/neve-fse/"
+msgstr "https://themeisle.com/themes/neve-fse/"

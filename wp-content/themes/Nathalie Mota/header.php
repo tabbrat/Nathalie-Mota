@@ -24,16 +24,4 @@ Cette valeur est basée sur le réglage WordPress dans Réglages > Général > L
     (c’est-à-dire complète) du logo. Sans ça,notre image ne s’affichera pas.-->
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo_nathalie_mota.png" alt="Logo"> </a>
 
-            <!-- Le menu -->
-            <nav id="menu">
-                <div class="element menu">
-                    <ul>
-                        <li><a href="Accueil.php">Accueil</a></li>
-                        <li><a href="À propos.php">Àpropos</a></li>
-                        <li><a href="contact.php">Contact</a></li>
-                    </ul>
-                </div>
-            </nav>
-
-        </div>
     </header>

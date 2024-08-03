@@ -15,13 +15,11 @@ Cette valeur est basée sur le réglage WordPress dans Réglages > Général > L
 
         <?php wp_head(); ?>
 </head>
+    <header>
 
-<body <?php body_class(); ?>>
-    <header class="header">
-        <div class="container">
-            <a href="<?php echo home_url('/'); ?>">
-                <!--On utilise la fonction get_template_directory_uri() afin d’obtenir l’adresse absolue 
-    (c’est-à-dire complète) du logo. Sans ça,notre image ne s’affichera pas.-->
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo_nathalie_mota.png" alt="Logo"> </a>
+                <!--On utilise la fonction get_template_directory_uri() afin d’obtenir l’adresse absolue du logo
+    (c’est à dire complète). Sans ça,notre image ne s’affichera pas.-->
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo_nathalie_mota.png"alt="Logo <?php echo bloginfo('name'); ?>">
 
+                
     </header>

@@ -46,7 +46,7 @@
                 $query->the_post();
                 $post_id = get_the_ID();
         ?>
-                <article class="card  ">
+                <article class="card">
                     <h2 class="title"><?php echo the_title(); ?></h2>
                     <img class="post_img" src="<?php echo get_the_post_thumbnail_url(); ?>" />
                 </article>

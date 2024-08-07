@@ -9,10 +9,18 @@ Version: 1.0.0
 Text Domain: nathaliemota
 */
 
-* {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/*----* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}*/
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .site-main {
@@ -31,7 +39,7 @@ body {
 }
 
 h1 {
-  color: #9d3b3b; 
+  color: #9d3b3b;
   font-style: italic;
   font-weight: 800;
   font-size: 56px;
@@ -52,15 +60,6 @@ h1 {
   line-height: 58px;
   width: 80%;
   padding: 40px 0;
-}
-
-
-
-.post_img {
-  width: 564px;
-  height: 495px;
-  border: solid 1px ;
-  padding: 10px;
 }
 
 .photos_container {
@@ -85,18 +84,19 @@ header {
   padding: 20px;
   background-color: #f8f8f8f8;
 }
- /* HERO */
+
+/* HERO */
 .hero-area .hero-thumbnail {
   position: relative;
   margin: auto;
   align-items: center;
   width: 100%;
-  max-height: 966px;    
+  max-height: 966px;
   overflow: hidden;
   background-size: contain;
 }
 
-.hero-area img {    
+.hero-area img {
   margin: auto;
   object-fit: cover;
   object-position: 50% 50%;
@@ -105,7 +105,7 @@ header {
   max-height: 966px;
 }
 
-.hero-area .title-hero {    
+.hero-area .title-hero {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -118,4 +118,162 @@ header {
   font-style: italic;
   color: transparent;
   -webkit-text-stroke: 2px rgb(255, 255, 255);
+}
+
+/* Partie en haut - Détail de la photo */
+.container.single_post {
+  display: flex;
+  justify-content: center;
+  max-width: 1148px;
+  margin: auto;
+  height: 844px;
+}
+
+.post-info {
+  margin-top: 450px;
+  width: 45%;
+  padding: 20px;
+  border-bottom: 1px solid #23282d;
+  margin-right: 20px;
+}
+
+.single_title {
+  font-family: "Space Mono", monospace;
+  font-size: 66px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 58px;
+  text-align: left;
+  margin-bottom: 25px;
+  width: 420px;
+  height: 116px;
+  text-transform: uppercase;
+}
+
+.event-meta ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  font-Weight: 400;
+  font-size: 14px;
+  line-height: 20.73px;
+  padding: 0px;
+}
+
+.event-meta li {
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.post-img {
+  width: 50%;
+}
+
+.card {
+  display: inline-block;
+  margin-left: 50px;
+}
+
+.post-image img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Partie centrale - Contact + photos suivantes et précédentes */
+.contact_line {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.contact_lin > p {
+  display: flex;
+  justify-content: flex-start;
+  max-width: 1148px;
+  margin: auto;
+  font-family: 'Poppins';
+  font-size: 14px;
+  font-weight: 300;
+}
+
+
+
+/* Partie basse - Autre photos de la catégorie */
+.container_bas {
+  max-width: 1148px;
+  margin: auto;
+}
+
+ h3 {
+  text-align: start;
+  margin-bottom: 20px;
+  font-size: 1em;
+  border-top: 1px solid #23282d;
+  padding: 79px 0 50px 0;
+}
+
+.post-image img  {
+  width: 563px;
+  height: 844px;
+  border: solid 1px;
+
+}
+
+.post-img  {
+  width: 564px;
+  height: 495px;
+  border: solid 1px;
+}
+
+.img-bas .cardb{
+  display: inline-block;
+  max-width: 1440px;
+}
+
+
+.related-events {
+  text-align: center;
+}
+
+.related-events h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.related-posts {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.related-event {
+  width: 45%;
+  text-align: left;
+}
+
+.related-event img {
+  max-width: 100%;
+  height: auto;
+}
+
+.related-event h4 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.all-photos-button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #ccc;
+  border: none;
+  border-radius: 5px;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px 0;
+  border-top: 1px solid #ccc;
 }

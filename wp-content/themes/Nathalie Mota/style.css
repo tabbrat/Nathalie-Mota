@@ -232,18 +232,19 @@ p {
   height: 90px;
 }
 
-.navigation-next  {
-display: inline-block;
-  align-items: end;
+.navigation-next {
+  display: inline-block;
 }
 
-
+.next_post {
+  margin-left: 10px;
+}
 
 
 /* Partie basse - Autres photos de la catégorie */
 .container_bas {
   max-width: 1148px;
-  margin: auto;
+  margin: auto; 
 }
 
 h3 {
@@ -264,57 +265,11 @@ h3 {
   width: 564px;
   height: 495px;
   border: solid 1px;
+  margin-left: 2px;
 }
 
 .img-bas .cardb {
   display: inline-block;
-  max-width: 1448px;
+  max-width: 1148px;
 }
 
-.related-events {
-  text-align: center;
-}
-
-.related-events h3 {
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-
-.related-posts {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.related-event {
-  width: 45%;
-  text-align: left;
-}
-
-.related-event img {
-  max-width: 100%;
-  height: auto;
-}
-
-.related-event h4 {
-  font-size: 18px;
-  margin: 10px 0;
-}
-
-.all-photos-button {
-  display: block;
-  margin: 20px auto;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  background-color: #ccc;
-  border: none;
-  border-radius: 5px;
-}
-
-.footer {
-  text-align: center;
-  margin-top: 20px;
-  padding: 10px 0;
-  border-top: 1px solid #ccc;
-}

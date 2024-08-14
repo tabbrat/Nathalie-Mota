@@ -10,7 +10,7 @@ if (!function_exists('get_field')) return;
 $term = get_queried_object();
 $term_id  = $term ? $term->term_id : null;
 ?>
-
+<!-- Partie haute single.php - Détail de la photo -->
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
         <?php
@@ -19,7 +19,6 @@ $term_id  = $term ? $term->term_id : null;
         $reference = get_post_meta(get_the_ID(), 'reference', true);
         $type = get_field('type') ? get_field('type') : 'Inconnu';
         ?>
-
         <section class="container single_post">
             <div class="post-info">
                 <!-- Affiche titre photo -->
@@ -39,58 +38,56 @@ $term_id  = $term ? $term->term_id : null;
                 <?php the_post_thumbnail('custom-size'); ?>
             </div>
         </section>
-
+        <!--Partie centrale - Contact + photos suivantes et précédentes -->
         <section class="contact_line">
             <div class="contact-section">
                 <p>Cette photo vous intéresse ? </p>
-                <a href="mailto:example@example.com" class="contact-button">
-                    Contact
-                </a>
-                <div class="navigation-avatar">				
-				<div class="navigation-prev">
-				<?php
-					$prev_post = get_previous_post();							
-					if($prev_post) {
-						$prev_title = strip_tags(str_replace('"', '', $prev_post->post_title));
-						$prev_post_id = $prev_post->ID;
-						echo '<a rel="prev" href="' . get_permalink($prev_post_id) . '" title="' . $prev_title. '" class="previous_post">';
-						if (has_post_thumbnail($prev_post_id)){
-							?>
-							<div>
-								<?php echo get_the_post_thumbnail($prev_post_id, array(71,81));?></div>
-							<?php
-							}
-							else{
-							echo '<img src="'. get_stylesheet_directory_uri() .'/assets/img/no-image.jpeg" alt="Pas de photo" width="77px" ><br>';
-							}							
-							echo '<img src="'. get_stylesheet_directory_uri() .'/assets/img/precedent.png" alt="Photo précédente" ></a>';
-						}
-						?>
-				
-				<div class="navigation-next">
-					<!-- next_post_link( '%link', '%title', false );  -->
-					<?php
-						$next_post = get_next_post();
-						if($next_post) {
-							$next_title = strip_tags(str_replace('"', '', $next_post->post_title));
-							$next_post_id = $next_post->ID;
-							echo  '<a rel="next" href="' . get_permalink($next_post_id) . '" title="' . $next_title. '" class="next_post">';
-							if (has_post_thumbnail($next_post_id)){	
-							}
-							else{
-								echo '<img src="'. get_stylesheet_directory_uri() .'/assets/img/no-image.jpeg" alt="Pas de photo" width="77px" ><br>';
-							}							
-							echo '<img src="'. get_stylesheet_directory_uri() .'/assets/img/suivant.png" alt="Photo suivante" ></a>';
-						}
-					?>
-					</div>
-				</div>
-            </div>
+                <a href="#" class="contact-button">Contact</a>
+
+                <div class="navigation-avatar">
+                    <!-- next_prev_link( '%link', '%title', false );  -->
+                    <div class="navigation-prev">
+                        <?php
+                        $prev_post = get_previous_post();
+                        if ($prev_post) {
+                            $prev_title = strip_tags(str_replace('"', '', $prev_post->post_title));
+                            $prev_post_id = $prev_post->ID;
+                            echo '<a rel="prev" href="' . get_permalink($prev_post_id) . '" title="' . $prev_title . '" class="previous_post">';
+                            if (has_post_thumbnail($prev_post_id)) {
+                        ?>
+                                <div>
+                                    <?php echo get_the_post_thumbnail($prev_post_id, array(71, 81)); ?></div>
+                        <?php
+                            } else {
+                                echo '<img src="' . get_stylesheet_directory_uri() . '/assets/img/no-image.jpeg" alt="Pas de photo" width="77px" ><br>';
+                            }
+                            echo '<img src="' . get_stylesheet_directory_uri() . '/assets/img/precedent.png" alt="Photo précédente" ></a>';
+                        }
+                        ?>
+
+                        <div class="navigation-next">
+                            <!-- next_post_link( '%link', '%title', false );  -->
+                            <?php
+                            $next_post = get_next_post();
+                            if ($next_post) {
+                                $next_title = strip_tags(str_replace('"', '', $next_post->post_title));
+                                $next_post_id = $next_post->ID;
+                                echo  '<a rel="next" href="' . get_permalink($next_post_id) . '" title="' . $next_title . '" class="next_post">';
+                                if (has_post_thumbnail($next_post_id)) {
+                                } else {
+                                    echo '<img src="' . get_stylesheet_directory_uri() . '/assets/img/no-image.jpeg" alt="Pas de photo" width="77px" ><br>';
+                                }
+                                echo '<img src="' . get_stylesheet_directory_uri() . '/assets/img/suivant.png" alt="Photo suivante" ></a>';
+                            }
+                            ?>
+                        </div>
+                    </div>
+                </div>
         </section>
 
 <?php endwhile;
 endif; ?>
-
+<!-- Partie basse - Autres photos de la catégorie -->
 <?php
 $args = array(
     'post_type' => 'photo',

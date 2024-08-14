@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WordPress - 6.6.x - Development - Administration package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-07-31 15:19:15+0000\n"
+"PO-Revision-Date: 2024-08-08 16:37:27+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -8589,7 +8589,7 @@ msgstr "La recherche parmi les thèmes installés se fait sur leur nom, leur des
 
 #: wp-admin/theme-install.php:113
 msgid "Alternately, you can browse the themes that are Popular or Latest. When you find a theme you like, you can preview it or install it."
-msgstr "Autrement, vous pouvez parcourir les thèmes mis en avant, populaires, ou les derniers en date. Lorsque vous avez trouvé un thème qui vous plaît, vous pouvez le prévisualiser ou l’installer."
+msgstr "Autrement, vous pouvez parcourir les thèmes populaires, ou les derniers en date. Lorsque vous avez trouvé un thème qui vous plaît, vous pouvez le prévisualiser ou l’installer."
 
 #: wp-admin/theme-install.php:112
 msgid "You can Search for themes by keyword, author, or tag, or can get more specific and search by criteria listed in the feature filter."
@@ -12299,8 +12299,8 @@ msgstr "<strong>Notez bien :</strong> toutes les personnalisations que vous pou
 msgctxt "posts"
 msgid "Sticky <span class=\"count\">(%s)</span>"
 msgid_plural "Sticky <span class=\"count\">(%s)</span>"
-msgstr[0] "Mis en avant <span class=\"count\">(%s)</span>"
-msgstr[1] "Mis en avant <span class=\"count\">(%s)</span>"
+msgstr[0] "Épinglé <span class=\"count\">(%s)</span>"
+msgstr[1] "Épinglés <span class=\"count\">(%s)</span>"
 
 #: wp-admin/update-core.php:1117
 msgid "Check again."
@@ -14503,7 +14503,7 @@ msgstr "Thème"
 
 #: wp-admin/includes/theme.php:345
 msgid "Sticky Post"
-msgstr "Article mis en avant"
+msgstr "Article épinglé"
 
 #: wp-admin/includes/theme.php:348
 msgid "Theme Options"
@@ -14619,11 +14619,11 @@ msgstr "Planification manquée"
 
 #: wp-admin/includes/class-wp-posts-list-table.php:2011
 msgid "Make this post sticky"
-msgstr "Mettre ce contenu en avant"
+msgstr "Épingler ce contenu"
 
 #: wp-admin/includes/class-wp-posts-list-table.php:2003
 msgid "Not Sticky"
-msgstr "Pas mis en avant"
+msgstr "Non épinglé"
 
 #: wp-admin/includes/class-wp-posts-list-table.php:1961
 msgid "Allow Pings"
@@ -15055,7 +15055,7 @@ msgstr "Publier <b>tout de suite</b>"
 
 #: wp-admin/includes/meta-boxes.php:214
 msgid "Stick this post to the front page"
-msgstr "Mettre cet article en avant sur la page d’accueil"
+msgstr "Épingler cet article sur la page d’accueil"
 
 #: wp-admin/edit-form-comment.php:113 wp-admin/export.php:237
 #: wp-admin/export.php:289 wp-admin/includes/meta-boxes.php:104

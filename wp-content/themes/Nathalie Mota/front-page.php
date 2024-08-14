@@ -3,7 +3,7 @@
 
    <!-- ici le hero -->
     <section class="hero">
-     <!-- Slider Area -->
+     <!-- Slider aléatoire -->
 <div class="hero-area">
     <div class="hero-thumbnail">
         <!-- Initialisation de post à afficher -->
@@ -51,11 +51,15 @@
                     <img class="post_img" src="<?php echo get_the_post_thumbnail_url(); ?>" />
                 </article>
         <?php endwhile;
-        else :
-            _e('Sorry, no posts were found.', 'textdomain');
+        
+            _e('Désolé. Aucun article ne correspond à cette demande.', 'textdomain');
         endif;
+        // On réinitialise à la requête principale
+        // wp_reset_query(); 
         wp_reset_postdata();
         ?>
+
+
 
     </section>
 </main>

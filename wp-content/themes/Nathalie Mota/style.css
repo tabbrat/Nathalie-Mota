@@ -138,12 +138,12 @@ h1 {
 
 .post-info {
   display: flex;
+  align-content: flex-end;
+  align-items: flex-end;
   flex-wrap: wrap;
-  margin-top: 450px;
-  width: 45%;
-  padding: 20px;
+  margin: 430px 20px 0 0;
   border-bottom: 1px solid #23282d;
-  margin-right: 20px;
+  padding-bottom: 15px;
 }
 
 .single_title {
@@ -153,7 +153,7 @@ h1 {
   font-weight: 400;
   line-height: 58px;
   text-align: left;
-  margin-bottom: 25px;
+  margin-bottom: 0;
   width: 420px;
   height: 116px;
   text-transform: uppercase;
@@ -165,13 +165,20 @@ h1 {
   list-style: none;
   font-weight: 400;
   font-size: 14px;
-  line-height: 20.73px;
   padding: 0;
 }
 
 .event-meta li {
-  margin-bottom: 10px;
+  font-family: Space Mono;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20.73px;
+  letter-spacing: 0.1em;
+  text-align: left;
+  letter-spacing: 10%;
+  margin: 0 0 10px 0;
   text-transform: uppercase;
+
 }
 
 .card {
@@ -221,7 +228,7 @@ p {
   background-color: #D8D8D8;
   color: black;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 2px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease;
 }
@@ -244,7 +251,7 @@ p {
 /* Partie basse - Autres photos de la catégorie */
 .container_bas {
   max-width: 1148px;
-  margin: auto; 
+  margin: auto;
 }
 
 h3 {
@@ -273,3 +280,140 @@ h3 {
   max-width: 1148px;
 }
 
+
+
+
+
+
+
+/*lightbox */
+
+
+
+
+/* CSS Personallié pour la popup contact */
+
+
+/*.hidden{
+  visibility: hidden; 
+  display: none !important;
+}*/
+
+
+.popup-overlay {
+  position: fixed;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);/* Fond semi-transparent */
+  z-index: 9999;/* S'assure que la pop-up est au-dessus de tout */
+}
+
+.popup-contact {
+  position: relative;
+  Width: 597px;
+  Height: 769px;
+  border: 5px solid black;
+  overflow: hidden;/* Assure qu'il n'y a pas de scroll */
+  background-color: white;
+  transform: scale(0.87);
+
+}
+
+/*.popup-close {
+  height: 110px;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}*/
+
+.popup-title {
+  background-image: url('assets/img/contact.png');
+  background-size: 34.4%;
+  width: 885.96px;
+  height: 106.05px;
+}
+
+.popup-informations {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: min-content;
+  margin: auto;
+}
+
+
+.wpcf7-form p label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.wpcf7-form p{
+  font-family: "Poppins", sans-serif;
+  width: 230px;
+  height: 35px;
+  margin: 50px 0;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 300;
+}
+
+.wpcf7-form p .wpcf7-text,
+.wpcf7-form p .wpcf7-email,
+.wpcf7-form p textarea {
+  height: 40px;
+  gap: 0px;
+  width: 263px;
+  border-radius: 8px;
+  border: 1px solid #000000;
+}
+
+.wpcf7-form p .wpcf7-text:focus,
+.wpcf7-form p .wpcf7-email:focus,
+.wpcf7-form p textarea:focus {
+  border: 3px solid #000000;
+  background-color: rgba(175, 174, 174, 0.151);
+}
+
+
+.wpcf7-response-output {
+  margin: 1em 3.5em 1em;
+  width: 100%;
+  transform: translate(-20%, 0%);
+  color: red;
+}
+
+.wpcf7 form .wpcf7-response-output{   
+margin: 1em 3.5em 1em;
+padding: 0.2em 1em;
+}
+
+
+#wpcf7-f24-o1>form>p:nth-child(5)>label>span>textarea {
+  height: 210px;
+  border-radius: 8px;
+  border: 1px solid black;
+  opacity: 0px;
+
+}
+
+
+input[type="submit" i] {
+  margin-top: 190px;
+  width: 263px;
+  height: 50px;
+  padding: 8px 15px 8px 15px;
+  border-radius: 2px;
+  align-self: flex-start;
+  /* ou 'flex-end' pour l'aligner à droite */
+
+}
+.wpcf7-not-valid-tip {
+  margin-left: 100px;
+}

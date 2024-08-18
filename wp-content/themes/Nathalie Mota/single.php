@@ -103,9 +103,7 @@ $query = new WP_Query($args);
     <h3>VOUS AIMEREZ AUSSI</h3>
     <div class="img-bas">
         <?php if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); ?>
-                <article class="cardb">
-                    <img class="post-img" src="<?php echo get_the_post_thumbnail_url(); ?>" />
-                </article>
+                <img class="post-img" src="<?php echo get_the_post_thumbnail_url(); ?>" />
         <?php endwhile;
         endif;
         wp_reset_postdata(); ?>

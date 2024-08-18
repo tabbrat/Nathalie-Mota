@@ -9,14 +9,14 @@ document.querySelectorAll(".contact-button").forEach((contact) => {
     console.log("Bouton de contact cliqué"); // Vérifie si le bouton est bien cliqué
     popupOverlay.classList.remove("hidden");
     popupOverlay.classList.add("show");
-    console.log("Classes après ouverture :", popupOverlay.classList); // Affiche les classes appliquées à l'overlay
-    
+    //console.log("Classes après ouverture :", popupOverlay.classList); // Affiche les classes appliquées à l'overlay
+
     if (referenceElement) {
       let ref = referenceElement.innerText.substring(11).trim();
       console.log("Référence trouvée :", ref); // Vérifie la valeur de la référence
       if (refPhotoInput) {
         refPhotoInput.value = ref;
-        console.log("Champ refPhoto mis à jour avec :", ref); // Vérifie que la référence est bien assignée
+        //console.log("Champ refPhoto mis à jour avec :", ref); // Vérifie que la référence est bien assignée
       }
     }
   });

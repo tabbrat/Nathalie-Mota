@@ -12,8 +12,6 @@ Text Domain: nathaliemota
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-
-
 a {
   text-decoration: none;
   color: inherit;
@@ -50,7 +48,7 @@ h1 {
   right: 50%;
   top: 41%;
   Width: 1000px;
-  Height:142.18px;
+  Height: 142.18px;
   transform: translate3d(-50%, -50%, 0);
 }
 
@@ -81,6 +79,20 @@ h1 {
   max-height: 966px;
 }
 
+.title {
+  position: absolute;
+  float: left;
+  margin: 449px 0px 0px -20px;
+  color: #ffffff;
+  Width: auto;
+  Height: 21px;
+  font-family: 'Poppins';
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  text-align: left;
+  text-transform: uppercase;
+}
 
 /* Acceuil galleries photos */
 .photos_container {
@@ -100,13 +112,19 @@ h1 {
   margin: 0 0 0 -40px;
 }
 
-/* Partie en haut single.php - Détail de la photo */
+/* icons galleries et ref.photos */
+
+
+
+
+/* Partie en haut fichier single.php - Détail de la photo */
 .container.single_post {
   display: flex;
   justify-content: center;
   max-width: 1148px;
   margin: auto;
   height: 844px;
+  width: 563px;
 }
 
 .post-info {
@@ -127,16 +145,10 @@ h1 {
   line-height: 58px;
   text-align: left;
   margin-bottom: 0;
-  width: 420px;
+  width: 560px;
   height: 116px;
+  overflow: hidden;
   text-transform: uppercase;
-}
-
-h2{
-  position: absolute;
-  float: left;
-  margin: 449px 350px 10px -20px;
-  color: #ffffff;
 }
 
 .event-meta ul {
@@ -146,19 +158,18 @@ h2{
   font-weight: 400;
   font-size: 14px;
   padding: 0;
+  margin-bottom: 0;
 }
 
 .event-meta li {
-  font-family: Space Mono;
+  font-family: 'Space Mono';
   font-size: 14px;
   font-weight: 400;
   line-height: 20.73px;
   letter-spacing: 0.1em;
   text-align: left;
-  letter-spacing: 10%;
-  margin: 0 0 10px 0;
+  margin: 0 0 20px 0;
   text-transform: uppercase;
-
 }
 
 .card {
@@ -166,7 +177,8 @@ h2{
   margin-left: 50px;
 }
 
-/* Partie centrale - Contact + photos suivantes et précédentes */
+/* Partie centrale fichier single.php 
+Contact + nav photos suivantes et précédentes avatar*/
 .contact_line {
   width: 1148px;
   height: 120px;
@@ -217,11 +229,12 @@ p {
   width: 81px;
   height: 71px;
 }
+
 .navigation-next {
   display: inline-block;
 }
 
-.navigation-prev{
+.navigation-prev {
   width: 81px;
   margin-right: 0;
 }
@@ -231,7 +244,8 @@ p {
 }
 
 
-/* Partie basse - Autres photos de la catégorie */
+/* Partie basse fichier single.php-
+ et 2 photos de la catégorie */
 .container_bas {
   max-width: 1148px;
   margin: auto;
@@ -242,7 +256,7 @@ h3 {
   margin-bottom: 20px;
   margin-top: 0;
   font-size: 1em;
-  font-weight:normal;
+  font-weight: normal;
   border-top: 1px solid #23282d;
   padding: 79px 0 50px;
 }
@@ -258,13 +272,15 @@ h3 {
   width: 564px;
   height: 495px;
   object-fit: cover;
-  row-gap: 10px;
 }
 
-.img-bas .cardb {
-  display: inline-block;
+.img-bas {
+  display: flex;
+  justify-content: space-between;
   max-width: 1148px;
+  margin: auto;
 }
+
 
 
 
@@ -279,9 +295,11 @@ h3 {
 .popup-overlay.hidden {
   visibility: hidden;
   pointer-events: none;
-  opacity: 0; /* Cacher l'élément */
+  opacity: 0;
+  /* Cacher l'élément */
   transition: opacity 0.3s ease;
 }
+
 /* Style par défaut de l'overlay */
 .popup-overlay {
   position: fixed;
@@ -292,9 +310,11 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Fond semi-transparent */
   z-index: 1000;
-  opacity: 0; /* Opacité par défaut */
+  opacity: 0;
+  /* Opacité par défaut */
   transition: opacity 0.3s ease;
 }
 
@@ -302,7 +322,8 @@ h3 {
 .popup-overlay.show {
   visibility: visible;
   pointer-events: auto;
-  opacity: 1; /* Affiche l'élément */
+  opacity: 1;
+  /* Affiche l'élément */
 }
 
 /* Style de la modale */
@@ -311,9 +332,11 @@ h3 {
   width: 597px;
   height: 769px;
   border: 5px solid black;
-  overflow: hidden; /* Supprime le scroll */
+  overflow: hidden;
+  /* Supprime le scroll */
   background-color: white;
-  transform: scale(1.3); /* Optionnel : effet d'échelle */
+  transform: scale(0.87);
+  /* Optionnel : effet d'échelle */
 }
 
 .popup-title {
@@ -324,6 +347,7 @@ h3 {
   background-repeat: repeat-x;
 
 }
+
 /* Position des 2 bannières pour le titre */
 .popup-title:first-child {
   background-position-x: -27%;
@@ -352,7 +376,7 @@ h3 {
   text-transform: uppercase;
 }
 
-.wpcf7-form p{
+.wpcf7-form p {
   font-family: "Poppins", sans-serif;
   width: 230px;
   height: 35px;
@@ -386,7 +410,7 @@ h3 {
   color: red;
 }
 
-.wpcf7 form .wpcf7-response-output{   
+.wpcf7 form .wpcf7-response-output {
   margin: -2em 0.5em 0em 2em;
   padding: 0.2em 4em 0em 4em;
 }
@@ -405,7 +429,8 @@ input[type="submit" i] {
   height: 50px;
   padding: 8px 15px 8px 15px;
   border-radius: 2px;
-  align-self: flex-start; /* ou 'flex-end' pour l'aligner à droite */
+  align-self: flex-start;
+  /* ou 'flex-end' pour l'aligner à droite */
   background-color: #D8D8D8;
 }
 

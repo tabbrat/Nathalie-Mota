@@ -1,10 +1,3 @@
-<?php
-
-/**
- * Modal contact
- */
-?>
-
 <div class="popup-overlay hidden">
   <div class="popup-contact">
 

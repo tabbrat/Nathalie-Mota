@@ -1,7 +1,6 @@
+<?php get_header(); ?><!-- (inclut header.php) où le DOCTYPE est défini ce qui peut cause le "Quirks Mode" dit:mode bizarreries -->
 <main class="site-main">
-    <?php get_header(); ?>
-
-   <!-- ici le hero -->
+  <!-- ici le hero -->
     <section class="hero">
      <!-- Slider aléatoire -->
 <div class="hero-area">
@@ -25,14 +24,14 @@
             <?php endif; ?>                  
                     
         <?php endwhile; ?>            
-        <h1 class="title-hero"><?php bloginfo('description'); ?></h1>
+        
     </div>  
 </div>
 <?php
     // On réinitialise à la requête principale
     wp_reset_postdata();       
 ?>   
-      <div> <h1>PHOTOGRAPH EVENT</h1></div> 
+      <div> <h1>PHOTOGRAPHE EVENT</h1></div> 
     </section>
      <!-- ici contenu dynamique requettes Query pour appeler les photos et les afficher-->
     <section class="photos_container">
@@ -52,7 +51,7 @@
                 </article>
         <?php endwhile;
         
-            _e('Désolé. Aucun article ne correspond à cette demande.', 'textdomain');
+            //_e('Désolé. Aucun article ne correspond à cette demande.', 'textdomain');
         endif;
         // On réinitialise à la requête principale
         // wp_reset_query(); 

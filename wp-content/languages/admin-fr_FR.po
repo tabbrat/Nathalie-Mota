@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WordPress - 6.6.x - Development - Administration package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-08-08 16:37:27+0000\n"
+"PO-Revision-Date: 2024-08-17 06:59:43+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -36,6 +36,10 @@ msgstr "1"
 msgctxt "default GMT offset or timezone string"
 msgid "0"
 msgstr "Europe/Paris"
+
+#: wp-admin/includes/class-wp-debug-data.php:1678
+msgid "The directory does not exist."
+msgstr "Le répertoire n’existe pas."
 
 #: wp-admin/update-core.php:1048
 msgid "<a href=\"https://developer.wordpress.org/advanced-administration/wordpress/common-errors/\">Common Errors</a>"
@@ -248,7 +252,7 @@ msgstr "Aperçu rapide des pages"
 
 #: wp-admin/about.php:95
 msgid "Block theme authors can create unlimited individual color or font sets to offer more specific design options within the same theme. These sets provide more contained design possibilities, allowing for customization without changing the site&#8217;s broader styling, beyond color or typography settings."
-msgstr "Les auteur·ices de thèmes basés sur les blocs peuvent créer un nombre illimité de palettes de couleurs ou de polices personnalisées pour offrir des options graphiques plus spécifiques au sein du même thème. Ces palettes offrent des possibilités graphiques plus harmonisées, permettant une personnalisation sans modifier le style global du site, au-delà des paramètres de couleur ou de typographie."
+msgstr "Les auteurs de thèmes basés sur les blocs peuvent créer un nombre illimité de palettes de couleurs ou de polices personnalisées pour offrir des options graphiques plus spécifiques au sein du même thème. Ces palettes offrent des possibilités graphiques plus harmonisées, permettant une personnalisation sans modifier le style global du site, au-delà des paramètres de couleur ou de typographie."
 
 #: wp-admin/about.php:95
 msgid "Add more design options to any block theme."
@@ -4391,15 +4395,15 @@ msgstr "Cette extension n’a pas pu se charger correctement et a été mise en 
 msgid "Go to the Themes screen"
 msgstr "Aller à l’écran des thèmes"
 
-#: wp-admin/includes/class-wp-debug-data.php:1734
+#: wp-admin/includes/class-wp-debug-data.php:1746
 msgid "Total size is not available. Some errors were encountered when determining the size of your installation."
 msgstr "La taille totale n’est pas disponible. Des erreurs ont été rencontrées lors de la détermination de la taille de votre installation."
 
-#: wp-admin/includes/class-wp-debug-data.php:1683
+#: wp-admin/includes/class-wp-debug-data.php:1695
 msgid "The size cannot be calculated. The directory is not accessible. Usually caused by invalid permissions."
 msgstr "La taille ne peut pas être calculée. Le répertoire n’est pas accessible. Usuellement cela est causé par des droits d’accès non valides."
 
-#: wp-admin/includes/class-wp-debug-data.php:1690
+#: wp-admin/includes/class-wp-debug-data.php:1702
 msgid "The directory size calculation has timed out. Usually caused by a very large number of sub-directories and files."
 msgstr "Le calcul de la taille du répertoire a expiré. Cela est généralement causé par un très grand nombre de sous-répertoires et de fichiers."
 
@@ -5112,7 +5116,7 @@ msgstr "Numéro de version ImageMagick"
 #: wp-admin/includes/class-wp-debug-data.php:521
 #: wp-admin/includes/class-wp-debug-data.php:543
 #: wp-admin/includes/class-wp-debug-data.php:560
-#: wp-admin/includes/class-wp-debug-data.php:1718 wp-admin/includes/ms.php:803
+#: wp-admin/includes/class-wp-debug-data.php:1730 wp-admin/includes/ms.php:803
 msgid "Not available"
 msgstr "Non disponible"
 

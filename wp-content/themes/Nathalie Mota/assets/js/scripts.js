@@ -1,32 +1,33 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const contactBtn = document.querySelectorAll(".contact");
-    const popupOverlay = document.querySelector(".popup-overlay");
-    const popupCloseBtn = document.querySelector(".popup-close");
-  
-    // Ouverture de la pop-up au clic sur un lien contact
-    contactBtn.forEach((contact) => {
-      contact.addEventListener("click", () => {
-        popupOverlay.classList.remove("hidden");
-        if (document.querySelector(".reference") !== null) {
-          let ref = document.querySelector(".reference").innerText.substring(11);
-          ref = ref.trim();
-          if (document.querySelector(".refPhoto") !== null) {
-            document.querySelector(".refPhoto").value = ref;
-          }
-        }
-      });
-    });
-  
-    // Fermeture de la pop-up au clic sur l'overlay ou sur le bouton de fermeture
-    popupOverlay.addEventListener("click", (e) => {
-      if (e.target.className == "popup-overlay") {
-        popupOverlay.classList.add("hidden");
+// Mise en cache des éléments DOM
+const popupOverlay = document.querySelector(".popup-overlay");
+const refPhotoInput = document.querySelector(".refPhoto");
+const referenceElement = document.querySelector(".reference");
+
+// Ouverture de la pop-up au clic sur un lien contact
+document.querySelectorAll(".contact-button").forEach((contact) => {
+  contact.addEventListener("click", () => {
+    console.log("Bouton de contact cliqué"); // Vérifie si le bouton est bien cliqué
+    popupOverlay.classList.remove("hidden");
+    popupOverlay.classList.add("show");
+    console.log("Classes après ouverture :", popupOverlay.classList); // Affiche les classes appliquées à l'overlay
+    
+    if (referenceElement) {
+      let ref = referenceElement.innerText.substring(11).trim();
+      console.log("Référence trouvée :", ref); // Vérifie la valeur de la référence
+      if (refPhotoInput) {
+        refPhotoInput.value = ref;
+        console.log("Champ refPhoto mis à jour avec :", ref); // Vérifie que la référence est bien assignée
       }
-    });
-  
-    if (popupCloseBtn) {
-      popupCloseBtn.addEventListener("click", () => {
-        popupOverlay.classList.add("hidden");
-      });
     }
   });
+});
+
+// Fermeture de la modale au clic sur l'overlay (zone extérieure)
+popupOverlay.addEventListener("click", function (e) {
+  if (e.target === popupOverlay) {
+    console.log("Overlay cliqué, fermeture de la modale"); // Vérifie si l'overlay est cliqué
+    popupOverlay.classList.remove("show");
+    popupOverlay.classList.add("hidden");
+    console.log("Classes après fermeture :", popupOverlay.classList); // Vérifie les classes appliquées après fermeture
+  }
+});

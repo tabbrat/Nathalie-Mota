@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html><!-- header.php où le DOCTYPE est défini, si non inserer ici cause : le "Quirks Mode" (mode bizarreries) -->
 <html <?php language_attributes(); ?>>
 <!-- Définit automatiquement la langue et la direction du texte (par exemple, de gauche à droite) en fonction des réglages WordPress. -->
 <head>
@@ -21,14 +21,27 @@
      <!-- Cette fonction est utilisée pour ajouter des hooks juste après l’ouverture du <body>. 
         C’est une bonne pratique dans les thèmes modernes.-->
 <body <?php body_class(); ?>>
+    <!---Cette ligne ouvre la balise <body> et ajoute des classes dynamiques à l'élément <body> en utilisant la fonction body_class() de WordPress.
+    body_class() : Génère automatiquement une liste de classes pour l'élément <body> en fonction du contexte de la page. Par exemple, il peut ajouter
+     des classes spécifiques comme home, single, page-id-2, etc., ce qui permet de cibler ces classes dans votre CSS pour personnaliser l'apparence des différentes pages. -->
 	<?php wp_body_open(); ?>
-
+    <!--- ette fonction est une nouvelle addition (depuis WordPress 5.2) qui insère un hook wp_body_open juste après l’ouverture de la balise <body>.
+    wp_body_open() : Permet aux développeurs de thèmes et de plugins d’ajouter du contenu immédiatement après l’ouverture de la balise <body>
+    par exemple des scripts de suivi, des balises de vérification ou d'autres éléments.
+    C’est une bonne pratique de l’inclure dans votre thème pour des raisons de compatibilité avec les plugins et autres personnalisations.  --->
     <header>
-
+            <div class="bloc-menu-nav">
                 <!--On utilise la fonction get_template_directory_uri() afin d’obtenir l’adresse absolue du logo
     (c’est à dire complète). Sans ça,notre image ne s’affichera pas.-->
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo_nathalie_mota.png"alt="Logo <?php echo bloginfo('name'); ?>">
-
-                
+                <nav id="navigation">
+					<?php
+					// Affichage du menu main déclaré dans functions.php
+					wp_nav_menu(array('theme_location' => 'header'));
+					?>
+					
+					</div>
+                </nav>
+            </div>
     </header>
     

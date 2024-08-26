@@ -1,12 +1,17 @@
 <footer>
-        ici footer
+<?php
+// Affichage du menu main déclaré dans functions.php
+wp_nav_menu(array('theme_location' => 'footer'));
+?>        
 </footer>
-<!-- Lance la popup contact -->
-<?php 
-        get_template_part ( 'template-parts/modal/contact'); 		
+<!-- Lance la popup contact page single.php -->
+<?php
+get_template_part('template-parts/modal/contact');
 ?>
+
+
 <?php wp_footer(); ?>
-<script src="/wp-content/themes/Nathalie Mota/assets/js/scripts.js"></script>
+
 </body>
 
 </html>

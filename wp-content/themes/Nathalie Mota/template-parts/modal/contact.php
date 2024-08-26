@@ -1,4 +1,4 @@
-<div class="popup-overlay hidden">
+<div id="contact-popup" class="popup-overlay hidden">
   <div class="popup-contact">
 
     <div class="popup-title__container">

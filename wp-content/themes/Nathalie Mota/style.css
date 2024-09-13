@@ -12,6 +12,8 @@ Text Domain: nathaliemota
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+
+
 /* Supprime la décoration des liens et utilise la couleur héritée */
 a {
   text-decoration: none; /* Supprime le soulignement des liens */
@@ -49,23 +51,15 @@ header {
   margin: auto; /* Centre l'en-tête horizontalement */
 }
 
-/* Style du titre principal h1 */
-h1 {
-  font-family: 'Space Mono', Sans-serif; /* Définit la police du titre */
-  position: absolute; /* Positionne le titre de manière absolue */
-  color: transparent; /* Rend le texte transparent */
-  font-style: italic; /* Rend le texte en italique */
-  font-weight: 700; /* Définit le poids de la police à 700 (gras) */
-  font-size: 95px; /* Définit la taille de la police */
-  -webkit-text-stroke: 2px rgb(255, 255, 255); /* Ajoute un contour de 2px autour du texte */
-  left: 50.8%; /* Positionne le titre à 50.8% du côté gauche */
-  right: 50%; /* Positionne le titre à 50% du côté droit */
-  top: 49%; /* Positionne le titre à 49% du haut */
-  Width: 1000px; /* Définit la largeur du titre */
-  Height: 142.18px; /* Définit la hauteur du titre */
-  transform: translate3d(-50%, -50%, 0); /* Centre le titre à l'intérieur de son conteneur */
-}
+/* Style du titre principal photos*/
 
+.evento{
+  max-width: 973px;
+  max-height: 1024px;
+  position: absolute;
+  margin: -664px 0px 0px 233px;
+  object-fit: contain;
+}
 /* --------------------------------------------Style pour la section hero --------------------------------------------*/
 .hero {
   position: relative; /* Positionne la section hero de manière relative */
@@ -91,7 +85,7 @@ h1 {
   object-fit: cover; /* Recadre l'image pour couvrir tout le conteneur */
   object-position: 50% 50%; /* Centre l'image à l'intérieur du conteneur */
   width: 100%; /* Définit la largeur de l'image à 100% du conteneur parent */
-  height: auto; /* Définit la hauteur automatique pour maintenir les proportions */
+  height: 962px; /* Définit la hauteur automatique pour maintenir les proportions */
   max-height: 966px; /* Définit la hauteur maximale de l'image */
 }
 
@@ -147,10 +141,105 @@ h1 {
 }
 
 
-/* icons galleries */
+/*--------------------------------Style de base pour la lightbox-trigger  icons galleries -------------------------------------------------- */
+/* Style de base pour la lightbox-trigger */
+.lightbox-trigger {
+  position: relative; /* Position relative pour positionner les éléments internes */
+  display: inline-block; /* Affichage en ligne pour les éléments inline */
+}
 
+/* Conteneur pour le fond sombre et les éléments au survol */
+.lightbox-trigger .overlay {
+  position: absolute; /* Positionne l'overlay par rapport au conteneur parent */
+  top: 0; /* Positionne l'overlay en haut du conteneur */
+  left: -40px; /* Positionne l'overlay à gauche du conteneur */
+  width: 564px; /* Assure que l'overlay couvre toute la largeur du conteneur */
+  height: 495px; /* Assure que l'overlay couvre toute la hauteur du conteneur */
+  background-color: rgba(0, 0, 0, 0.6); /* Fond sombre avec transparence */
+  color: white; /* Couleur du texte dans l'overlay */
+  display: flex; /* Utilise flexbox pour centrer le contenu */
+  flex-direction: column; /* Dispose les éléments en colonne */
+  justify-content: center; /* Centre verticalement les éléments */
+  align-items: center; /* Centre horizontalement les éléments */
+  opacity: 0; /* Caché par défaut */
+  transition: opacity 0.3s ease; /* Transition douce pour l'apparition de l'overlay */
+  z-index: 10; /* Assure que l'overlay est au-dessus de l'image */
+}
 
-/* Style pour le bouton "Charger plus" des galeries */
+/* Affichage de l'overlay et des icônes au survol */
+.lightbox-trigger:hover .overlay {
+  opacity: 1; /* Affiche l'overlay au survol */
+}
+
+/* Style pour les informations (catégorie et référence) */
+.overlay .info {
+  position: absolute; /* Positionne les informations en bas de l'overlay */
+  bottom: 10px; /* Positionne les informations à 10px du bas */
+  width: 100%; /* Assure que l'info occupe toute la largeur de l'overlay */
+  display: flex; /* Utilise flexbox pour disposer les informations en ligne */
+  justify-content: space-between; /* Dispose les éléments en espace égal */
+  padding: 0 10px; /* Espacement horizontal */
+}
+
+.overlay .info .category,
+.overlay .info .reference {
+  margin: 10px; /* Enlève les marges par défaut */
+  font-size: 18px; /* Ajuste la taille de la police */
+  font-family: 'Space Mono', Sans-serif; /* Définit la police du titre */
+}
+
+/* Style pour les icônes */
+.oeil, .fullscreen {
+  position: absolute; /* Positionnement absolu pour placer les icônes précisément */
+  z-index: 11; /* Assure que les icônes sont au-dessus de l'overlay */
+  cursor: pointer; /* Change le curseur au survol pour indiquer que c'est cliquable */
+  opacity: 0; /* Caché par défaut */
+  transition: opacity 0.3s ease; /* Transition douce pour l'apparition des icônes */
+}
+
+/* Positionner l'icône "oeil" au centre de l'overlay */
+.oeil {
+  top: 50%; /* Positionne l'icône verticalement au centre */
+  left: 47%; /* Positionne l'icône horizontalement au centre */
+  transform: translate(-50%, -50%); /* Centre l'icône exactement au milieu */
+  width: 10%; /* Ajuste la taille de l'icône */
+  height: 10%; /* Maintient le ratio de l'image */
+  background-color: none; /* Fond sombre au survol de l'icône */
+  border-radius: 50%; /* Forme circulaire */
+  padding: 10px; /* Ajuste la taille de l'icône */
+}
+
+/* Positionner l'icône "fullscreen" en haut à gauche */
+.fullscreen {
+  top: 15px; /* Positionne l'icône à 10px du haut */
+  right: 15px; /* Positionne l'icône à 10px de la gauche */
+  width: 35px; /* Ajuste la taille de l'icône */
+  height: auto; /* Maintient le ratio de l'image */
+}
+
+/* Affichage des icônes au survol */
+.lightbox-trigger:hover .oeil,
+.lightbox-trigger:hover .fullscreen {
+  opacity: 1; /* Affiche les icônes au survol */
+}
+
+/* Optionnel : ajout d'un effet de zoom au survol des icônes */
+.oeil:hover, .fullscreen:hover {
+  
+  scale: 1; /* Agrandissement au survol */
+}
+
+/* Style pour la référence */
+.reference {
+  margin-left: auto; /* Placer la référence à gauche */
+}
+
+/* Style pour la catégorie */
+.category {
+  margin-right: auto; /* Placer la catégorie à droite */
+}
+/*------------------------------------------------------Bouton "Charger plus" des galeries--------------------------------------------------  */
+/* Style pour le bouton "Charger plus" */
 .galbtn {
   width: 272px; /* Définit la largeur du bouton à 272 pixels */
   height: 50px; /* Définit la hauteur du bouton à 50 pixels */
@@ -359,6 +448,8 @@ h3 {
   padding-top: 63px;  /* Ajoute un padding en haut de 63px */
   display: flex;  /* Utilise un affichage en flexbox */
   justify-content: start;  /* Aligne les éléments au début du conteneur */
+  position: relative;
+  z-index: 1050;
 }
 
 .filters-and-sort label, .filters-and-sort select {
@@ -413,9 +504,8 @@ h3 {
 .lightbox-content {
   position: relative; /* Position relative pour le contenu de la lightbox */
   width: 564px; /* Largeur souhaitée de l'image */
-  height: 499px; /* Hauteur souhaitée de l'image */
+  height: 495px; /* Hauteur souhaitée de l'image */
   padding: 20px; /* Espacement intérieur */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Ombre portée */
 }
 
 /* Image dans la lightbox */
@@ -435,27 +525,87 @@ h3 {
 }
 
 .lightbox-close {
-  right: 20px; /* Positionne l'icône de fermeture à droite */
+  margin-top: -125px;
+  right: -136px;/* Positionne l'icône fermer à droite*/
+  width: 27px;/* Ajuste la largeur de L'image du conteneur defini*/
+  height: 27px;/* Ajuste la hauteur de l'image du conteneur defini */
+}
+
+.Précédent, img {
+  margin: 0px 0px 0 15px;/*décalage vers la droite*/
 }
 
 .lightbox-prev {
-  left: 20px; /* Positionne l'icône précédente à gauche */
+  left: -137px;/* Positionne l'icône précédente à gauche */
 }
 
+.Suivant, img {
+  margin: 0px 17px 0px 0px;/* décalage a gauche */
+  }
+
+  .lightbox-prev img,
+  .lightbox-next img {
+    transition: transform 0.3s ease; /* Animation fluide sur 0.3 secondes */
+  }
+  
+  .lightbox-prev img:hover,
+  .lightbox-next img:hover {
+    transform: scale(2); /* Zoom à 120% au survol */
+  }
+  
 .lightbox-next {
-  right: 60px; /* Positionne l'icône suivante à droite */
+  right: -137px; /* Positionne l'icône suivante à droite */
 }
 
 .lightbox-prev,
 .lightbox-next {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  color: white;
   top: 50%; /* Centre verticalement */
   transform: translateY(-50%); /* Ajuste la position pour centrer parfaitement */
+  margin-right: 15px;/* Ajuste la position a droite */
 }
 
 .lightbox-reference,
 .lightbox-category {
-  margin: auto; /* Centre les éléments textuels */
+  margin: 5px 0;
+  color: WHITE;
+  text-transform: uppercase; /* Transforme le texte en majuscules */
+  font-family: 'Space Mono', Sans-serif; /* Définit la police des éléments de la liste à 'Space Mono' ou une police sans-serif en secours */
+  cursor: pointer;
+  font-size: larger;
 }
+
+.lightbox-info {
+  display: flex; /* Utilise Flexbox pour aligner les éléments côte à côte */
+  justify-content: space-between; /* Espace les éléments de manière égale */
+  margin-top: 10px; /* Espacement au-dessus des informations */
+}
+
+/* Style pour chaque élément d'information */
+.lightbox-info-item {
+  font-size: 16px; /* Taille de la police */
+  color: #fff; /* Couleur du texte */
+  background-color: rgba(0, 0, 0, 0.6); /* Fond sombre avec transparence */
+  padding: 5px 10px; /* Espacement interne */
+  border-radius: 4px; /* Coins arrondis */
+}
+
+/* Style spécifique pour la référence */
+.lightbox-reference {
+  margin-right: 20px; /* Espacement à droite */
+ 
+}
+
+/* Style spécifique pour la catégorie */
+.lightbox-category {
+  margin-left: 20px; /* Espacement à gauche */
+ 
+}
+
+
 
 /*------------------------  Gestion de la visibilité de la modale pour la popup contact formulaire de contact ---------------------------*/
 
@@ -500,7 +650,7 @@ h3 {
   transform: scale(0.87); /* Optionnel : réduit la taille de la modale */
 }
 
-/*** Titre CONTACT ***/
+/*------------------------------------------------------------------Titre CONTACT --------------------------------------------------------*/
 .popup-title {
   background-image: url('assets/img/contact.png'); /* Image de fond pour le titre */
   background-size: 34.4%; /* Taille de l'image de fond */
@@ -642,7 +792,7 @@ input[type=submit]:hover {
   text-transform: uppercase; /* Convertit le texte en majuscules */
   line-height: 23.7px; /* Hauteur de ligne */
   list-style-type: none; /* Supprime les puces des éléments de liste */
-  width: 1148px; /* Largeur du footer */
+  width: 1140px; /* Largeur du footer */
   height: 40px; /* Hauteur du footer */
   margin: auto; /* Centre le footer horizontalement */
   padding: 0px 0 0 67px; /* Padding gauche de 67px */
@@ -652,25 +802,960 @@ input[type=submit]:hover {
 }
 
 
-
-.photo-overlay:hover {
-  opacity: 1;
+/* --------------------------------------------Styles de base pour le menu burger --------------------------------------------*/
+.nav-burger {
+  position: relative;
 }
 
-/* Styles généraux pour le <select> */
-select {
-  cursor: pointer;
-  padding: 8px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-}
-
-/* Les couleurs ne sont pas appliquées directement aux options via CSS */
-
-.oeil {
+.logo {
+  visibility: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #fff;
   position: absolute;
-  margin: 0px 0px 0px 0px;
-  height: 31.2px;
-  width: 46px;
-  z-index: 2;
+  width: 1415px;
+  height: 46px;
+  border: black solid;
+  margin: -10px 0 0 0;
+  left: -1445px;
+}
+
+/* Icônes du bouton hamburger */
+.nav-toggler {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0 39px 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.nav-toggler .line {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin: 3px 0;
+  transition: all 0.3s ease;
+}
+
+/* Styles du menu rouge */
+#menuToggle {
+  position: fixed;
+  top: 0;
+  right: -100%; /* Le menu est hors de l'écran par défaut */
+  width: 100%;
+  height: 100%;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: right 0.5s ease;
+  z-index: 9999;
+}
+
+#menuToggle ul {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
+
+#menuToggle ul li {
+  font-size: 2rem;
+  margin: 20px 0;
+  color: white;
+}
+
+#menuToggle.active {
+  right: 0; /* Le menu glisse depuis la droite */
+}
+
+/* --------------------------------------------Styles @media query screen  --------------------------------------------*/
+
+/*  **********************************  */
+/*    Media query : max-width: 320px    */
+/*  **********************************  */
+@media (max-width: 320px) {
+  /* Ajustements pour les éléments de la zone héros et les images */
+  .hero-area .hero-thumbnail,
+  .hero-area img,
+  .photos_container,
+  .post_img {
+    max-height: 320px; /* Limite la hauteur maximale pour les petits écrans */
+    width: 100%; /* Utilise 100% de la largeur disponible au lieu de 320px fixe */
+    max-width: 320px; /* Ajoute une largeur maximale de 320px */
+    margin: auto; /* Centre les éléments horizontalement */
+  }
+
+  /* Configuration de la grille de photos */
+  .photos_container {
+    columns: 1; /* Affiche les photos en une seule colonne */
+    width: 100%; /* Utilise toute la largeur disponible */
+    column-gap: 5px; /* Réduit l'espace entre les colonnes */
+  }
+
+  /* Ajustement des images individuelles */
+  .post_img {
+    width: 100%; /* Utilise toute la largeur disponible */
+    height: auto; /* Maintient le ratio d'aspect de l'image */
+    margin-bottom: 5px; /* Ajoute un petit espace entre les images */
+  }
+
+  /* Styles pour le titre et la catégorie */
+  .title,
+  .categorie {
+    font-size: 12px; /* Réduit la taille de la police pour les petits écrans */
+    margin: 5px 0; /* Ajuste les marges pour un meilleur espacement */
+    text-align: center; /* Centre le texte */
+  }
+
+  /* Ajustement des icônes */
+  .oeil,
+  .fullscreen {
+    width: 20px; /* Réduit la taille des icônes */
+    height: 20px; /* Assure une taille carrée */
+  }
+
+  /* Styles pour les filtres et le tri */
+  #category-filter, #format-filter, #date-sort {
+    width: calc(100% - 40px); /* Utilise toute la largeur disponible moins les marges */
+    height: 42px;
+    margin: 10px 20px; /* Ajuste les marges pour un meilleur espacement */
+    border-radius: 8px;
+    border: 1.3px solid #B8BBC2;
+  }
+
+  /* Ajustement du bouton de galerie */
+  .galbtn {
+    width: calc(100% - 40px); /* Utilise toute la largeur disponible moins les marges */
+    margin: 10px 20px; /* Ajoute des marges pour l'alignement */
+  }
+
+  /* Styles pour le conteneur de post unique */
+  .container.single_post {
+    width: 100%;
+    height: auto;
+    padding: 10px; /* Ajoute un peu de padding intérieur */
+  }
+
+  /* Ajustement du titre unique */
+  .single_title {
+    font-size: 24px;
+    width: 100%;
+    text-align: center; /* Centre le titre */
+  }
+
+  /* Ajustement du bouton de contact */
+  .contact-button {
+    width: 100%;
+    margin-top: 10px; /* Ajoute un espace au-dessus du bouton */
+  }
+
+  /* Ajustement des filtres et du tri */
+  .filters-and-sort {
+    padding: 15px;
+  }
+
+  .filters-and-sort select {
+    width: 100%;
+    margin-bottom: 10px; /* Ajoute un espace entre les sélecteurs */
+  }
+
+  /* Ajustements pour le menu de navigation */
+  .bloc-menu-nav {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+  }
+
+  .menu {
+    width: 100%;
+    padding: 10px 0; /* Ajoute du padding vertical */
+  }
+
+  #navigation {
+    flex-direction: column;
+  }
+
+  #menu-footer {
+    width: 100%;
+    padding: 10px 0;
+    gap: 20px;
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si nécessaire */
+    justify-content: center; /* Centre les éléments horizontalement */
+  }
+
+  /* Ajustements pour le post unique */
+  .single_post {
+    padding: 5px;
+  }
+
+  .img-bas img {
+    max-width: 100%;
+  }
+
+  .navigation-avatar img {
+    max-width: 40px;
+  }
+}
+
+
+/*  **********************************  */
+/*    Media query : max-width: 580px    */
+/*  **********************************  */
+@media (max-width: 580px) {
+  /* Conteneur principal */
+  .container_bas {
+    max-width: 1148px; /* Définit la largeur maximale du conteneur */
+    margin: auto; /* Centre le conteneur horizontalement */
+    display: flex; /* Utilise Flexbox pour la mise en page */
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne suivante */
+    flex-direction: column; /* Aligne les éléments en colonne */
+    align-items: center; /* Centre les éléments horizontalement */
+    justify-content: center; /* Centre les éléments verticalement */
+    align-content: center; /* Centre le contenu de plusieurs lignes */
+    width: 90%; /* Définit la largeur du conteneur à 90% de son parent */
+    max-width: 265px; /* Définit une largeur maximale spécifique */
+    height: 230px; /* Définit une hauteur fixe */
+  }
+
+  /* Conteneur des photos */
+  .photos_container {
+    columns: 1; /* Affiche les photos en une seule colonne */
+    width: 100%; /* Définit la largeur à 100% du conteneur parent */
+    column-gap: 10px; /* Réduit l'espace entre les colonnes */
+  }
+  
+  /* Images des posts */
+  .post_img {
+    width: 100%; /* Ajuste la largeur de l'image à 100% */
+    height: auto; /* Ajuste la hauteur de l'image automatiquement */
+    margin: 0; /* Réinitialise les marges */
+  }
+  
+  /* Titre et catégorie des posts */
+  .title,
+  .categorie {
+    font-size: 13px; /* Réduit la taille de la police */
+    margin: 350px 0px 0px -10px; /* Ajuste les marges pour les petits écrans */
+  }
+  
+  /* Icônes (œil et fullscreen) */
+  .oeil,
+  .fullscreen {
+    width: 25px; /* Réduit la taille des icônes */
+    height: 25px; /* Réduit la hauteur des icônes */
+  }
+
+  /* Bouton de galerie */
+  .galbtn {
+    width: 100%; /* La largeur du bouton prend 100% de celle du conteneur */
+  }
+
+  /* Conteneur d'un seul post */
+  .container.single_post {
+    width: 100%; /* La largeur prend 100% du conteneur parent */
+    height: auto; /* La hauteur ajuste automatiquement */
+  }
+
+  /* Titre d'un seul post */
+  .single_title {
+    font-size: 32px; /* Réduit la taille de la police du titre */
+    width: 100%; /* La largeur du titre prend 100% du conteneur */
+  }
+
+  /* Bouton de contact */
+  .contact-button {
+    width: 100%; /* La largeur du bouton prend 100% de celle du conteneur */
+  }
+
+  /* Conteneur des filtres et options de tri */
+  .filters-and-sort {
+    padding-right: 20px;  /* Réduit le padding à droite */
+    padding-left: 20px;  /* Réduit le padding à gauche */
+  }
+
+  /* Sélecteurs dans les filtres et options de tri */
+  .filters-and-sort select {
+    width: 100%;  /* Ajuste la largeur des filtres */
+    margin-right: 0;  /* Supprime la marge à droite */
+    margin-left: 0;  /* Supprime la marge à gauche */
+  }
+
+  /* Sélecteur de date de tri */
+  #date-sort {
+    margin-left: 0;  /* Supprime la marge à gauche */
+  }
+
+  /* Bloc de navigation du menu */
+  .bloc-menu-nav {
+    width: 100%; /* Largeur ajustée à 100% */
+    height: auto; /* Hauteur ajustée automatiquement */
+    flex-direction: column; /* Aligne les éléments en colonne */
+  }
+
+  /* Menu */
+  .menu {
+    width: 100%; /* Largeur ajustée à 100% */
+    padding-right: 0; /* Réduit le padding à droite */
+  }
+
+  /* Navigation */
+  #navigation {
+    flex-direction: column; /* Aligne les éléments en colonne */
+  }
+
+  /* Menu footer */
+  #menu-footer {
+    width: 100%; /* Largeur ajustée à 100% */
+    padding-left: 0; /* Réduit le padding à gauche */
+    gap: 30px; /* Réduit l'espace entre les éléments */
+  }
+
+  /* Contenu d'un seul post */
+  .single_post {
+    padding: 10px; /* Ajoute un padding autour du contenu */
+  }
+
+  /* Informations sur le post */
+  .post-info,
+  .post-image {
+    width: 100%; /* La largeur prend 100% du conteneur */
+  }
+
+  /* Images en bas du post */
+  .img-bas img {
+    max-width: 80%; /* Limite la largeur maximale des images */
+  }
+
+  /* Avatar de navigation */
+  .navigation-avatar img {
+    max-width: 50px; /* Limite la largeur maximale des images */
+  }
+}
+
+/*  **********************************  */
+/*    Media query : max-width: 768px    */
+/*  **********************************  */
+@media (max-width: 768px) {
+
+  /* Cartes */
+  .card {
+    width: 100%; /* Les cartes prennent toute la largeur disponible */
+    margin-bottom: 20px; /* Ajoute un espace de 20px entre les cartes */
+  }
+
+  /* Conteneur des photos */
+  .photos_container {
+    columns: 1; /* Affiche les photos en une seule colonne */
+    width: 100%; /* Définit la largeur à 100% du conteneur parent */
+    column-gap: 20px; /* Réduit l'espace entre les colonnes à 20px */
+  }
+
+  /* Images des posts */
+  .post_img {
+    width: 317.66px; /* Définit une largeur spécifique pour l'image */
+    height: 278.8px; /* Définit une hauteur spécifique pour l'image */
+    margin: 0; /* Réinitialise les marges */
+  }
+
+  .post-img {
+    width: 100%; /* Définit la largeur à 100% du conteneur parent */
+    height: 495px; /* Définit une hauteur spécifique pour l'image */
+    margin: 0; /* Réinitialise les marges */
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne suivante */
+    right: 0; /* Aligne à droite */
+  }
+
+  /* Titre et catégorie des posts */
+  .title,
+  .categorie {
+    font-size: 14px; /* Réduit légèrement la taille de la police */
+    margin: 400px 0px 0px -10px; /* Ajuste les marges */
+  }
+
+  /* Icônes (œil et fullscreen) */
+  .oeil,
+  .fullscreen {
+    width: 30px; /* Réduit la taille des icônes */
+    height: 30px; /* Réduit la hauteur des icônes */
+  }
+
+  /* Bouton de galerie */
+  .galbtn {
+    width: 100%; /* La largeur du bouton prend 100% de celle du conteneur */
+  }
+
+  /* Conteneur d'un seul post */
+  .container.single_post {
+    width: 100%; /* La largeur prend 100% du conteneur parent */
+    height: auto; /* La hauteur ajuste automatiquement */
+    margin: auto; /* Centre le conteneur horizontalement */
+  }
+
+  /* Informations sur le post */
+  .post-info {
+    display: flex; /* Utilise Flexbox pour l'affichage */
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne suivante */
+  }
+
+  /* Titre d'un seul post */
+  .single_title {
+    font-size: 40px; /* Définit la taille de la police du titre à 40 pixels */
+    width: 100%; /* La largeur du titre prend 100% du conteneur */
+  }
+
+  /* Bouton de contact */
+  .contact-button {
+    width: 100%; /* La largeur du bouton prend 100% de celle du conteneur */
+  }
+
+  /* Conteneur des filtres et options de tri */
+  .filters-and-sort {
+    flex-direction: column;  /* Aligne les filtres en colonne */
+    padding: 30px 15px;  /* Ajuste le padding autour des filtres */
+    align-items: center; /* Centre les éléments horizontalement */
+  }
+
+  /* Sélecteurs dans les filtres et options de tri */
+  #category-filter,
+  #format-filter,
+  #date-sort {
+    width: 100%;  /* Ajuste la largeur des filtres */
+    margin: 10px 0;  /* Ajuste les marges */
+  }
+
+  /* Sélecteur de date de tri */
+  #date-sort {
+    margin-left: 0;  /* Supprime la marge à gauche */
+  }
+
+  /* Bloc de navigation du menu */
+  .bloc-menu-nav {
+    width: 100%; /* Largeur ajustée à 100% */
+    height: auto; /* Hauteur ajustée automatiquement */
+    display: none; /* Masque le menu de navigation */
+  }
+
+  /* Menu */
+  .menu {
+    width: 100%; /* Largeur ajustée à 100% */
+    padding-right: 0; /* Réduit le padding à droite */
+    display: none; /* Masque le menu */
+  }
+
+  /* Menu footer */
+  #menu-footer {
+    width: 100%; /* Largeur ajustée à 100% */
+    padding-left: 0; /* Réduit le padding à gauche */
+    gap: 40px; /* Réduit l'espace entre les éléments */
+  }
+
+  /* En-tête */
+  header {
+    text-align: center; /* Centre le texte dans l'en-tête */
+    background-color: #f8f8f8f8; /* Définit la couleur de fond de l'en-tête */
+    width: auto; /* Définit la largeur de l'en-tête */
+    height: 80px; /* Définit la hauteur de l'en-tête */
+    margin: auto; /* Centre l'en-tête horizontalement */
+  }
+
+  /* Événement */
+  .evento {
+    max-width: 973px; /* Définit la largeur maximale */
+    max-height: 1024px; /* Définit la hauteur maximale */
+    position: absolute; /* Positionne l'élément de manière absolue */
+    margin: -810px 0px 0px 233px; /* Ajuste les marges */
+    object-fit: contain; /* Ajuste la taille de l'objet pour le contenir */
+  }
+
+  /* Contenu d'un seul post */
+  .single_post {
+    flex-direction: column; /* Aligne les éléments en colonne */
+    text-align: center; /* Centre le texte */
+  }
+
+  /* Informations et image du post */
+  .post-info,
+  .post-image {
+    width: 100%; /* La largeur prend 100% du conteneur */
+  }
+
+  /* Ligne de contact */
+  .contact_line {
+    flex-direction: column; /* Aligne les éléments en colonne */
+    align-items: center; /* Centre les éléments horizontalement */
+  }
+
+  /* Avatar de navigation */
+  .navigation-avatar {
+    flex-direction: column; /* Aligne les éléments en colonne */
+    align-items: center; /* Centre les éléments horizontalement */
+  }
+
+  /* Images en bas du post */
+  .img-bas img {
+    max-width: 60%; /* Limite la largeur maximale des images */
+  }
+}
+
+
+/*  **********************************  */
+/*    Media query : max-width: 850px    */
+/*  **********************************  */
+@media (max-width: 850px) {
+
+  /* Cartes */
+  .card {
+    width: 100%; /* Les cartes prennent toute la largeur disponible */
+    margin-bottom: 20px; /* Ajoute un espace de 20px entre les cartes */
+  }
+
+  /* Conteneur des photos */
+  .photos_container {
+    columns: 1; /* Affiche les photos en une seule colonne */
+    width: 100%; /* Définit la largeur à 100% du conteneur parent */
+    column-gap: 15px; /* Réduit l'espace entre les colonnes à 15px */
+  }
+
+  /* Images des posts */
+  .post_img {
+    width: 100%; /* Définit la largeur à 100% du conteneur parent */
+    height: auto; /* Ajuste la hauteur automatiquement */
+    margin: 0; /* Réinitialise les marges */
+  }
+
+  .post-img {
+    width: 100%; /* Définit la largeur à 100% du conteneur parent */
+    height: auto; /* Ajuste la hauteur automatiquement */
+    margin: 0; /* Réinitialise les marges */
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne suivante */
+    right: 0; /* Aligne à droite */
+  }
+
+  .hero-area img {
+    width: 83%;
+    margin-left: -30px;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+  .evento {
+    max-width: 540px;
+    max-height: 900px;
+    position: absolute;
+    margin: -482px 0px 0px 176px;
+    object-fit: contain;
+}
+
+
+  /* Titre et catégorie des posts */
+  .title,
+  .categorie {
+    font-size: 16px; /* Réduit légèrement la taille de la police à 16px */
+    margin: 200px 0px 0px -10px; /* Ajuste les marges */
+  }
+
+  /* Icônes (œil et fullscreen) */
+  .oeil,
+  .fullscreen {
+    width: 28px; /* Réduit la taille des icônes à 28px */
+    height: 28px; /* Réduit la hauteur des icônes à 28px */
+  }
+
+  /* Bouton de galerie */
+  .galbtn {
+    width: 100%; /* La largeur du bouton prend 100% de celle du conteneur */
+  }
+
+  /* Conteneur d'un seul post */
+  .container.single_post {
+    width: 100%; /* La largeur prend 100% du conteneur parent */
+    height: auto; /* La hauteur ajuste automatiquement */
+    margin: auto; /* Centre le conteneur horizontalement */
+  }
+
+  /* Informations sur le post */
+  .post-info {
+    display: flex; /* Utilise Flexbox pour l'affichage */
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne suivante */
+  }
+
+  /* Titre d'un seul post */
+  .single_title {
+    font-size: 36px; /* Définit la taille de la police du titre à 36 pixels */
+    width: 100%; /* La largeur du titre prend 100% du conteneur */
+  }
+
+  /* Bouton de contact */
+  .contact-button {
+    width: 100%; /* La largeur du bouton prend 100% de celle du conteneur */
+  }
+
+  /* Conteneur des filtres et options de tri */
+  .filters-and-sort {
+    align-items: center;
+  }
+
+  /* Sélecteurs dans les filtres et options de tri */
+  #category-filter,
+  #format-filter,
+  #date-sort {
+    width: 100%;  /* Ajuste la largeur des filtres */
+    margin: 10px 0;  /* Ajuste les marges */
+  }
+
+  /* Sélecteur de date de tri */
+  #date-sort {
+    margin-left: 0;  /* Supprime la marge à gauche */
+  }
+
+  /* Bloc de navigation du menu */
+  .bloc-menu-nav {
+    width: 100%; /* Largeur ajustée à 100% */
+    height: auto; /* Hauteur ajustée automatiquement */
+    display: none; /* Masque le menu de navigation */
+  }
+
+  /* Menu */
+  .menu {
+    width: 100%; /* Largeur ajustée à 100% */
+    padding-right: 0; /* Réduit le padding à droite */
+    display: none; /* Masque le menu */
+  }
+
+  /* Menu footer */
+  #menu-footer {
+    width: 100%; /* Largeur ajustée à 100% */
+    padding-left: 0; /* Réduit le padding à gauche */
+    gap: 30px; /* Réduit l'espace entre les éléments */
+  }
+
+  /* En-tête */
+  header {
+    text-align: center; /* Centre le texte dans l'en-tête */
+    background-color: #f8f8f8f8; /* Définit la couleur de fond de l'en-tête */
+    width: auto; /* Définit la largeur de l'en-tête */
+    height: 70px; /* Définit la hauteur de l'en-tête */
+    margin: auto; /* Centre l'en-tête horizontalement */
+  }
+
+  /* Événement */
+  .evento {
+    max-width: 800px; /* Définit la largeur maximale */
+    max-height: 900px; /* Définit la hauteur maximale */
+    position: absolute; /* Positionne l'élément de manière absolue */
+    margin: -600px 0px 0px 150px; /* Ajuste les marges */
+    object-fit: contain; /* Ajuste la taille de l'objet pour le contenir */
+  }
+
+  /* Contenu d'un seul post */
+  .single_post {
+    flex-direction: column; /* Aligne les éléments en colonne */
+    text-align: center; /* Centre le texte */
+  }
+
+  /* Informations et image du post */
+  .post-info,
+  .post-image {
+    width: 100%; /* La largeur prend 100% du conteneur */
+  }
+
+  /* Ligne de contact */
+  .contact_line {
+    flex-direction: column; /* Aligne les éléments en colonne */
+    align-items: center; /* Centre les éléments horizontalement */
+  }
+
+  /* Avatar de navigation */
+  .navigation-avatar {
+    flex-direction: column; /* Aligne les éléments en colonne */
+    align-items: center; /* Centre les éléments horizontalement */
+  }
+
+  /* Images en bas du post */
+  .img-bas img {
+    max-width: 70%; /* Limite la largeur maximale des images */
+  }
+}
+
+
+/*  **********************************  */
+/*    Media query : max-width: 1023px   */
+/*  **********************************  */
+@media (max-width: 1023px) {
+
+  /* Conteneur des photos */
+  .photos_container {
+    columns: 1; /* Affiche les photos en deux colonnes */
+    width: 75%; /* Définit la largeur à 100% du conteneur parent */
+  }
+
+  /* En-tête */
+  header {
+    text-align: center; /* Centre le texte dans l'en-tête */
+    background-color: #f8f8f8f8; /* Définit la couleur de fond de l'en-tête */
+    width: auto; /* Définit la largeur de l'en-tête */
+    height: 80px; /* Définit la hauteur de l'en-tête */
+    margin: auto; /* Centre l'en-tête horizontalement */
+  }
+/* Hero*/
+  .hero-area img {
+    width: 83%;
+    margin-left: -57px;
+}
+/* Photos Photograph event */
+  .evento {
+      max-width: 640px;
+      max-height: 919px;
+      position: absolute;
+      margin: -543px 0px 0px 156px;
+      object-fit: contain;
+  }
+  /* Image des posts */
+  .post_img {
+    width: 100%; /* Ajuste la largeur de l'image */
+    height: auto; /* Ajuste la hauteur de l'image */
+    margin: 0; /* Réinitialise les marges */
+  }
+
+  /* Titre et catégorie */
+  .title,
+  .categorie {
+    font-size: 15px; /* Réduit légèrement la taille de la police */
+    margin: 400px 0px 0px -10px; /* Ajuste les marges */
+  }
+
+  /* Icônes */
+  .oeil,
+  .fullscreen {
+    width: 35px; /* Réduit la taille des icônes */
+    height: 35px; /* Réduit la hauteur des icônes */
+  }
+
+  /* Bouton de galerie */
+  .galbtn {
+    width: 32%; /* La largeur du bouton prend 100% de la largeur du conteneur */
+  }
+
+  /* Conteneur de post unique */
+  .container.single_post {
+    width: 100%; /* La largeur du conteneur prend 100% de la largeur du conteneur parent */
+    height: auto; /* La hauteur du conteneur s'ajuste automatiquement */
+  }
+
+  /* Titre du post */
+  .single_title {
+    font-size: 50px; /* Réduit la taille de la police du titre à 50 pixels */
+    width: 100%; /* La largeur du titre prend 100% de la largeur du conteneur */
+  }
+
+  /* Bouton de contact */
+  .contact-button {
+    width: 100%; /* La largeur du bouton prend 100% de la largeur du conteneur */
+  }
+
+  /* Filtres et tri */
+  .filters-and-sort {
+    padding-right: 20px; /* Réduit le padding à droite */
+    padding-left: 20px; /* Réduit le padding à gauche */
+    padding: 62px 0px 63px 325px;
+  }
+
+  .nice-select {
+    max-width: 260px;
+    max-height: 42px;
+    margin-left: 74px;
+}
+
+
+  #category-filter {
+    margin-right: 30px; /* Ajuste la marge à droite */
+  }
+
+  #date-sort {
+    margin-left: 20px; /* Ajuste la marge à gauche */
+  }
+
+  /* Menu de navigation */
+  .bloc-menu-nav {
+    max-width: 934px;
+    margin-left: 53px;
+}
+
+  .menu {
+    width: 100%; /* Largeur du menu ajustée à 100% */
+    padding-right: 0; /* Réduit le padding à droite */
+    font-size: 14px; /* Réduit la taille de la police */
+  }
+
+  #menu-footer {
+    padding-left: -2px;
+  }
+
+  /* Post unique */
+  .single_post {
+    padding: 15px; /* Ajoute du padding autour du post */
+  }
+
+  /* Informations du post */
+  .post-info {
+    width: 60%; /* Ajuste la largeur des informations du post */
+  }
+
+  /* Image du post */
+  .post-image {
+    width: 100%; /* Ajuste la largeur de l'image du post */
+  }
+
+  /* Images en bas */
+  .img-bas img {
+    max-width: 90%; /* Ajuste la largeur maximale des images en bas */
+  }
+
+  /* Avatar de navigation */
+  .navigation-avatar img {
+    max-width: 65px; /* Réduit la largeur maximale des images d'avatar */
+  }
+}
+
+
+/*  **********************************  */
+/*    Media query : max-width: 1200px    */
+/*  **********************************  */
+@media (max-width: 1200px) {
+/* contenair photos */
+  .photos_container {
+    columns: 1;
+    width: 75%;
+    overflow: hidden;
+    column-gap: 10px;
+    width: 1148px;
+    margin: 0 auto;
+    padding: 5px;
+  }
+  /* Photos Photograph event */
+  .evento {
+    max-width: 640px;
+    max-height: 919px;
+    position: absolute;
+    margin: -543px 0px 0px 156px;
+    object-fit: contain;
+}
+/* Hero*/
+  .hero-area .hero-thumbnail {
+    position: relative;
+    margin: 0;
+    width: 66%;
+    overflow: hidden;
+    background-size: contain;
+  }
+  /* Btn charger plus */
+  .galerie_btn {
+      display: flex;
+      align-items: center;
+      width: 930px;
+      margin: 0;
+      padding: 40px 0;
+      justify-content: center;
+  }
+  /* Overlay galerie photos */
+  .lightbox-trigger:hover .overlay {
+    opacity: 1;
+    margin-left: 40px;
+}
+
+ /* Filtres et tri */
+ .filters-and-sort {
+  width: 20em;
+  height: 43px;
+  margin: 0px 0 0px -40px;
+  padding: 63px 0px 63px 147px;
+}
+.lightbox {
+  left: -237px;
+}
+
+  /* Image des posts */
+  .post_img {
+    width: 564px; /* Ajuste la largeur de l'image */
+    height: 495px; /* Ajuste la hauteur de l'image */
+    margin: 0; /* Réinitialise les marges */
+  }
+
+  /* Titre et catégorie */
+  .title,
+  .categorie {
+    font-size: 16px; /* Réduit légèrement la taille de la police */
+    margin: 400px 0px 0px -10px; /* Ajuste les marges */
+  }
+
+  /* Icônes */
+  .oeil,
+  .fullscreen {
+    width: 35px; /* Ajuste la taille des icônes */
+    height: 35px; /* Ajuste la hauteur des icônes */
+  }
+
+  /* Conteneur de post unique */
+  .container.single_post {
+    width: 1148px; /* Réinitialise la largeur du conteneur à 1148 pixels */
+    height: 844px; /* Réinitialise la hauteur du conteneur à 844 pixels */
+  }
+
+  /* Titre du post */
+  .single_title {
+    font-size: 66px; /* Réinitialise la taille de la police du titre à 66 pixels */
+    width: 560px; /* Réinitialise la largeur du titre à 560 pixels */
+  }
+
+  /* Bouton de contact */
+  .contact-button {
+    width: 272px; /* Réinitialise la largeur du bouton à 272 pixels */
+  }
+  
+  /* Menu de navigation */
+  .bloc-menu-nav {
+    width: 1050px; /* Réajuste la largeur du menu */
+    height: 80px; /* Réajuste la hauteur du menu */
+  }
+
+  .menu {
+    width: 509px; /* Réajuste la largeur du menu */
+    padding-right: 115px; /* Réajuste le padding à droite */
+    font-size: 16px; /* Réajuste la taille de la police */
+  }
+
+  /* Footer */
+  #menu-footer {
+    width: 910px; /* Réajuste la largeur du footer */
+    gap: 100px; /* Réajuste l'espace entre les éléments */
+    margin: 0;/*  Ajuste les marges */
+  }
+
+  /* Post unique */
+  .single_post {
+    padding: 20px; /* Ajoute du padding autour du post */
+  }
+
+  /* Informations du post */
+  .post-info {
+    width: 70%; /* Ajuste la largeur des informations du post */
+  }
+
+  /* Image du post */
+  .post-image {
+    width: 100%; /* Ajuste la largeur de l'image du post */
+  }
+
+  /* Images en bas */
+  .img-bas img {
+    max-width: 100%; /* Ajuste la largeur maximale des images en bas */
+  }
+
+  /* Avatar de navigation */
+  .navigation-avatar img {
+    max-width: 70px; /* Réduit la largeur maximale des images d'avatar */
+  }
 }

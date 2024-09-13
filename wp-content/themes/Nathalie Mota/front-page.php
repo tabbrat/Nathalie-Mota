@@ -1,6 +1,8 @@
 <?php get_header(); ?>
-<!-- Inclut header.php où le DOCTYPE est défini, ce qui peut causer le "Quirks Mode" (mode bizarreries) -->
+
+<!-- Inclut dans "header.php" où le DOCTYPE est défini, ce qui peut causer le "Quirks Mode" (mode bizarreries) -->
 <!---    -----------------------------------HERO------------------------------------------------------------------------------   --->
+
 <main class="site-main">
     <!-- Section Hero -->
     <section class="hero">
@@ -20,7 +22,7 @@
                 <?php while ($query_hero->have_posts()) : ?>
                     <?php $query_hero->the_post(); ?>
                     <?php if (has_post_thumbnail()) : ?>
-                        <!-- Si le post a une image mise en avant, on l'affiche avec un lien vers l'article complet -->
+                        <!-- Si le post a une photo mise en avant, on l'affiche avec un lien vers l'article complet -->
                         <a href="<?php the_permalink(); ?>" alt="<?php the_title(); ?>"><?php the_post_thumbnail('hero'); ?></a>
                     <?php endif; ?>
                 <?php endwhile; ?>
@@ -28,11 +30,13 @@
         </div>
         <?php wp_reset_postdata(); // Réinitialise les données post pour la requête principale ?>
     </section>
+
 <!---   -------------------------------------section filtres--------------------------------------------------------------------   --->
+
     <!-- Filtres -->
     <div class="filters-and-sort">
         <!-- Filtre | Catégorie -->
-        <select name="category-filter" id="category-filter">
+        <select name="category-filter" class="selectize" id="category-filter">
             <option value="ALL">CATÉGORIE</option>
             <?php
             // Récupère les termes de la taxonomie 'categorie'
@@ -45,7 +49,7 @@
         </select>
 
         <!-- Filtre | Format -->
-        <select name="format-filter" id="format-filter">
+        <select name="format-filter" class="selectize" id="format-filter">
             <option value="ALL">FORMAT</option>
             <?php
             $photo_formats = get_terms('format');// Récupère les termes de la taxonomie 'format'
@@ -59,7 +63,7 @@
         </select>
 
         <!-- Filtre | Trier par date -->
-        <select name="date-sort" id="date-sort">
+        <select name="date-sort" class="selectize" id="date-sort">
             <option value="ALL">TRIER PAR</option>
             <option value="DESC">Du plus récent au plus ancien</option>
             <option value="ASC">Du plus ancien au plus récent</option>
@@ -68,9 +72,11 @@
 
     <!-- Titre de la section -->
     <div>
-        <h1>PHOTOGRAPHE EVENT</h1>
+        <img class="evento" src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/Titre header.png'); ?>" alt="" />
     </div>
-<!---   -------------------------------------section charger plus--------------------------------------------------------------------   --->
+
+<!---   -------------------------------------section charger plus---------------------------------------------------------------   --->
+
     <!-- Section | Photos avec Lightbox et Bouton Charger Plus -->
     <section class="photos_container">
         <?php
@@ -87,25 +93,53 @@
                 $post_id = get_the_ID();  // Récupère l'ID du post actuel
         ?>
                <!-- Carte individuelle pour chaque photo -->
-<article class="card">
-        <h2 class="title"><?php the_title(); ?></h2>
-        <h2 class="categorie"><?php the_terms(get_the_ID(), 'categorie'); ?></h2>
-        <a href="<?php echo get_the_post_thumbnail_url(); ?>" class="lightbox-trigger">
-        <img class="post_img" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>" />
-        <img class="oeil" src="<?php echo get_the_post_thumbnail_url('assets/img/eye.png'); ?>" alt="oeil" />
-        <img class="fullscreen" src="<?php echo get_the_post_thumbnail_url('assets/img/fullscreen.png'); ?>" alt="fullscreen.png" />
-    </a>
+ <article class="card">
+    <h2 class="title"><?php the_title(); ?></h2>
+    <h2 class="categorie"><?php the_terms(get_the_ID(), 'categorie'); ?></h2>
+    <?php
+    // Récupération de la référence via ACF
+    $reference = get_field('reference'); // Remplace 'reference' par le nom de champ personnalisé
+    ?>
+
+   <!-- Carte individuelle pour chaque photo -->
+    <span 
+        class="lightbox-trigger" 
+        data-category="<?php echo esc_attr(get_the_terms(get_the_ID(), 'categorie')[0]->name); // Catégorie de l'image ?>" 
+        data-reference="<?php echo esc_attr($reference); //Référence de la photo ?>" 
+    >
+        <!-- photo de la carte -->
+        <img class="post_img" src="<?php echo esc_url(get_the_post_thumbnail_url()); ?>" alt="<?php the_title(); ?>" />
+        
+<!----   ------------------------------------------ Icônes photos galerie ---------------------------------------------------   ----->
+         <!---lien vers la page single.php la page des photo --->
+         <a href="<?php the_permalink(); ?>">
+
+             <img class="oeil" src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/eye.png'); ?>" alt="Oeil" />
+         </a>
+        <img class="fullscreen" src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/fullscreen.png'); ?>" alt="Plein écran" />
+        
+        <!-- Contenu de l'overlay caché par défaut -->
+        <div class="overlay">
+            <div class="info">
+                <div class="reference"></div> <!-- Référence de l'image -->
+                <div class="category"></div> <!-- Catégorie de l'image -->
+            </div>
+        </div>
+    </span>
 </article>
         <?php endwhile;
         endif;
         wp_reset_postdata(); // Réinitialise les données post pour la requête principale ?>
-        
+       
     </section>
-<!---   -------------------------------------bouton charger plus--------------------------------------------------------------------   --->
+
+<!---   -------------------------------------bouton charger plus----------------------------------------------------------------   --->
+
     <!-- "Charger Plus" -->
     <div class="galerie_btn">
         <input id="load-more" class="galbtn" type="button" value="Charger plus">
     </div>
 
 </main>
+
 <?php get_footer(); ?> 

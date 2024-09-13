@@ -11,38 +11,43 @@ if ( ! function_exists( 'wp_body_open' ) ) {
 function nathalie_mota_theme() {
     // Enfile le fichier CSS principal du thème
     wp_enqueue_style( 'Nathalie-Mota-style', get_stylesheet_uri(), array(), '1.0' );
+    // fichier du extension Nice-select-2 css
+    wp_enqueue_style('nice-select-2', get_template_directory_uri() . '/assets/css/nice-select2.css' );
 }
-
 
 // Fonction pour charger les scripts JS personnalisés
 function enqueue_my_scripts() {
     // Enfile le script JS principal du thème
     wp_enqueue_script('my-scripts', get_template_directory_uri() . '/assets/js/scripts.js', array('jquery'), null, true);
 
+    // nice-selct2 script
+    wp_enqueue_script('nice-select-2-js', get_template_directory_uri() .  '/assets/js/nice-select2.js', array(), null, true);
+    // script pour modifier les select filtre on html
+    wp_enqueue_script('select-js', get_template_directory_uri() .  '/assets/js/select.js', array('nice-select-2-js'), null, true);
+    
     // Passe l'URL du template (chemin du thème) au script JS
     wp_localize_script('my-scripts', 'myTheme', array(
-        'templateUrl' => get_template_directory_uri(),
+        'templateUrl' => get_template_directory_uri()
     ));
 
     // Passe l'URL pour les requêtes AJAX au script JS
-    wp_localize_script('my-scripts', 'myAjax', array(
-        'ajaxUrl' => admin_url('admin-ajax.php'),
+    wp_localize_script('my-scripts', 'nathalie_mota', array(
+        'ajaxurl' => admin_url('admin-ajax.php')
     ));
-
-    // activer les Dashicons sur le front-end 
-    wp_enqueue_style ( 'dashicons' ); 
 }
+
 //----------------------------------------fonction chargement plus de photos----------------------------------------------
 // Fonction pour charger plus de photos via AJAX
 function load_more_photos() {
     // Récupère la page actuelle envoyée par l'appel AJAX
+    // 'page' est la donnée envoyée via AJAX pour savoir quelle page de photos charger
     $paged = $_POST['page'];
     
     // Définition des arguments pour la requête WP_Query
     $args = array(
-        'post_type' => 'photo', // Type de contenu 'photo'
-        'posts_per_page' => 8,  // Nombre de photos par page
-        'paged' => $paged,      // Page actuelle
+        'post_type' => 'photo', // Type de contenu 'photo' (le type d'article personnalisé que vous avez défini pour les photos)
+        'posts_per_page' => 8,  // Nombre de photos à afficher par page
+        'paged' => $paged,      // Page actuelle à afficher, récupérée depuis la requête AJAX
     );
 
     // Exécute la requête WP_Query avec les arguments définis
@@ -51,32 +56,74 @@ function load_more_photos() {
     // Vérifie s'il y a des résultats à afficher
     if ($query->have_posts()) :
         // Boucle pour afficher les photos
-        while ($query->have_posts()) : $query->the_post(); ?>
+        while ($query->have_posts()) : $query->the_post();
+            // Récupère l'ID du post actuel
+            $post_id = get_the_ID();
+            // Récupération de la référence via ACF (Advanced Custom Fields)
+            $reference = get_field('reference'); // 'reference' est le nom du champ personnalisé que vous avez défini
+            // Récupération de la catégorie (taxonomie 'categorie') associée à l'image
+            $category = get_the_terms(get_the_ID(), 'categorie')[0]->name; // Récupère le nom de la première catégorie associée
+            ?>
+            <!-- Structure HTML pour chaque photo -->
             <article class="card">
+                <!-- Affiche le titre de la photo -->
                 <h2 class="title"><?php the_title(); ?></h2>
-                <a href="<?php echo get_the_post_thumbnail_url(); ?>" class="lightbox-trigger">
-                    <img class="post_img" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>" />
-                </a>
+                <!-- Affiche la catégorie de la photo -->
+                <h2 class="categorie"><?php echo esc_html($category); ?></h2>
+                <span
+                    class="lightbox-trigger" 
+                    data-category="<?php echo esc_attr($category); // Catégorie de l'image ?>" 
+                    data-reference="<?php echo esc_attr($reference); // Référence de l'image ?>" 
+                >
+                        <!-- Affiche l'image de la carte -->
+                        <img class="post_img" src="<?php echo esc_url(get_the_post_thumbnail_url()); ?>" alt="<?php the_title(); ?>" />
+                        <!-- Affiche l'icône pour la lightbox -->
+                        <!---  lien vers la page single.php la page du photo     ----->
+                        <a href="<?php the_permalink(); ?>">
+
+                            <img class="oeil" src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/eye.png'); ?>" alt="Oeil" />
+                        </a>
+                        <!-- Affiche l'icône pour le plein écran -->
+                        <img class="fullscreen" src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/fullscreen.png'); ?>" alt="Plein écran" />
+                        <!-- Contenu de l'overlay caché par défaut -->
+                        <div class="overlay">
+                            <div class="info">
+                                <!-- Affiche la référence de l'image dans l'overlay -->
+                                <div class="reference"><?php echo esc_html($reference); ?></div>
+                                <!-- Affiche la catégorie de l'image dans l'overlay -->
+                                <div class="category"><?php echo esc_html($category); ?></div>
+                            </div>
+                        </div>
+                </span>
             </article>
-        <?php endwhile;
+            <?php
+        endwhile;
     endif;
 
-    // Réinitialise les données du post
+    // Réinitialise les données du post pour restaurer l'état global des requêtes WordPress
     wp_reset_postdata();
     
     // Termine correctement l'appel AJAX
+    // 'die()' est utilisé pour s'assurer que le script s'arrête ici après avoir envoyé la réponse AJAX
     die();
 }
 
-//---------------------------------------liens creation menu defauts wordpress--------------------------------------------
-// créer un lien pour la gestion des menus dans l'administration
-// et activation d'un menu pour le header et d'un menu pour le footer
-// Visibles ensuite dans Apparence / Menus (after_setup_theme)
-function register_my_menu(){
-    register_nav_menu('header', "Menu principal");
-    register_nav_menu('footer', "Menu pied de page");
- }
- 
+//---------------------------------------liens creations menu defauts wordpress--------------------------------------------
+// Créer un lien pour la gestion des menus dans l'administration
+// et activer un menu pour le header et un autre pour le footer
+// Ces menus seront ensuite visibles dans Apparence / Menus (after_setup_theme)
+function register_my_menu() {
+    // Enregistre un menu de navigation pour le header
+    // Le premier paramètre 'header' est l'identifiant unique du menu
+    // Le deuxième paramètre est le nom affiché dans l'administration de WordPress
+    register_nav_menu('header', 'Menu principal');
+
+    // Enregistre un menu de navigation pour le footer
+    // Le premier paramètre 'footer' est l'identifiant unique du menu
+    // Le deuxième paramètre est le nom affiché dans l'administration de WordPress
+    register_nav_menu('footer', 'Menu pied de page');
+}
+
 //------------------------------------Liens bouton contact page d accuril-------------------------------------------------
 function modify_menu_item($items, $args) {
     // Vérifie si nous sommes sur le menu principal
@@ -159,6 +206,8 @@ function filter_photos() {
 //----Les actions:des hooks que le noyau WP lance à des moments précis de l'exécution ou lorsque des événements spécifiques se produisent.----------//
 //----Les plugins peuvent spécifier qu'une ou plusieurs de ses fonctions PHP sont exécutées à ces moments-là, à l'aide de l'API Action.-------------//
 //--------------------------------------------------------------------------------------------------------------------------------------------------//
+
+
 // Ajoute l'action pour enqueuer les styles lors du chargement des scripts
 // 'wp_enqueue_scripts' est le hook utilisé pour ajouter les styles et les scripts
 // 'nathalie_mota_theme' est la fonction appelée pour enqueuer les styles

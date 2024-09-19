@@ -16,545 +16,814 @@ Text Domain: nathaliemota
 
 /* Supprime la décoration des liens et utilise la couleur héritée */
 a {
-  text-decoration: none; /* Supprime le soulignement des liens */
-  color: inherit; /* Utilise la couleur du texte parent pour les liens */
+  text-decoration: none;
+  /* Supprime le soulignement des liens */
+  color: inherit;
+  /* Utilise la couleur du texte parent pour les liens */
 }
 
 /* Applique un style lorsque l'utilisateur survole le lien */
 a:hover {
-  font-weight: bold; /* Rend le texte du lien en gras au survol */
+  font-weight: bold;
+  /* Rend le texte du lien en gras au survol */
 }
 
 /* Style principal pour la zone du contenu */
 .site-main {
-  columns: 1; /* Affiche les éléments en une seule colonne */
-  width: 1440px; /* Définit la largeur de la zone principale */
-  margin: 0 auto; /* Centre la zone principale horizontalement */
-  padding: 5px; /* Ajoute un espacement interne de 5px */
-}
-
-/* Style du corps de la page */
-body {
-  background: #ffffff; /* Définit la couleur de fond à blanc */
-  color: #23282d; /* Définit la couleur du texte */
-  width: 100vw; /* Définit la largeur à 100% de la largeur de la vue */
-  max-width: 100% !important; /* Assure que la largeur ne dépasse pas 100% */
-  overflow-x: hidden !important; /* Supprime le défilement horizontal */
+  columns: 1;
+  /* Affiche les éléments en une seule colonne */
+  width: 1440px;
+  /* Définit la largeur de la zone principale */
+  margin: 0 auto;
+  /* Centre la zone principale horizontalement */
+  padding: 5px;
+  /* Ajoute un espacement interne de 5px */
 }
 
 /* Style de l'en-tête */
 header {
-  text-align: center; /* Centre le texte dans l'en-tête */
-  background-color: #f8f8f8f8; /* Définit la couleur de fond de l'en-tête */
-  width: 1440px; /* Définit la largeur de l'en-tête */
-  height: 80px; /* Définit la hauteur de l'en-tête */
-  margin: auto; /* Centre l'en-tête horizontalement */
+  text-align: center;
+  /* Centre le texte dans l'en-tête */
+  background-color: #f8f8f8f8;
+  /* Définit la couleur de fond de l'en-tête */
+  width: 1440px;
+  /* Définit la largeur de l'en-tête */
+  height: 80px;
+  /* Définit la hauteur de l'en-tête */
+  margin: auto;
+  /* Centre l'en-tête horizontalement */
 }
 
 /* Style du titre principal photos*/
 
-.evento{
+.evento {
   max-width: 973px;
   max-height: 1024px;
   position: absolute;
-  margin: -664px 0px 0px 233px;
+  margin: -704px 0px 0px 233px;
   object-fit: contain;
 }
+
 /* --------------------------------------------Style pour la section hero --------------------------------------------*/
 .hero {
-  position: relative; /* Positionne la section hero de manière relative */
-  text-align: center; /* Centre le texte dans la section hero */
-  color: rgb(19, 18, 18); /* Définit la couleur du texte dans la section hero */
+  position: relative;
+  /* Positionne la section hero de manière relative */
+  text-align: center;
+  /* Centre le texte dans la section hero */
+  color: rgb(19, 18, 18);
+  /* Définit la couleur du texte dans la section hero */
 }
 
 
 /* Style pour la vignette dans la section hero */
 .hero-area .hero-thumbnail {
-  position: relative; /* Positionne la vignette de manière relative */
-  margin: auto; /* Centre la vignette horizontalement */
-  align-items: center; /* Aligne les éléments au centre verticalement */
-  width: 100%; /* Définit la largeur à 100% du conteneur parent */
-  max-height: 962px; /* Définit la hauteur maximale de la vignette */
-  overflow: hidden; /* Cache tout débordement de contenu */
-  background-size: contain; /* Redimensionne l'image d'arrière-plan pour qu'elle soit contenue */
+  position: relative;
+  /* Positionne la vignette de manière relative */
+  margin: auto;
+  /* Centre la vignette horizontalement */
+  align-items: center;
+  /* Aligne les éléments au centre verticalement */
+  width: 100%;
+  /* Définit la largeur à 100% du conteneur parent */
+  max-height: 962px;
+  /* Définit la hauteur maximale de la vignette */
+  overflow: hidden;
+  /* Cache tout débordement de contenu */
+  background-size: contain;
+  /* Redimensionne l'image d'arrière-plan pour qu'elle soit contenue */
 }
 
 /* Style des images dans la section hero */
 .hero-area img {
-  margin: auto; /* Centre l'image horizontalement */
-  object-fit: cover; /* Recadre l'image pour couvrir tout le conteneur */
-  object-position: 50% 50%; /* Centre l'image à l'intérieur du conteneur */
-  width: 100%; /* Définit la largeur de l'image à 100% du conteneur parent */
-  height: 962px; /* Définit la hauteur automatique pour maintenir les proportions */
-  max-height: 966px; /* Définit la hauteur maximale de l'image */
+  margin: auto;
+  /* Centre l'image horizontalement */
+  object-fit: cover;
+  /* Recadre l'image pour couvrir tout le conteneur */
+  object-position: 50% 50%;
+  /* Centre l'image à l'intérieur du conteneur */
+  width: 100%;
+  /* Définit la largeur de l'image à 100% du conteneur parent */
+  height: 962px;
+  /* Définit la hauteur automatique pour maintenir les proportions */
+  max-height: 966px;
+  /* Définit la hauteur maximale de l'image */
 }
 
 /* --------------------------------------------Style pour le conteneur des photos --------------------------------------------*/
 .photos_container {
-  columns: 2; /* Affiche les photos en deux colonnes */
-  overflow: hidden; /* Cache tout débordement de contenu */
-  column-gap: 10px; /* Définit l'espace entre les colonnes */
-  width: 1148px; /* Définit la largeur du conteneur des photos */
-  margin: 0 auto; /* Centre le conteneur des photos horizontalement */
-  padding: 5px; /* Ajoute un espacement interne de 5px */
+  columns: 2;
+  /* Affiche les photos en deux colonnes */
+  overflow: hidden;
+  /* Cache tout débordement de contenu */
+  column-gap: 10px;
+  /* Définit l'espace entre les colonnes */
+  width: 1148px;
+  /* Définit la largeur du conteneur des photos */
+  margin: 0 auto;
+  /* Centre le conteneur des photos horizontalement */
+  padding: 5px;
+  /* Ajoute un espacement interne de 5px */
 }
 
 /* Style pour les images des posts */
 .post_img {
-  object-fit: cover; /* Recadre l'image pour couvrir tout le conteneur */
-  width: 564px; /* Définit la largeur de l'image */
-  height: 495px; /* Définit la hauteur de l'image */
-  overflow: hidden; /* Cache tout débordement de contenu */
-  margin: 0 0 0 -40px; /* Ajuste les marges pour l'image */
+  object-fit: cover;
+  /* Recadre l'image pour couvrir tout le conteneur */
+  width: 564px;
+  /* Définit la largeur de l'image */
+  height: 495px;
+  /* Définit la hauteur de l'image */
+  overflow: hidden;
+  /* Cache tout débordement de contenu */
+  margin: 0 0 0 -40px;
+  /* Ajuste les marges pour l'image */
 }
 
 /* Style pour les titres des photos */
 .title {
-  position: absolute; /* Positionne le titre de manière absolue */
-  float: left; /* Aligne le titre à gauche */
-  margin: 449px 0px 0px -20px; /* Ajuste les marges autour du titre */
-  color: #ffffff; /* Définit la couleur du texte */
-  Width: auto; /* Définit la largeur automatique du titre */
-  Height: 21px; /* Définit la hauteur du titre */
-  font-family: 'Poppins'; /* Définit la police du titre */
-  font-size: 14px; /* Définit la taille de la police */
-  font-weight: 500; /* Définit le poids de la police à 500 (semi-gras) */
-  line-height: 21px; /* Définit la hauteur de ligne */
-  text-align: left; /* Aligne le texte à gauche */
-  text-transform: uppercase; /* Transforme le texte en majuscules */
+  position: absolute;
+  /* Positionne le titre de manière absolue */
+  float: left;
+  /* Aligne le titre à gauche */
+  margin: 449px 0px 0px -20px;
+  /* Ajuste les marges autour du titre */
+  color: #ffffff;
+  /* Définit la couleur du texte */
+  Width: auto;
+  /* Définit la largeur automatique du titre */
+  Height: 21px;
+  /* Définit la hauteur du titre */
+  font-family: 'Poppins';
+  /* Définit la police du titre */
+  font-size: 14px;
+  /* Définit la taille de la police */
+  font-weight: 500;
+  /* Définit le poids de la police à 500 (semi-gras) */
+  line-height: 21px;
+  /* Définit la hauteur de ligne */
+  text-align: left;
+  /* Aligne le texte à gauche */
+  text-transform: uppercase;
+  /* Transforme le texte en majuscules */
 }
 
 /* Style pour les catégories des photos */
 .categorie {
-  position: absolute; /* Positionne la catégorie de manière absolue */
-  float: left; /* Aligne la catégorie à gauche */
-  margin: 449px 0px 0px -20px; /* Ajuste les marges autour de la catégorie */
-  color: #ffffff; /* Définit la couleur du texte */
-  Width: 524px; /* Définit la largeur de la catégorie */
-  Height: 21px; /* Définit la hauteur de la catégorie */
-  font-family: 'Poppins'; /* Définit la police de la catégorie */
-  font-size: 14px; /* Définit la taille de la police */
-  font-weight: 500; /* Définit le poids de la police à 500 (semi-gras) */
-  line-height: 21px; /* Définit la hauteur de ligne */
-  text-align: right; /* Aligne le texte à droite */
-  text-transform: uppercase; /* Transforme le texte en majuscules */
+  position: absolute;
+  /* Positionne la catégorie de manière absolue */
+  float: left;
+  /* Aligne la catégorie à gauche */
+  margin: 449px 0px 0px -20px;
+  /* Ajuste les marges autour de la catégorie */
+  color: #ffffff;
+  /* Définit la couleur du texte */
+  Width: 524px;
+  /* Définit la largeur de la catégorie */
+  Height: 21px;
+  /* Définit la hauteur de la catégorie */
+  font-family: 'Poppins';
+  /* Définit la police de la catégorie */
+  font-size: 14px;
+  /* Définit la taille de la police */
+  font-weight: 500;
+  /* Définit le poids de la police à 500 (semi-gras) */
+  line-height: 21px;
+  /* Définit la hauteur de ligne */
+  text-align: right;
+  /* Aligne le texte à droite */
+  text-transform: uppercase;
+  /* Transforme le texte en majuscules */
 }
 
 
 /*--------------------------------Style de base pour la lightbox-trigger  icons galleries -------------------------------------------------- */
 /* Style de base pour la lightbox-trigger */
 .lightbox-trigger {
-  position: relative; /* Position relative pour positionner les éléments internes */
-  display: inline-block; /* Affichage en ligne pour les éléments inline */
+  position: relative;
+  /* Position relative pour positionner les éléments internes */
+  display: inline-block;
+  /* Affichage en ligne pour les éléments inline */
 }
 
 /* Conteneur pour le fond sombre et les éléments au survol */
 .lightbox-trigger .overlay {
-  position: absolute; /* Positionne l'overlay par rapport au conteneur parent */
-  top: 0; /* Positionne l'overlay en haut du conteneur */
-  left: -40px; /* Positionne l'overlay à gauche du conteneur */
-  width: 564px; /* Assure que l'overlay couvre toute la largeur du conteneur */
-  height: 495px; /* Assure que l'overlay couvre toute la hauteur du conteneur */
-  background-color: rgba(0, 0, 0, 0.6); /* Fond sombre avec transparence */
-  color: white; /* Couleur du texte dans l'overlay */
-  display: flex; /* Utilise flexbox pour centrer le contenu */
-  flex-direction: column; /* Dispose les éléments en colonne */
-  justify-content: center; /* Centre verticalement les éléments */
-  align-items: center; /* Centre horizontalement les éléments */
-  opacity: 0; /* Caché par défaut */
-  transition: opacity 0.3s ease; /* Transition douce pour l'apparition de l'overlay */
-  z-index: 10; /* Assure que l'overlay est au-dessus de l'image */
+  position: absolute;
+  /* Positionne l'overlay par rapport au conteneur parent */
+  top: 0;
+  /* Positionne l'overlay en haut du conteneur */
+  left: -40px;
+  /* Positionne l'overlay à gauche du conteneur */
+  width: 564px;
+  /* Assure que l'overlay couvre toute la largeur du conteneur */
+  height: 495px;
+  /* Assure que l'overlay couvre toute la hauteur du conteneur */
+  background-color: rgba(0, 0, 0, 0.6);
+  /* Fond sombre avec transparence */
+  color: white;
+  /* Couleur du texte dans l'overlay */
+  display: flex;
+  /* Utilise flexbox pour centrer le contenu */
+  flex-direction: column;
+  /* Dispose les éléments en colonne */
+  justify-content: center;
+  /* Centre verticalement les éléments */
+  align-items: center;
+  /* Centre horizontalement les éléments */
+  opacity: 0;
+  /* Caché par défaut */
+  transition: opacity 0.3s ease;
+  /* Transition douce pour l'apparition de l'overlay */
+  z-index: 10;
+  /* Assure que l'overlay est au-dessus de l'image */
 }
 
 /* Affichage de l'overlay et des icônes au survol */
 .lightbox-trigger:hover .overlay {
-  opacity: 1; /* Affiche l'overlay au survol */
+  opacity: 1;
+  /* Affiche l'overlay au survol */
 }
 
 /* Style pour les informations (catégorie et référence) */
 .overlay .info {
-  position: absolute; /* Positionne les informations en bas de l'overlay */
-  bottom: 10px; /* Positionne les informations à 10px du bas */
-  width: 100%; /* Assure que l'info occupe toute la largeur de l'overlay */
-  display: flex; /* Utilise flexbox pour disposer les informations en ligne */
-  justify-content: space-between; /* Dispose les éléments en espace égal */
-  padding: 0 10px; /* Espacement horizontal */
+  position: absolute;
+  /* Positionne les informations en bas de l'overlay */
+  bottom: 10px;
+  /* Positionne les informations à 10px du bas */
+  width: 100%;
+  /* Assure que l'info occupe toute la largeur de l'overlay */
+  display: flex;
+  /* Utilise flexbox pour disposer les informations en ligne */
+  justify-content: space-between;
+  /* Dispose les éléments en espace égal */
+  padding: 0 10px;
+  /* Espacement horizontal */
 }
 
 .overlay .info .category,
 .overlay .info .reference {
-  margin: 10px; /* Enlève les marges par défaut */
-  font-size: 18px; /* Ajuste la taille de la police */
-  font-family: 'Space Mono', Sans-serif; /* Définit la police du titre */
+  margin: 10px;
+  /* Enlève les marges par défaut */
+  font-size: 18px;
+  /* Ajuste la taille de la police */
+  font-family: 'Space Mono', Sans-serif;
+  /* Définit la police du titre */
 }
 
 /* Style pour les icônes */
-.oeil, .fullscreen {
-  position: absolute; /* Positionnement absolu pour placer les icônes précisément */
-  z-index: 11; /* Assure que les icônes sont au-dessus de l'overlay */
-  cursor: pointer; /* Change le curseur au survol pour indiquer que c'est cliquable */
-  opacity: 0; /* Caché par défaut */
-  transition: opacity 0.3s ease; /* Transition douce pour l'apparition des icônes */
+.oeil,
+.fullscreen {
+  position: absolute;
+  /* Positionnement absolu pour placer les icônes précisément */
+  z-index: 11;
+  /* Assure que les icônes sont au-dessus de l'overlay */
+  cursor: pointer;
+  /* Change le curseur au survol pour indiquer que c'est cliquable */
+  opacity: 0;
+  /* Caché par défaut */
+  transition: opacity 0.3s ease;
+  /* Transition douce pour l'apparition des icônes */
 }
 
 /* Positionner l'icône "oeil" au centre de l'overlay */
 .oeil {
-  top: 50%; /* Positionne l'icône verticalement au centre */
-  left: 47%; /* Positionne l'icône horizontalement au centre */
-  transform: translate(-50%, -50%); /* Centre l'icône exactement au milieu */
-  width: 10%; /* Ajuste la taille de l'icône */
-  height: 10%; /* Maintient le ratio de l'image */
-  background-color: none; /* Fond sombre au survol de l'icône */
-  border-radius: 50%; /* Forme circulaire */
-  padding: 10px; /* Ajuste la taille de l'icône */
+  top: 50%;
+  /* Positionne l'icône verticalement au centre */
+  left: 47%;
+  /* Positionne l'icône horizontalement au centre */
+  transform: translate(-50%, -50%);
+  /* Centre l'icône exactement au milieu */
+  width: 10%;
+  /* Ajuste la taille de l'icône */
+  height: 10%;
+  /* Maintient le ratio de l'image */
+  background-color: none;
+  /* Fond sombre au survol de l'icône */
+  border-radius: 50%;
+  /* Forme circulaire */
+  padding: 10px;
+  /* Ajuste la taille de l'icône */
 }
 
 /* Positionner l'icône "fullscreen" en haut à gauche */
 .fullscreen {
-  top: 15px; /* Positionne l'icône à 10px du haut */
-  right: 15px; /* Positionne l'icône à 10px de la gauche */
-  width: 35px; /* Ajuste la taille de l'icône */
-  height: auto; /* Maintient le ratio de l'image */
+  top: 15px;
+  /* Positionne l'icône à 10px du haut */
+  right: 15px;
+  /* Positionne l'icône à 10px de la gauche */
+  width: 35px;
+  /* Ajuste la taille de l'icône */
+  height: auto;
+  /* Maintient le ratio de l'image */
 }
 
 /* Affichage des icônes au survol */
 .lightbox-trigger:hover .oeil,
 .lightbox-trigger:hover .fullscreen {
-  opacity: 1; /* Affiche les icônes au survol */
+  opacity: 1;
+  /* Affiche les icônes au survol */
 }
 
 /* Optionnel : ajout d'un effet de zoom au survol des icônes */
-.oeil:hover, .fullscreen:hover {
-  
-  scale: 1; /* Agrandissement au survol */
+.oeil:hover,
+.fullscreen:hover {
+  scale: 1;
+  /* Agrandissement au survol */
 }
 
 /* Style pour la référence */
 .reference {
-  margin-left: auto; /* Placer la référence à gauche */
+  margin-left: auto;
+  /* Placer la référence à gauche */
 }
 
 /* Style pour la catégorie */
 .category {
-  margin-right: auto; /* Placer la catégorie à droite */
+  margin-right: auto;
+  /* Placer la catégorie à droite */
 }
+
 /*------------------------------------------------------Bouton "Charger plus" des galeries--------------------------------------------------  */
 /* Style pour le bouton "Charger plus" */
 .galbtn {
-  width: 272px; /* Définit la largeur du bouton à 272 pixels */
-  height: 50px; /* Définit la hauteur du bouton à 50 pixels */
-  padding: 8px 15px; /* Ajoute un espacement intérieur de 8 pixels en haut et en bas, et de 15 pixels à gauche et à droite */
-  border-radius: 2px 0 0 0; /* Arrondit uniquement le coin supérieur gauche du bouton avec un rayon de 2 pixels, les autres coins restent droits */
-  background-color: #D8D8D8; /* Définit la couleur de fond du bouton en gris clair */
+  width: 272px;
+  /* Définit la largeur du bouton à 272 pixels */
+  height: 50px;
+  /* Définit la hauteur du bouton à 50 pixels */
+  padding: 8px 15px;
+  /* Ajoute un espacement intérieur de 8 pixels en haut et en bas, et de 15 pixels à gauche et à droite */
+  border-radius: 2px 0 0 0;
+  /* Arrondit uniquement le coin supérieur gauche du bouton avec un rayon de 2 pixels, les autres coins restent droits */
+  background-color: #D8D8D8;
+  /* Définit la couleur de fond du bouton en gris clair */
 }
 
 /* Style pour le bouton "Charger plus" lorsqu'il est survolé */
 .galbtn:hover {
-  background-color: black; /* Change la couleur de fond en noir au survol du bouton */
-  color: #ffffff; /* Change la couleur du texte en blanc au survol du bouton */
+  background-color: black;
+  /* Change la couleur de fond en noir au survol du bouton */
+  color: #ffffff;
+  /* Change la couleur du texte en blanc au survol du bouton */
 }
 
 /* Style pour le conteneur du bouton de galerie */
 .galerie_btn {
-  display: flex; /* Utilise le modèle de boîte flexible pour disposer les éléments à l'intérieur du conteneur */
-  align-items: center; /* Centre les éléments verticalement à l'intérieur du conteneur */
-  justify-content: center; /* Centre les éléments horizontalement à l'intérieur du conteneur */
-  width: 1148px; /* Définit la largeur du conteneur à 1148 pixels */
-  margin: auto; /* Centre le conteneur horizontalement dans son conteneur parent */
-  padding: 40px 0; /* Ajoute un espacement intérieur de 40 pixels en haut et en bas, aucun espacement sur les côtés */
+  display: flex;
+  /* Utilise le modèle de boîte flexible pour disposer les éléments à l'intérieur du conteneur */
+  align-items: center;
+  /* Centre les éléments verticalement à l'intérieur du conteneur */
+  justify-content: center;
+  /* Centre les éléments horizontalement à l'intérieur du conteneur */
+  width: 1148px;
+  /* Définit la largeur du conteneur à 1148 pixels */
+  margin: auto;
+  /* Centre le conteneur horizontalement dans son conteneur parent */
+  padding: 40px 0;
+  /* Ajoute un espacement intérieur de 40 pixels en haut et en bas, aucun espacement sur les côtés */
 }
+
 /*-------------------------------------------- Partie en haut fichier single.php - Détail de la photo --------------------------------------------*/
+
 /* Conteneur principal pour une publication unique */
 .container.single_post {
-  display: flex; /* Utilise le modèle de boîte flexible pour aligner les éléments enfants */
-  justify-content: center; /* Centre les éléments horizontalement dans le conteneur */
-  max-width: 1148px; /* Définit la largeur maximale du conteneur à 1148 pixels */
-  margin: auto; /* Centre le conteneur horizontalement dans son conteneur parent */
-  height: 844px; /* Définit la hauteur du conteneur à 844 pixels */
-  width: 563px; /* Définit la largeur du conteneur à 563 pixels */
+  display: flex;
+  /* Utilise le modèle de boîte flexible pour aligner les éléments enfants */
+  justify-content: center;
+  /* Centre les éléments horizontalement dans le conteneur */
+  max-width: 1148px;
+  /* Définit la largeur maximale du conteneur à 1148 pixels */
+  margin: auto;
+  /* Centre le conteneur horizontalement dans son conteneur parent */
+  height: 844px;
+  /* Définit la hauteur du conteneur à 844 pixels */
+  width: 563px;
+  /* Définit la largeur du conteneur à 563 pixels */
 }
 
 /* Conteneur pour les informations de la publication */
 .post-info {
-  display: flex; /* Utilise le modèle de boîte flexible pour aligner les éléments enfants */
-  align-content: flex-end; /* Aligne le contenu flex à l'extrémité du conteneur */
-  align-items: flex-end; /* Aligne les éléments flex à l'extrémité du conteneur */
-  flex-wrap: wrap; /* Permet aux éléments flex de se répartir sur plusieurs lignes si nécessaire */
-  margin: 430px 22px 0 0; /* Ajoute une marge de 430 pixels en haut, 22 pixels à droite, aucun en bas et 0 à gauche */
-  border-bottom: 1px solid #23282d; /* Ajoute une bordure inférieure de 1 pixel, de couleur #23282d (gris foncé) */
-  padding-bottom: 15px; /* Ajoute un espacement intérieur de 15 pixels en bas du conteneur */
+  display: flex;
+  /* Utilise le modèle de boîte flexible pour aligner les éléments enfants */
+  align-content: flex-end;
+  /* Aligne le contenu flex à l'extrémité du conteneur */
+  align-items: flex-end;
+  /* Aligne les éléments flex à l'extrémité du conteneur */
+  flex-wrap: wrap;
+  /* Permet aux éléments flex de se répartir sur plusieurs lignes si nécessaire */
+  margin: 430px 22px 0 0;
+  /* Ajoute une marge de 430 pixels en haut, 22 pixels à droite, aucun en bas et 0 à gauche */
+  border-bottom: 1px solid #23282d;
+  /* Ajoute une bordure inférieure de 1 pixel, de couleur #23282d (gris foncé) */
+  padding-bottom: 15px;
+  /* Ajoute un espacement intérieur de 15 pixels en bas du conteneur */
 }
 
 /* Style pour le titre de la publication */
 .single_title {
-  font-family: 'Space Mono', Sans-serif; /* Définit la police du titre à 'Space Mono' ou une police sans-serif en secours */
-  font-size: 66px; /* Définit la taille de la police à 66 pixels */
-  font-style: italic; /* Applique une inclinaison italique au texte */
-  font-weight: 400; /* Définit le poids de la police à 400 (normal) */
-  line-height: 65px; /* Définit la hauteur de ligne à 65 pixels */
-  text-align: left; /* Aligne le texte à gauche */
-  margin-bottom: 30px; /* Ajoute une marge de 30 pixels en bas du titre */
-  width: 560px; /* Définit la largeur du titre à 560 pixels */
-  height: 116px; /* Définit la hauteur du titre à 116 pixels */
-  text-transform: uppercase; /* Transforme le texte en majuscules */
+  font-family: 'Space Mono', Sans-serif;
+  /* Définit la police du titre à 'Space Mono' ou une police sans-serif en secours */
+  font-size: 66px;
+  /* Définit la taille de la police à 66 pixels */
+  font-style: italic;
+  /* Applique une inclinaison italique au texte */
+  font-weight: 400;
+  /* Définit le poids de la police à 400 (normal) */
+  line-height: 65px;
+  /* Définit la hauteur de ligne à 65 pixels */
+  text-align: left;
+  /* Aligne le texte à gauche */
+  margin-bottom: 30px;
+  /* Ajoute une marge de 30 pixels en bas du titre */
+  width: 560px;
+  /* Définit la largeur du titre à 560 pixels */
+  height: 116px;
+  /* Définit la hauteur du titre à 116 pixels */
+  text-transform: uppercase;
+  /* Transforme le texte en majuscules */
 }
 
 /* Style pour la liste d'événements */
 .event-meta ul {
-  display: flex; /* Utilise le modèle de boîte flexible pour aligner les éléments de la liste */
-  flex-direction: column; /* Aligne les éléments de la liste en colonne */
-  list-style: none; /* Supprime les puces de la liste */
-  font-size: 14px; /* Définit la taille de la police à 14 pixels */
-  padding: 0; /* Supprime l'espacement intérieur de la liste */
-  margin-bottom: 0; /* Supprime la marge en bas de la liste */
+  display: flex;
+  /* Utilise le modèle de boîte flexible pour aligner les éléments de la liste */
+  flex-direction: column;
+  /* Aligne les éléments de la liste en colonne */
+  list-style: none;
+  /* Supprime les puces de la liste */
+  font-size: 14px;
+  /* Définit la taille de la police à 14 pixels */
+  padding: 0;
+  /* Supprime l'espacement intérieur de la liste */
+  margin-bottom: 0;
+  /* Supprime la marge en bas de la liste */
 }
 
 /* Style pour chaque élément de la liste d'événements */
 .event-meta li {
-  font-family: 'Space Mono', Sans-serif; /* Définit la police des éléments de la liste à 'Space Mono' ou une police sans-serif en secours */
-  font-size: 14px; /* Définit la taille de la police à 14 pixels */
-  font-weight: 400; /* Définit le poids de la police à 400 (normal) */
-  line-height: 20.73px; /* Définit la hauteur de ligne à 20.73 pixels */
-  letter-spacing: 0.1em; /* Ajoute un espacement de 0.1em entre les lettres */
-  text-align: left; /* Aligne le texte à gauche */
-  margin: 0 0 20px 0; /* Ajoute une marge de 20 pixels en bas, aucun espacement sur les autres côtés */
-  text-transform: uppercase; /* Transforme le texte en majuscules */
+  font-family: 'Space Mono', Sans-serif;
+  /* Définit la police des éléments de la liste à 'Space Mono' ou une police sans-serif en secours */
+  font-size: 14px;
+  /* Définit la taille de la police à 14 pixels */
+  font-weight: 400;
+  /* Définit le poids de la police à 400 (normal) */
+  line-height: 20.73px;
+  /* Définit la hauteur de ligne à 20.73 pixels */
+  letter-spacing: 0.1em;
+  /* Ajoute un espacement de 0.1em entre les lettres */
+  text-align: left;
+  /* Aligne le texte à gauche */
+  margin: 0 0 20px 0;
+  /* Ajoute une marge de 20 pixels en bas, aucun espacement sur les autres côtés */
+  text-transform: uppercase;
+  /* Transforme le texte en majuscules */
 }
 
 /* Style pour les cartes */
 .card {
-  display: inline-block; /* Affiche les éléments en ligne mais permet également les marges verticales */
-  margin-left: 50px; /* Ajoute une marge de 50 pixels à gauche des cartes */
+  display: inline-block;
+  /* Affiche les éléments en ligne mais permet également les marges verticales */
+  margin-left: 50px;
+  /* Ajoute une marge de 50 pixels à gauche des cartes */
 }
 
 /*--------------------------- Partie centrale fichier single.php Contact + nav photos suivantes et précédentes avatar---------------------------*/
 /* Conteneur pour la ligne de contact */
 .contact_line {
-  width: 1148px; /* Définit la largeur du conteneur à 1148 pixels */
-  height: 120px; /* Définit la hauteur du conteneur à 120 pixels */
-  margin: auto; /* Centre le conteneur horizontalement dans son conteneur parent */
+  width: 1148px;
+  /* Définit la largeur du conteneur à 1148 pixels */
+  height: 120px;
+  /* Définit la hauteur du conteneur à 120 pixels */
+  margin: auto;
+  /* Centre le conteneur horizontalement dans son conteneur parent */
 }
 
 /* Style pour les éléments <p> */
 p {
-  font-family: "Poppins", sans-serif; /* Définit la police des paragraphes à 'Poppins' ou une police sans-serif en secours */
-  width: 230px; /* Définit la largeur des paragraphes à 230 pixels */
-  height: 21px; /* Définit la hauteur des paragraphes à 21 pixels */
-  margin: 50px 0; /* Ajoute une marge de 50 pixels en haut et en bas, aucun espacement sur les côtés */
-  font-size: 14px; /* Définit la taille de la police à 14 pixels */
-  line-height: 21px; /* Définit la hauteur de ligne à 21 pixels */
-  font-weight: 300; /* Définit le poids de la police à 300 (léger) */
+  font-family: "Poppins", sans-serif;
+  /* Définit la police des paragraphes à 'Poppins' ou une police sans-serif en secours */
+  width: 230px;
+  /* Définit la largeur des paragraphes à 230 pixels */
+  height: 21px;
+  /* Définit la hauteur des paragraphes à 21 pixels */
+  margin: 50px 0;
+  /* Ajoute une marge de 50 pixels en haut et en bas, aucun espacement sur les côtés */
+  font-size: 14px;
+  /* Définit la taille de la police à 14 pixels */
+  line-height: 21px;
+  /* Définit la hauteur de ligne à 21 pixels */
+  font-weight: 300;
+  /* Définit le poids de la police à 300 (léger) */
 }
 
 /* Conteneur pour la section de contact */
 .contact-section {
-  display: inline-flex; /* Utilise le modèle de boîte flexible en ligne pour aligner les éléments enfants */
-  flex-wrap: wrap; /* Permet aux éléments flex de se répartir sur plusieurs lignes si nécessaire */
-  align-items: center; /* Aligne les éléments flex au centre verticalement */
-  width: 1148px; /* Définit la largeur de la section de contact à 1148 pixels */
+  display: inline-flex;
+  /* Utilise le modèle de boîte flexible en ligne pour aligner les éléments enfants */
+  flex-wrap: wrap;
+  /* Permet aux éléments flex de se répartir sur plusieurs lignes si nécessaire */
+  align-items: center;
+  /* Aligne les éléments flex au centre verticalement */
+  width: 1148px;
+  /* Définit la largeur de la section de contact à 1148 pixels */
 }
 
 /* Style pour le bouton de contact */
 .contact-button {
-  font-size: 12px; /* Définit la taille de la police du bouton à 12 pixels */
-  font-weight: 400; /* Définit le poids de la police du bouton à 400 (normal) */
-  display: inline-flex; /* Utilise le modèle de boîte flexible en ligne pour le bouton */
-  justify-content: center; /* Centre le contenu horizontalement dans le bouton */
-  flex-direction: row; /* Aligne les éléments enfants en ligne */
-  align-items: center; /* Centre le contenu verticalement dans le bouton */
-  width: 272px; /* Définit la largeur du bouton à 272 pixels */
-  height: 50px; /* Définit la hauteur du bouton à 50 pixels */
-  margin-left: 60px; /* Ajoute une marge de 60 pixels à gauche du bouton */
-  background-color: #D8D8D8; /* Définit la couleur de fond du bouton à #D8D8D8 (gris clair) */
-  color: black; /* Définit la couleur du texte du bouton à noir */
-  text-decoration: none; /* Supprime la décoration du texte du bouton (comme le soulignement) */
-  border-radius: 2px; /* Ajoute un arrondi aux coins du bouton avec un rayon de 2 pixels */
-  transition: background-color 0.3s ease; /* Ajoute une transition douce pour le changement de couleur de fond en 0.3 secondes */
+  font-size: 12px;
+  /* Définit la taille de la police du bouton à 12 pixels */
+  font-weight: 400;
+  /* Définit le poids de la police du bouton à 400 (normal) */
+  display: inline-flex;
+  /* Utilise le modèle de boîte flexible en ligne pour le bouton */
+  justify-content: center;
+  /* Centre le contenu horizontalement dans le bouton */
+  flex-direction: row;
+  /* Aligne les éléments enfants en ligne */
+  align-items: center;
+  /* Centre le contenu verticalement dans le bouton */
+  width: 272px;
+  /* Définit la largeur du bouton à 272 pixels */
+  height: 50px;
+  /* Définit la hauteur du bouton à 50 pixels */
+  margin-left: 60px;
+  /* Ajoute une marge de 60 pixels à gauche du bouton */
+  background-color: #D8D8D8;
+  /* Définit la couleur de fond du bouton à #D8D8D8 (gris clair) */
+  color: black;
+  /* Définit la couleur du texte du bouton à noir */
+  text-decoration: none;
+  /* Supprime la décoration du texte du bouton (comme le soulignement) */
+  border-radius: 2px;
+  /* Ajoute un arrondi aux coins du bouton avec un rayon de 2 pixels */
+  transition: background-color 0.3s ease;
+  /* Ajoute une transition douce pour le changement de couleur de fond en 0.3 secondes */
 }
 
 /* Style pour l'avatar de navigation */
 .navigation-avatar {
-  margin: 0 0 0 504px; /* Ajoute une marge de 504 pixels à gauche, aucun espacement sur les autres côtés */
-  width: 77px; /* Définit la largeur de l'avatar à 77 pixels */
-  height: 97px; /* Définit la hauteur de l'avatar à 97 pixels */
+  margin: 0 0 0 504px;
+  /* Ajoute une marge de 504 pixels à gauche, aucun espacement sur les autres côtés */
+  width: 77px;
+  /* Définit la largeur de l'avatar à 77 pixels */
+  height: 97px;
+  /* Définit la hauteur de l'avatar à 97 pixels */
 }
 
 /* Style pour l'image de publication dans WordPress */
 .wp-post-image {
-  width: 81px; /* Définit la largeur de l'image de publication à 81 pixels */
-  height: 71px; /* Définit la hauteur de l'image de publication à 71 pixels */
+  width: 81px;
+  /* Définit la largeur de l'image de publication à 81 pixels */
+  height: 71px;
+  /* Définit la hauteur de l'image de publication à 71 pixels */
 }
 
 /* Style pour le bouton de navigation suivant */
 .navigation-next {
-  display: inline-block; /* Affiche le bouton en ligne mais permet les marges verticales */
+  display: inline-block;
+  /* Affiche le bouton en ligne mais permet les marges verticales */
 }
 
 /* Style pour le bouton de navigation précédent */
 .navigation-prev {
-  width: 81px; /* Définit la largeur du bouton précédent à 81 pixels */
-  margin-right: 0; /* Supprime la marge à droite du bouton précédent */
+  width: 81px;
+  /* Définit la largeur du bouton précédent à 81 pixels */
+  margin-right: 0;
+  /* Supprime la marge à droite du bouton précédent */
 }
 
 /* Style pour l'élément de navigation suivant */
 .next_post {
-  margin-left: 18px; /* Ajoute une marge de 18 pixels à gauche de l'élément suivant */
+  margin-left: 18px;
+  /* Ajoute une marge de 18 pixels à gauche de l'élément suivant */
 }
 
 
 /* ------------------------------------Partie basse fichier single.php- et 2 photos de la catégorie ------------------------------------*/
+
 .container_bas {
-  max-width: 1148px; /* Définit la largeur maximale du conteneur bas à 1148px */
-  margin: auto; /* Centre le conteneur horizontalement */
+  max-width: 1148px;
+  /* Définit la largeur maximale du conteneur bas à 1148px */
+  margin: auto;
+  /* Centre le conteneur horizontalement */
 }
 
 h3 {
-  text-align: start; /* Aligne le texte à gauche */
-  margin-bottom: 20px; /* Ajoute un espace de 20px en dessous du h3 */
-  margin-top: 0; /* Supprime l'espace au-dessus du h3 */
-  font-size: 1em; /* Définit la taille de la police à 1em (taille par défaut) */
-  font-weight: normal; /* Définit le poids de la police à normal */
-  border-top: 1px solid #23282d; /* Ajoute une bordure supérieure de 1px avec la couleur #23282d */
-  padding: 79px 0 50px; /* Ajoute un espace de 79px en haut, 0 à gauche/droite, et 50px en bas */
+  text-align: start;
+  /* Aligne le texte à gauche */
+  margin-bottom: 20px;
+  /* Ajoute un espace de 20px en dessous du h3 */
+  margin-top: 0;
+  /* Supprime l'espace au-dessus du h3 */
+  font-size: 1em;
+  /* Définit la taille de la police à 1em (taille par défaut) */
+  font-weight: normal;
+  /* Définit le poids de la police à normal */
+  border-top: 1px solid #23282d;
+  /* Ajoute une bordure supérieure de 1px avec la couleur #23282d */
+  padding: 79px 0 50px;
+  /* Ajoute un espace de 79px en haut, 0 à gauche/droite, et 50px en bas */
 }
 
 .post-image img {
-  width: 563px; /* Définit la largeur de l'image à 563px */
-  height: 844px; /* Définit la hauteur de l'image à 844px */
-  object-fit: cover; /* Assure que l'image couvre complètement le conteneur en conservant son ratio */
-  overflow: hidden; /* Masque toute partie de l'image qui dépasse le conteneur */
+  width: 563px;
+  /* Définit la largeur de l'image à 563px */
+  height: 844px;
+  /* Définit la hauteur de l'image à 844px */
+  object-fit: cover;
+  /* Assure que l'image couvre complètement le conteneur en conservant son ratio */
+  overflow: hidden;
+  /* Masque toute partie de l'image qui dépasse le conteneur */
 }
 
 .post-img {
-  width: 564px; /* Définit la largeur de l'image à 564px */
-  height: 495px; /* Définit la hauteur de l'image à 495px */
-  object-fit: cover; /* Assure que l'image couvre complètement le conteneur en conservant son ratio */
+  width: 564px;
+  /* Définit la largeur de l'image à 564px */
+  height: 495px;
+  /* Définit la hauteur de l'image à 495px */
+  object-fit: cover;
+  /* Assure que l'image couvre complètement le conteneur en conservant son ratio */
 }
 
 .img-bas {
-  display: flex; /* Utilise le mode flexbox pour le conteneur */
-  justify-content: space-between; /* Espace les éléments enfants de manière égale avec de l'espace entre eux */
-  max-width: 1148px; /* Définit la largeur maximale à 1148px */
-  margin: auto; /* Centre le conteneur horizontalement */
-  padding-bottom: 10em; /* Ajoute un espace de 10em en bas du conteneur */
-}
-/*-------------------------------------------- Filtres --------------------------------------------*/
-.filters-and-sort {
-  max-width: 1126px;  /* Largeur maximale - Section Filtres */
-  margin: 0 auto;  /* Centre la section horizontalement */
-  text-align: center;  /* Centre le texte dans la section */
-  padding-right: 25px;  /* Ajoute un padding à droite de 25px */
-  padding-left: 35px;  /* Ajoute un padding à gauche de 35px */
-  padding-top: 63px;  /* Ajoute un padding en haut de 63px */
-  display: flex;  /* Utilise un affichage en flexbox */
-  justify-content: start;  /* Aligne les éléments au début du conteneur */
-  position: relative;
-  z-index: 1050;
+  display: flex;
+  /* Utilise le mode flexbox pour le conteneur */
+  justify-content: space-between;
+  /* Espace les éléments enfants de manière égale avec de l'espace entre eux */
+  max-width: 1148px;
+  /* Définit la largeur maximale à 1148px */
+  margin: auto;
+  /* Centre le conteneur horizontalement */
+  padding-bottom: 10em;
+  /* Ajoute un espace de 10em en bas du conteneur */
 }
 
-.filters-and-sort label, .filters-and-sort select {
-  font-family: Poppins;  /* Police utilisée pour les labels et les sélecteurs */
-  font-size: 12px;  /* Taille de la police */
-  font-weight: 500;  /* Poids de la police */
-  line-height: 18px;  /* Hauteur de ligne */
-  letter-spacing: 0.03em;  /* Espacement entre les lettres */
-  text-align: left;  /* Aligne le texte à gauche */
-  text-transform: uppercase;  /* Transforme le texte en majuscules */
+/*------------------------------------------------------------------- Filtres -----------------------------------------------------------------*/
+
+.filters-and-sort {
+  width: 1185px;
+  margin: 0;
+  text-align: center;
+  padding-top: 65px;
+  margin-left: 110px;
+  padding-bottom: 40px;
+  display: flex;
+  position: relative;
+  z-index: 12;
+  justify-content: space-between;
+}
+
+.filters-and-sort label,
+.filters-and-sort select {
+  font-family: Poppins;
+  /* Police utilisée pour les labels et les sélecteurs */
+  font-size: 12px;
+  /* Taille de la police */
+  font-weight: 500;
+  /* Poids de la police */
+  line-height: 18px;
+  /* Hauteur de ligne */
+  letter-spacing: 0.03em;
+  /* Espacement entre les lettres */
+  text-align: left;
+  /* Aligne le texte à gauche */
+  text-transform: uppercase;
+  /* Transforme le texte en majuscules */
 }
 
 #category-filter {
-  margin-right: 42px;  /* Marge à droite du filtre de catégorie */
+  margin-right: 42px;
+  /* Marge à droite du filtre de catégorie */
 }
 
 #date-sort {
-  margin-left: 310px;  /* Marge à gauche du tri par date */
+  margin-left: 310px;
+  /* Marge à gauche du tri par date */
 }
 
 #category-filter,
 #format-filter,
 #date-sort {
-  width: 260px;  /* Largeur des filtres */
-  height: 42px;  /* Hauteur des filtres */
-  padding: 11px 18px;  /* Ajoute un padding intérieur de 11px en haut/bas et 18px à gauche/droite */
-  margin-bottom: 20px;  /* Marge inférieure des filtres */
-  border-radius: 8px;  /* Arrondit les coins des filtres */
-  border: 1.3px solid #B8BBC2;  /* Ajoute une bordure solide de 1,3px */
-  justify-content: space-between;  /* Espace les éléments de manière égale */
+  width: 260px;
+  /* Largeur des filtres */
+  height: 42px;
+  /* Hauteur des filtres */
+  padding: 11px 18px;
+  /* Ajoute un padding intérieur de 11px en haut/bas et 18px à gauche/droite */
+  margin-bottom: 20px;
+  /* Marge inférieure des filtres */
+  border-radius: 8px;
+  /* Arrondit les coins des filtres */
+  border: 1.3px solid #B8BBC2;
+  /* Ajoute une bordure solide de 1,3px */
+  justify-content: space-between;
+  /* Espace les éléments de manière égale */
 }
 
 
-/*-------------------------------------------lightbox --------------------------------------------*/
+/*------------------------------------------------------------------------lightbox ---------------------------------------------------------------*/
 
 .lightbox {
-  position: fixed; /* Fixe la lightbox par rapport à la fenêtre du navigateur */
-  top: 0; /* Positionne la lightbox en haut */
-  left: 0; /* Positionne la lightbox à gauche */
-  width: 100%; /* Occupe toute la largeur de la fenêtre */
-  height: 100%; /* Occupe toute la hauteur de la fenêtre */
-  background: rgba(0, 0, 0, 0.8); /* Fond semi-transparent noir */
-  display: flex; /* Utilise Flexbox pour centrer le contenu */
-  align-items: center; /* Centre le contenu verticalement */
-  justify-content: center; /* Centre le contenu horizontalement */
+  position: fixed;
+  /* Fixe la lightbox par rapport à la fenêtre du navigateur */
+  top: 0;
+  /* Positionne la lightbox en haut */
+  left: 0;
+  /* Positionne la lightbox à gauche */
+  width: 100%;
+  /* Occupe toute la largeur de la fenêtre */
+  height: 100%;
+  /* Occupe toute la hauteur de la fenêtre */
+  background: rgba(0, 0, 0, 0.8);
+  /* Fond semi-transparent noir */
+  display: flex;
+  /* Utilise Flexbox pour centrer le contenu */
+  align-items: center;
+  /* Centre le contenu verticalement */
+  justify-content: center;
+  /* Centre le contenu horizontalement */
   align-items: center;
   justify-content: center;
-  z-index: 1000; /* Assure que la lightbox est au-dessus des autres éléments */
+  z-index: 20;
+  /* Assure que la lightbox est au-dessus des autres éléments */
 }
 
 /* Contenu de la lightbox */
 .lightbox-content {
-  position: relative; /* Position relative pour le contenu de la lightbox */
-  width: 564px; /* Largeur souhaitée de l'image */
-  height: 495px; /* Hauteur souhaitée de l'image */
-  padding: 20px; /* Espacement intérieur */
+  position: relative;
+  /* Position relative pour le contenu de la lightbox */
+  width: 564px;
+  /* Largeur souhaitée de l'image */
+  height: 495px;
+  /* Hauteur souhaitée de l'image */
+  padding: 20px;
+  /* Espacement intérieur */
 }
 
 /* Image dans la lightbox */
 .lightbox-content img {
-  width: 100%; /* Ajuste l'image à la largeur du conteneur */
-  height: 100%; /* Ajuste l'image à la hauteur du conteneur */
-  object-fit: cover; /* Couvre le conteneur sans déformation */
-  margin: 0 auto; /* Centre l'image horizontalement */
+  width: 100%;
+  /* Ajuste l'image à la largeur du conteneur */
+  height: 100%;
+  /* Ajuste l'image à la hauteur du conteneur */
+  object-fit: cover;
+  /* Couvre le conteneur sans déformation */
+  margin: 0 auto;
+  /* Centre l'image horizontalement */
 }
+
 /* Styles pour les boutons de navigation */
 .lightbox-close,
 .lightbox-prev,
 .lightbox-next {
-  position: absolute; /* Position absolue pour les icônes de navigation */
-  top: 20px; /* Positionne en haut */
-  cursor: pointer; /* Curseur pointeur pour indiquer que c'est cliquable */
+  position: absolute;
+  /* Position absolue pour les icônes de navigation */
+  top: 20px;
+  /* Positionne en haut */
+  cursor: pointer;
+  /* Curseur pointeur pour indiquer que c'est cliquable */
 }
 
 .lightbox-close {
   margin-top: -125px;
-  right: -136px;/* Positionne l'icône fermer à droite*/
-  width: 27px;/* Ajuste la largeur de L'image du conteneur defini*/
-  height: 27px;/* Ajuste la hauteur de l'image du conteneur defini */
+  right: -136px;
+  /* Positionne l'icône fermer à droite*/
+  width: 27px;
+  /* Ajuste la largeur de L'image du conteneur defini*/
+  height: 27px;
+  /* Ajuste la hauteur de l'image du conteneur defini */
 }
 
-.Précédent, img {
-  margin: 0px 0px 0 15px;/*décalage vers la droite*/
+.Précédent,
+img {
+  margin: 0px 0px 0 15px;
+  /*décalage vers la droite*/
 }
 
 .lightbox-prev {
-  left: -137px;/* Positionne l'icône précédente à gauche */
+  left: -137px;
+  /* Positionne l'icône précédente à gauche */
 }
 
-.Suivant, img {
-  margin: 0px 17px 0px 0px;/* décalage a gauche */
-  }
+.Suivant,
+img {
+  margin: 0px 17px 0px 0px;
+  /* décalage a gauche */
+}
 
-  .lightbox-prev img,
-  .lightbox-next img {
-    transition: transform 0.3s ease; /* Animation fluide sur 0.3 secondes */
-  }
-  
-  .lightbox-prev img:hover,
-  .lightbox-next img:hover {
-    transform: scale(2); /* Zoom à 120% au survol */
-  }
-  
+.lightbox-prev img,
+.lightbox-next img {
+  transition: transform 0.3s ease;
+  /* Animation fluide sur 0.3 secondes */
+}
+
+.lightbox-prev img:hover,
+.lightbox-next img:hover {
+  transform: scale(2);
+  /* Zoom à 120% au survol */
+}
+
 .lightbox-next {
-  right: -137px; /* Positionne l'icône suivante à droite */
+  right: -137px;
+  /* Positionne l'icône suivante à droite */
 }
 
 .lightbox-prev,
@@ -563,1199 +832,763 @@ h3 {
   flex-wrap: nowrap;
   align-items: center;
   color: white;
-  top: 50%; /* Centre verticalement */
-  transform: translateY(-50%); /* Ajuste la position pour centrer parfaitement */
-  margin-right: 15px;/* Ajuste la position a droite */
+  top: 50%;
+  /* Centre verticalement */
+  transform: translateY(-50%);
+  /* Ajuste la position pour centrer parfaitement */
+  margin-right: 15px;
+  /* Ajuste la position a droite */
 }
 
 .lightbox-reference,
 .lightbox-category {
   margin: 5px 0;
   color: WHITE;
-  text-transform: uppercase; /* Transforme le texte en majuscules */
-  font-family: 'Space Mono', Sans-serif; /* Définit la police des éléments de la liste à 'Space Mono' ou une police sans-serif en secours */
+  text-transform: uppercase;
+  /* Transforme le texte en majuscules */
+  font-family: 'Space Mono', Sans-serif;
+  /* Définit la police des éléments de la liste à 'Space Mono' ou une police sans-serif en secours */
   cursor: pointer;
   font-size: larger;
 }
 
 .lightbox-info {
-  display: flex; /* Utilise Flexbox pour aligner les éléments côte à côte */
-  justify-content: space-between; /* Espace les éléments de manière égale */
-  margin-top: 10px; /* Espacement au-dessus des informations */
+  display: flex;
+  /* Utilise Flexbox pour aligner les éléments côte à côte */
+  justify-content: space-between;
+  /* Espace les éléments de manière égale */
+  margin-top: 10px;
+  /* Espacement au-dessus des informations */
 }
 
 /* Style pour chaque élément d'information */
 .lightbox-info-item {
-  font-size: 16px; /* Taille de la police */
-  color: #fff; /* Couleur du texte */
-  background-color: rgba(0, 0, 0, 0.6); /* Fond sombre avec transparence */
-  padding: 5px 10px; /* Espacement interne */
-  border-radius: 4px; /* Coins arrondis */
+  font-size: 16px;
+  /* Taille de la police */
+  color: #fff;
+  /* Couleur du texte */
+  background-color: rgba(0, 0, 0, 0.6);
+  /* Fond sombre avec transparence */
+  padding: 5px 10px;
+  /* Espacement interne */
+  border-radius: 4px;
+  /* Coins arrondis */
 }
 
 /* Style spécifique pour la référence */
 .lightbox-reference {
-  margin-right: 20px; /* Espacement à droite */
- 
+  margin-right: 20px;
+  /* Espacement à droite */
+
 }
 
 /* Style spécifique pour la catégorie */
 .lightbox-category {
-  margin-left: 20px; /* Espacement à gauche */
- 
+  margin-left: 20px;
+  /* Espacement à gauche */
+
 }
 
 
 
-/*------------------------  Gestion de la visibilité de la modale pour la popup contact formulaire de contact ---------------------------*/
+/*------------------------  Gestion de la visibilité de la modale pour la popup contact formulaire de contact ------------------------------*/
 
 .popup-overlay.hidden {
   visibility: hidden;
-  pointer-events: none; /* Désactive les interactions */
-  opacity: 0; /* Rend l'élément complètement transparent */
-  transition: opacity 0.3s ease; /* Ajoute une transition pour l'opacité lors de l'affichage/caché */
+  pointer-events: none;
+  /* Désactive les interactions */
+  opacity: 0;
+  /* Rend l'élément complètement transparent */
+  transition: opacity 0.3s ease;
+  /* Ajoute une transition pour l'opacité lors de l'affichage/caché */
 }
 
 /* Style par défaut de la modale */
 .popup-overlay {
-  position: fixed; /* Fixe la position par rapport à la fenêtre */
-  top: 0; /* Aligne en haut */
-  left: 0; /* Aligne à gauche */
-  width: 100%; /* Prend toute la largeur */
-  height: 100%; /* Prend toute la hauteur */
-  display: flex; /* Utilise flexbox pour centrer le contenu */
-  justify-content: center; /* Centre horizontalement */
-  align-items: center; /* Centre verticalement */
-  background-color: rgba(0, 0, 0, 0.5); /* Ajoute un fond semi-transparent noir */
-  z-index: 9999; /* Place l'élément au-dessus de presque tous les autres */
-  opacity: 1; /* Opacité par défaut */
-  transition: opacity 0.3s ease; /* Ajoute une transition douce pour l'opacité */
+  position: fixed;
+  /* Fixe la position par rapport à la fenêtre */
+  top: 0;
+  /* Aligne en haut */
+  left: 0;
+  /* Aligne à gauche */
+  width: 100%;
+  /* Prend toute la largeur */
+  height: 100%;
+  /* Prend toute la hauteur */
+  display: flex;
+  /* Utilise flexbox pour centrer le contenu */
+  justify-content: center;
+  /* Centre horizontalement */
+  align-items: center;
+  /* Centre verticalement */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Ajoute un fond semi-transparent noir */
+  z-index: 15;
+  /* Place l'élément au-dessus de presque tous les autres */
+  opacity: 1;
+  /* Opacité par défaut */
+  transition: opacity 0.3s ease;
+  /* Ajoute une transition douce pour l'opacité */
 }
 
 /* Classe qui rend la modale visible */
 .popup-overlay.show {
-  visibility: visible; /* Rends l'élément visible */
-  pointer-events: auto; /* Active les interactions */
-  opacity: 1; /* Assure que l'élément est entièrement visible */
+  visibility: visible;
+  /* Rends l'élément visible */
+  pointer-events: auto;
+  /* Active les interactions */
+  opacity: 1;
+  /* Assure que l'élément est entièrement visible */
 }
 
 /* Style de la modale */
 .popup-contact {
-  position: relative; /* Positionnement relatif à son conteneur */
-  width: 597px; /* Largeur de la modale */
-  height: 769px; /* Hauteur de la modale */
-  border: 5px solid black; /* Bordure noire de 5px */
-  overflow: hidden; /* Supprime le scroll */
-  background-color: white; /* Fond blanc */
-  transform: scale(0.87); /* Optionnel : réduit la taille de la modale */
+  position: relative;
+  /* Positionnement relatif à son conteneur */
+  width: 597px;
+  /* Largeur de la modale */
+  height: 769px;
+  /* Hauteur de la modale */
+  border: 5px solid black;
+  /* Bordure noire de 5px */
+  overflow: hidden;
+  /* Supprime le scroll */
+  background-color: white;
+  /* Fond blanc */
+  transform: scale(0.87);
+  /* Optionnel : réduit la taille de la modale */
 }
 
 /*------------------------------------------------------------------Titre CONTACT --------------------------------------------------------*/
+
 .popup-title {
-  background-image: url('assets/img/contact.png'); /* Image de fond pour le titre */
-  background-size: 34.4%; /* Taille de l'image de fond */
-  width: 885.96px; /* Largeur de la zone du titre */
-  height: 106.05px; /* Hauteur de la zone du titre */
-  background-repeat: repeat-x; /* Répète l'image horizontalement */
+  background-image: url('assets/img/contact.png');
+  /* Image de fond pour le titre */
+  background-size: 34.4%;
+  /* Taille de l'image de fond */
+  width: 885.96px;
+  /* Largeur de la zone du titre */
+  height: 106.05px;
+  /* Hauteur de la zone du titre */
+  background-repeat: repeat-x;
+  /* Répète l'image horizontalement */
 }
 
 /* Position des 2 bannières pour le positionnement du titre */
 .popup-title:first-child {
-  background-position-x: -27%; /* Décale l'image vers la gauche pour le premier titre */
-  margin: 10px 0 -50px 0; /* Marge spécifique pour le premier titre */
+  background-position-x: -27%;
+  /* Décale l'image vers la gauche pour le premier titre */
+  margin: 10px 0 -50px 0;
+  /* Marge spécifique pour le premier titre */
 }
 
 .popup-title:last-child {
-  background-position-x: -72%; /* Décale l'image pour le deuxième titre */
-  margin: 0 0 -75px 0; /* Marge spécifique pour le dernier titre */
+  background-position-x: -72%;
+  /* Décale l'image pour le deuxième titre */
+  margin: 0 0 -75px 0;
+  /* Marge spécifique pour le dernier titre */
 }
 
 /* Alignement des cases contact à remplir */
 .popup-informations {
-  display: flex; /* Utilise flexbox pour aligner les éléments */
-  justify-content: center; /* Centre horizontalement les éléments */
-  align-items: center; /* Centre verticalement les éléments */
-  width: min-content; /* Prend la largeur minimale nécessaire */
-  margin: auto; /* Centre le conteneur */
+  display: flex;
+  /* Utilise flexbox pour aligner les éléments */
+  justify-content: center;
+  /* Centre horizontalement les éléments */
+  align-items: center;
+  /* Centre verticalement les éléments */
+  width: min-content;
+  /* Prend la largeur minimale nécessaire */
+  margin: auto;
+  /* Centre le conteneur */
 }
 
 /* Mise en forme des cases à remplir : police, etc., du formulaire de contact */
 .wpcf7-form p label {
-  font-family: 'Poppins', sans-serif; /* Police pour les labels */
-  font-size: 10px; /* Taille de la police */
-  font-weight: 400; /* Poids de la police */
-  text-transform: uppercase; /* Convertit le texte en majuscules */
+  font-family: 'Poppins', sans-serif;
+  /* Police pour les labels */
+  font-size: 10px;
+  /* Taille de la police */
+  font-weight: 400;
+  /* Poids de la police */
+  text-transform: uppercase;
+  /* Convertit le texte en majuscules */
 }
 
 .wpcf7-form p {
-  font-family: "Poppins", sans-serif; /* Police pour les paragraphes */
-  width: 230px; /* Largeur du paragraphe */
-  height: 35px; /* Hauteur du paragraphe */
-  margin: 50px 0; /* Marge en haut et en bas de 50px */
-  font-size: 14px; /* Taille de la police */
-  line-height: 21px; /* Hauteur de ligne */
-  font-weight: 300; /* Poids de la police */
+  font-family: "Poppins", sans-serif;
+  /* Police pour les paragraphes */
+  width: 230px;
+  /* Largeur du paragraphe */
+  height: 35px;
+  /* Hauteur du paragraphe */
+  margin: 50px 0;
+  /* Marge en haut et en bas de 50px */
+  font-size: 14px;
+  /* Taille de la police */
+  line-height: 21px;
+  /* Hauteur de ligne */
+  font-weight: 300;
+  /* Poids de la police */
 }
 
 .wpcf7-form p .wpcf7-text,
 .wpcf7-form p .wpcf7-email,
 .wpcf7-form p textarea {
-  height: 40px; /* Hauteur des champs de texte */
-  gap: 0px; /* Aucun espace entre les éléments */
-  width: 263px; /* Largeur des champs de texte */
-  border-radius: 8px; /* Coins arrondis */
-  border: 1px solid #000000; /* Bordure noire de 1px */
+  height: 40px;
+  /* Hauteur des champs de texte */
+  gap: 0px;
+  /* Aucun espace entre les éléments */
+  width: 263px;
+  /* Largeur des champs de texte */
+  border-radius: 8px;
+  /* Coins arrondis */
+  border: 1px solid #000000;
+  /* Bordure noire de 1px */
 }
 
 .wpcf7-form p .wpcf7-text:focus,
 .wpcf7-form p .wpcf7-email:focus,
 .wpcf7-form p textarea:focus {
-  border: 3px solid #000000; /* Bordure noire plus épaisse lors du focus */
-  background-color: rgba(175, 174, 174, 0.151); /* Change la couleur de fond en gris clair lors du focus */
+  border: 3px solid #000000;
+  /* Bordure noire plus épaisse lors du focus */
+  background-color: rgba(175, 174, 174, 0.151);
+  /* Change la couleur de fond en gris clair lors du focus */
 }
 
 .wpcf7-not-valid-tip {
-  margin-left: 50px; /* Décale les messages d'erreur de validation de 50px à gauche */
+  margin-left: 50px;
+  /* Décale les messages d'erreur de validation de 50px à gauche */
 }
 
 .wpcf7-response-output {
-  width: 100%; /* Prend toute la largeur disponible */
-  transform: translate(-20%, 0%); /* Décale l'élément de 20% vers la gauche */
-  color: red; /* Texte rouge pour les messages de sortie */
+  width: 100%;
+  /* Prend toute la largeur disponible */
+  transform: translate(-20%, 0%);
+  /* Décale l'élément de 20% vers la gauche */
+  color: red;
+  /* Texte rouge pour les messages de sortie */
 }
 
 .wpcf7 form .wpcf7-response-output {
-  margin: -2em 0.5em 0em 2em; /* Marge négative en haut, légère marge à droite et à gauche */
-  padding: 0.2em 4em 0em 4em; /* Légère marge intérieure en haut, marge intérieure plus grande à gauche et à droite */
+  margin: -2em 0.5em 0em 2em;
+  /* Marge négative en haut, légère marge à droite et à gauche */
+  padding: 0.2em 4em 0em 4em;
+  /* Légère marge intérieure en haut, marge intérieure plus grande à gauche et à droite */
 }
 
 #wpcf7-f24-o1>form>p:nth-child(5)>label>span>textarea {
-  height: 210px; /* Hauteur du champ de texte */
-  border-radius: 8px; /* Coins arrondis */
-  border: 1px solid black; /* Bordure noire */
-  opacity: 0px; /* Le champ est complètement transparent */
+  height: 210px;
+  /* Hauteur du champ de texte */
+  border-radius: 8px;
+  /* Coins arrondis */
+  border: 1px solid black;
+  /* Bordure noire */
+  opacity: 0px;
+  /* Le champ est complètement transparent */
 }
 
 input[type=submit] {
-  margin-top: 190px; /* Grande marge au-dessus du bouton */
-  width: 263px; /* Largeur du bouton */
-  height: 50px; /* Hauteur du bouton */
-  padding: 8px 15px 8px 15px; /* Marge intérieure du bouton */
-  border-radius: 2px; /* Légers coins arrondis */
-  align-self: flex-start; /* Aligne le bouton à gauche dans son conteneur flex */
-  background-color: #D8D8D8; /* Couleur de fond grise */
+  margin-top: 190px;
+  /* Grande marge au-dessus du bouton */
+  width: 263px;
+  /* Largeur du bouton */
+  height: 50px;
+  /* Hauteur du bouton */
+  padding: 8px 15px 8px 15px;
+  /* Marge intérieure du bouton */
+  border-radius: 2px;
+  /* Légers coins arrondis */
+  align-self: flex-start;
+  /* Aligne le bouton à gauche dans son conteneur flex */
+  background-color: #D8D8D8;
+  /* Couleur de fond grise */
 }
 
 /* Styles | Styles de survol du bouton de soumission du formulaire de contact */
 input[type=submit]:hover {
-  background-color: black; /* Change la couleur de fond en noir lors du survol */
-  color: #ffffff; /* Change la couleur du texte en blanc lors du survol */
+  background-color: black;
+  /* Change la couleur de fond en noir lors du survol */
+  color: #ffffff;
+  /* Change la couleur du texte en blanc lors du survol */
 }
 
-/* -------------------------------------------------style-Menu-------------------------------------------------*/ 
+/* -------------------------------------------------style-Menu-------------------------------------------------*/
 
 .bloc-menu-nav {
-  display: flex; /* Utilise flexbox pour organiser les éléments */
-  align-items: center; /* Centre les éléments verticalement */
-  justify-content: space-between; /* Espace égal entre les éléments */
-  width: 1440px; /* Largeur totale du menu */
-  height: 80px; /* Hauteur du menu */
+  display: flex;
+  /* Utilise flexbox pour organiser les éléments */
+  align-items: center;
+  /* Centre les éléments verticalement */
+  justify-content: space-around;
+  /* Espace égal entre les éléments */
+  width: 1440px;
+  /* Largeur totale du menu */
+  height: 80px;
+  /* Hauteur du menu */
 }
 
 .menu {
-  list-style-type: none; /* Supprime les puces des éléments de liste */
-  display: flex; /* Affiche les éléments en ligne */
-  justify-content: space-around; /* Espacement égal entre les éléments */
-  padding-right: 115px; /* Ajoute un padding à droite */
-  font-size: 16px; /* Taille de la police */
-  font-weight: 400; /* Poids normal de la police */
-  line-height: 23.7px; /* Hauteur de ligne */
-  width: 509px; /* Largeur du menu */
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  padding-right: 0px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 23.7px;
+  width: 480px;
 }
 
 #navigation {
-  display: flex; /* Utilise flexbox pour organiser les éléments */
-  justify-content: space-between; /* Espace égal entre les éléments */
-  align-content: center; /* Centre les éléments sur l'axe secondaire */
-}
-
-/* -------------------------------------------------style-footer-------------------------------------------------*/ 
-#menu-footer {
-  display: flex; /* Utilise flexbox pour organiser les éléments */
-  align-content: center; /* Centre les éléments sur l'axe secondaire */
-  justify-content: center; /* Centre les éléments horizontalement */
-  align-items: center; /* Centre les éléments verticalement */
-  font-family: 'Space Mono', Sans-serif; /* Police utilisée */
-  border-top: 2px solid; /* Bordure en haut du footer */
-  font-size: 16px; /* Taille de la police */
-  font-weight: 400; /* Poids normal de la police */
-  text-transform: uppercase; /* Convertit le texte en majuscules */
-  line-height: 23.7px; /* Hauteur de ligne */
-  list-style-type: none; /* Supprime les puces des éléments de liste */
-  width: 1140px; /* Largeur du footer */
-  height: 40px; /* Hauteur du footer */
-  margin: auto; /* Centre le footer horizontalement */
-  padding: 0px 0 0 67px; /* Padding gauche de 67px */
-  padding-top: 8px; /* Padding en haut de 8px */
-  gap: 100px; /* Espace de 100px entre les éléments */
-  color: #000000; /* Texte noir */
-}
-
-
-/* --------------------------------------------Styles de base pour le menu burger --------------------------------------------*/
-.nav-burger {
-  position: relative;
-}
-
-.logo {
-  visibility: hidden;
   display: flex;
+  /* Utilise flexbox pour organiser les éléments */
   justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  background-color: #fff;
-  position: absolute;
-  width: 1415px;
-  height: 46px;
-  border: black solid;
-  margin: -10px 0 0 0;
-  left: -1445px;
+  /* Espace égal entre les éléments */
+  align-content: center;
+  /* Centre les éléments sur l'axe secondaire */
 }
 
-/* Icônes du bouton hamburger */
-.nav-toggler {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0 39px 0 0;
+/* -------------------------------------------------style-footer-------------------------------------------------*/
+#menu-footer {
   display: flex;
-  flex-direction: column;
+  /* Utilise flexbox pour organiser les éléments */
+  align-content: center;
+  /* Centre les éléments sur l'axe secondaire */
   justify-content: center;
+  /* Centre les éléments horizontalement */
   align-items: center;
-}
-.nav-toggler .line {
-  width: 25px;
-  height: 3px;
-  background-color: black;
-  margin: 3px 0;
-  transition: all 0.3s ease;
+  /* Centre les éléments verticalement */
+  font-family: 'Space Mono', Sans-serif;
+  /* Police utilisée */
+  border-top: 2px solid;
+  /* Bordure en haut du footer */
+  font-size: 16px;
+  /* Taille de la police */
+  font-weight: 400;
+  /* Poids normal de la police */
+  text-transform: uppercase;
+  /* Convertit le texte en majuscules */
+  line-height: 23.7px;
+  /* Hauteur de ligne */
+  list-style-type: none;
+  /* Supprime les puces des éléments de liste */
+  width: 1440px;
+  /* Largeur du footer */
+  height: 40px;
+  /* Hauteur du footer */
+  margin: auto;
+  /* Centre le footer horizontalement */
+  padding: 0px 0 0 67px;
+  /* Padding gauche de 67px */
+  padding-top: 8px;
+  /* Padding en haut de 8px */
+  gap: 100px;
+  /* Espace de 100px entre les éléments */
+  color: #000000;
+  /* Texte noir */
 }
 
-/* Styles du menu rouge */
-#menuToggle {
+
+/* ------------------------------------------------Styles de base pour le menu burger ----------------------------------------------------*/
+
+.bandeau {
   position: fixed;
-  top: 0;
-  right: -100%; /* Le menu est hors de l'écran par défaut */
+  height: 72px;
+  top: 60px;
+  left: -32px;
   width: 100%;
-  height: 100%;
-  background-color: red;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: right 0.5s ease;
-  z-index: 9999;
+  background-color: white;
+  display: none;
+  /* Par défaut, le bandeau est caché sur les écrans plus larges */
 }
 
-#menuToggle ul {
-  list-style: none;
-  text-align: center;
-  padding: 0;
-}
-
-#menuToggle ul li {
-  font-size: 2rem;
-  margin: 20px 0;
-  color: white;
-}
-
-#menuToggle.active {
-  right: 0; /* Le menu glisse depuis la droite */
-}
-
-/* --------------------------------------------Styles @media query screen  --------------------------------------------*/
-
-/*  **********************************  */
-/*    Media query : max-width: 320px    */
-/*  **********************************  */
-@media (max-width: 320px) {
-  /* Ajustements pour les éléments de la zone héros et les images */
-  .hero-area .hero-thumbnail,
-  .hero-area img,
-  .photos_container,
-  .post_img {
-    max-height: 320px; /* Limite la hauteur maximale pour les petits écrans */
-    width: 100%; /* Utilise 100% de la largeur disponible au lieu de 320px fixe */
-    max-width: 320px; /* Ajoute une largeur maximale de 320px */
-    margin: auto; /* Centre les éléments horizontalement */
-  }
-
-  /* Configuration de la grille de photos */
-  .photos_container {
-    columns: 1; /* Affiche les photos en une seule colonne */
-    width: 100%; /* Utilise toute la largeur disponible */
-    column-gap: 5px; /* Réduit l'espace entre les colonnes */
-  }
-
-  /* Ajustement des images individuelles */
-  .post_img {
-    width: 100%; /* Utilise toute la largeur disponible */
-    height: auto; /* Maintient le ratio d'aspect de l'image */
-    margin-bottom: 5px; /* Ajoute un petit espace entre les images */
-  }
-
-  /* Styles pour le titre et la catégorie */
-  .title,
-  .categorie {
-    font-size: 12px; /* Réduit la taille de la police pour les petits écrans */
-    margin: 5px 0; /* Ajuste les marges pour un meilleur espacement */
-    text-align: center; /* Centre le texte */
-  }
-
-  /* Ajustement des icônes */
-  .oeil,
-  .fullscreen {
-    width: 20px; /* Réduit la taille des icônes */
-    height: 20px; /* Assure une taille carrée */
-  }
-
-  /* Styles pour les filtres et le tri */
-  #category-filter, #format-filter, #date-sort {
-    width: calc(100% - 40px); /* Utilise toute la largeur disponible moins les marges */
-    height: 42px;
-    margin: 10px 20px; /* Ajuste les marges pour un meilleur espacement */
-    border-radius: 8px;
-    border: 1.3px solid #B8BBC2;
-  }
-
-  /* Ajustement du bouton de galerie */
-  .galbtn {
-    width: calc(100% - 40px); /* Utilise toute la largeur disponible moins les marges */
-    margin: 10px 20px; /* Ajoute des marges pour l'alignement */
-  }
-
-  /* Styles pour le conteneur de post unique */
-  .container.single_post {
-    width: 100%;
-    height: auto;
-    padding: 10px; /* Ajoute un peu de padding intérieur */
-  }
-
-  /* Ajustement du titre unique */
-  .single_title {
-    font-size: 24px;
-    width: 100%;
-    text-align: center; /* Centre le titre */
-  }
-
-  /* Ajustement du bouton de contact */
-  .contact-button {
-    width: 100%;
-    margin-top: 10px; /* Ajoute un espace au-dessus du bouton */
-  }
-
-  /* Ajustement des filtres et du tri */
-  .filters-and-sort {
-    padding: 15px;
-  }
-
-  .filters-and-sort select {
-    width: 100%;
-    margin-bottom: 10px; /* Ajoute un espace entre les sélecteurs */
-  }
-
-  /* Ajustements pour le menu de navigation */
-  .bloc-menu-nav {
-    width: 100%;
-    height: auto;
-    flex-direction: column;
-  }
-
-  .menu {
-    width: 100%;
-    padding: 10px 0; /* Ajoute du padding vertical */
-  }
-
-  #navigation {
-    flex-direction: column;
-  }
-
-  #menu-footer {
-    width: 100%;
-    padding: 10px 0;
-    gap: 20px;
-    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si nécessaire */
-    justify-content: center; /* Centre les éléments horizontalement */
-  }
-
-  /* Ajustements pour le post unique */
-  .single_post {
-    padding: 5px;
-  }
-
-  .img-bas img {
-    max-width: 100%;
-  }
-
-  .navigation-avatar img {
-    max-width: 40px;
-  }
-}
-
-
-/*  **********************************  */
-/*    Media query : max-width: 580px    */
-/*  **********************************  */
-@media (max-width: 580px) {
-  /* Conteneur principal */
-  .container_bas {
-    max-width: 1148px; /* Définit la largeur maximale du conteneur */
-    margin: auto; /* Centre le conteneur horizontalement */
-    display: flex; /* Utilise Flexbox pour la mise en page */
-    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne suivante */
-    flex-direction: column; /* Aligne les éléments en colonne */
-    align-items: center; /* Centre les éléments horizontalement */
-    justify-content: center; /* Centre les éléments verticalement */
-    align-content: center; /* Centre le contenu de plusieurs lignes */
-    width: 90%; /* Définit la largeur du conteneur à 90% de son parent */
-    max-width: 265px; /* Définit une largeur maximale spécifique */
-    height: 230px; /* Définit une hauteur fixe */
-  }
-
-  /* Conteneur des photos */
-  .photos_container {
-    columns: 1; /* Affiche les photos en une seule colonne */
-    width: 100%; /* Définit la largeur à 100% du conteneur parent */
-    column-gap: 10px; /* Réduit l'espace entre les colonnes */
-  }
-  
-  /* Images des posts */
-  .post_img {
-    width: 100%; /* Ajuste la largeur de l'image à 100% */
-    height: auto; /* Ajuste la hauteur de l'image automatiquement */
-    margin: 0; /* Réinitialise les marges */
-  }
-  
-  /* Titre et catégorie des posts */
-  .title,
-  .categorie {
-    font-size: 13px; /* Réduit la taille de la police */
-    margin: 350px 0px 0px -10px; /* Ajuste les marges pour les petits écrans */
-  }
-  
-  /* Icônes (œil et fullscreen) */
-  .oeil,
-  .fullscreen {
-    width: 25px; /* Réduit la taille des icônes */
-    height: 25px; /* Réduit la hauteur des icônes */
-  }
-
-  /* Bouton de galerie */
-  .galbtn {
-    width: 100%; /* La largeur du bouton prend 100% de celle du conteneur */
-  }
-
-  /* Conteneur d'un seul post */
-  .container.single_post {
-    width: 100%; /* La largeur prend 100% du conteneur parent */
-    height: auto; /* La hauteur ajuste automatiquement */
-  }
-
-  /* Titre d'un seul post */
-  .single_title {
-    font-size: 32px; /* Réduit la taille de la police du titre */
-    width: 100%; /* La largeur du titre prend 100% du conteneur */
-  }
-
-  /* Bouton de contact */
-  .contact-button {
-    width: 100%; /* La largeur du bouton prend 100% de celle du conteneur */
-  }
-
-  /* Conteneur des filtres et options de tri */
-  .filters-and-sort {
-    padding-right: 20px;  /* Réduit le padding à droite */
-    padding-left: 20px;  /* Réduit le padding à gauche */
-  }
-
-  /* Sélecteurs dans les filtres et options de tri */
-  .filters-and-sort select {
-    width: 100%;  /* Ajuste la largeur des filtres */
-    margin-right: 0;  /* Supprime la marge à droite */
-    margin-left: 0;  /* Supprime la marge à gauche */
-  }
-
-  /* Sélecteur de date de tri */
-  #date-sort {
-    margin-left: 0;  /* Supprime la marge à gauche */
-  }
-
-  /* Bloc de navigation du menu */
-  .bloc-menu-nav {
-    width: 100%; /* Largeur ajustée à 100% */
-    height: auto; /* Hauteur ajustée automatiquement */
-    flex-direction: column; /* Aligne les éléments en colonne */
-  }
-
-  /* Menu */
-  .menu {
-    width: 100%; /* Largeur ajustée à 100% */
-    padding-right: 0; /* Réduit le padding à droite */
-  }
-
-  /* Navigation */
-  #navigation {
-    flex-direction: column; /* Aligne les éléments en colonne */
-  }
-
-  /* Menu footer */
-  #menu-footer {
-    width: 100%; /* Largeur ajustée à 100% */
-    padding-left: 0; /* Réduit le padding à gauche */
-    gap: 30px; /* Réduit l'espace entre les éléments */
-  }
-
-  /* Contenu d'un seul post */
-  .single_post {
-    padding: 10px; /* Ajoute un padding autour du contenu */
-  }
-
-  /* Informations sur le post */
-  .post-info,
-  .post-image {
-    width: 100%; /* La largeur prend 100% du conteneur */
-  }
-
-  /* Images en bas du post */
-  .img-bas img {
-    max-width: 80%; /* Limite la largeur maximale des images */
-  }
-
-  /* Avatar de navigation */
-  .navigation-avatar img {
-    max-width: 50px; /* Limite la largeur maximale des images */
-  }
-}
+/* ---------------------------------------------------------Styles @media query screen 768px ---------------------------------------------------*/
 
 /*  **********************************  */
 /*    Media query : max-width: 768px    */
 /*  **********************************  */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
 
-  /* Cartes */
-  .card {
-    width: 100%; /* Les cartes prennent toute la largeur disponible */
-    margin-bottom: 20px; /* Ajoute un espace de 20px entre les cartes */
+  .site-main {
+    columns: 1;
+    width: 100%;
+    margin: 0 auto;
+    padding: 5px;
+    width: 1440px;
   }
 
-  /* Conteneur des photos */
-  .photos_container {
-    columns: 1; /* Affiche les photos en une seule colonne */
-    width: 100%; /* Définit la largeur à 100% du conteneur parent */
-    column-gap: 20px; /* Réduit l'espace entre les colonnes à 20px */
-  }
-
-  /* Images des posts */
-  .post_img {
-    width: 317.66px; /* Définit une largeur spécifique pour l'image */
-    height: 278.8px; /* Définit une hauteur spécifique pour l'image */
-    margin: 0; /* Réinitialise les marges */
-  }
-
-  .post-img {
-    width: 100%; /* Définit la largeur à 100% du conteneur parent */
-    height: 495px; /* Définit une hauteur spécifique pour l'image */
-    margin: 0; /* Réinitialise les marges */
-    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne suivante */
-    right: 0; /* Aligne à droite */
-  }
-
-  /* Titre et catégorie des posts */
-  .title,
-  .categorie {
-    font-size: 14px; /* Réduit légèrement la taille de la police */
-    margin: 400px 0px 0px -10px; /* Ajuste les marges */
-  }
-
-  /* Icônes (œil et fullscreen) */
-  .oeil,
-  .fullscreen {
-    width: 30px; /* Réduit la taille des icônes */
-    height: 30px; /* Réduit la hauteur des icônes */
-  }
-
-  /* Bouton de galerie */
-  .galbtn {
-    width: 100%; /* La largeur du bouton prend 100% de celle du conteneur */
-  }
-
-  /* Conteneur d'un seul post */
-  .container.single_post {
-    width: 100%; /* La largeur prend 100% du conteneur parent */
-    height: auto; /* La hauteur ajuste automatiquement */
-    margin: auto; /* Centre le conteneur horizontalement */
-  }
-
-  /* Informations sur le post */
-  .post-info {
-    display: flex; /* Utilise Flexbox pour l'affichage */
-    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne suivante */
-  }
-
-  /* Titre d'un seul post */
-  .single_title {
-    font-size: 40px; /* Définit la taille de la police du titre à 40 pixels */
-    width: 100%; /* La largeur du titre prend 100% du conteneur */
-  }
-
-  /* Bouton de contact */
-  .contact-button {
-    width: 100%; /* La largeur du bouton prend 100% de celle du conteneur */
-  }
-
-  /* Conteneur des filtres et options de tri */
-  .filters-and-sort {
-    flex-direction: column;  /* Aligne les filtres en colonne */
-    padding: 30px 15px;  /* Ajuste le padding autour des filtres */
-    align-items: center; /* Centre les éléments horizontalement */
-  }
-
-  /* Sélecteurs dans les filtres et options de tri */
-  #category-filter,
-  #format-filter,
-  #date-sort {
-    width: 100%;  /* Ajuste la largeur des filtres */
-    margin: 10px 0;  /* Ajuste les marges */
-  }
-
-  /* Sélecteur de date de tri */
-  #date-sort {
-    margin-left: 0;  /* Supprime la marge à gauche */
-  }
-
-  /* Bloc de navigation du menu */
-  .bloc-menu-nav {
-    width: 100%; /* Largeur ajustée à 100% */
-    height: auto; /* Hauteur ajustée automatiquement */
-    display: none; /* Masque le menu de navigation */
-  }
-
-  /* Menu */
-  .menu {
-    width: 100%; /* Largeur ajustée à 100% */
-    padding-right: 0; /* Réduit le padding à droite */
-    display: none; /* Masque le menu */
-  }
-
-  /* Menu footer */
-  #menu-footer {
-    width: 100%; /* Largeur ajustée à 100% */
-    padding-left: 0; /* Réduit le padding à gauche */
-    gap: 40px; /* Réduit l'espace entre les éléments */
-  }
-
-  /* En-tête */
-  header {
-    text-align: center; /* Centre le texte dans l'en-tête */
-    background-color: #f8f8f8f8; /* Définit la couleur de fond de l'en-tête */
-    width: auto; /* Définit la largeur de l'en-tête */
-    height: 80px; /* Définit la hauteur de l'en-tête */
-    margin: auto; /* Centre l'en-tête horizontalement */
-  }
-
-  /* Événement */
-  .evento {
-    max-width: 973px; /* Définit la largeur maximale */
-    max-height: 1024px; /* Définit la hauteur maximale */
-    position: absolute; /* Positionne l'élément de manière absolue */
-    margin: -810px 0px 0px 233px; /* Ajuste les marges */
-    object-fit: contain; /* Ajuste la taille de l'objet pour le contenir */
-  }
-
-  /* Contenu d'un seul post */
-  .single_post {
-    flex-direction: column; /* Aligne les éléments en colonne */
-    text-align: center; /* Centre le texte */
-  }
-
-  /* Informations et image du post */
-  .post-info,
-  .post-image {
-    width: 100%; /* La largeur prend 100% du conteneur */
-  }
-
-  /* Ligne de contact */
-  .contact_line {
-    flex-direction: column; /* Aligne les éléments en colonne */
-    align-items: center; /* Centre les éléments horizontalement */
-  }
-
-  /* Avatar de navigation */
-  .navigation-avatar {
-    flex-direction: column; /* Aligne les éléments en colonne */
-    align-items: center; /* Centre les éléments horizontalement */
-  }
-
-  /* Images en bas du post */
-  .img-bas img {
-    max-width: 60%; /* Limite la largeur maximale des images */
-  }
-}
-
-
-/*  **********************************  */
-/*    Media query : max-width: 850px    */
-/*  **********************************  */
-@media (max-width: 850px) {
-
-  /* Cartes */
-  .card {
-    width: 100%; /* Les cartes prennent toute la largeur disponible */
-    margin-bottom: 20px; /* Ajoute un espace de 20px entre les cartes */
-  }
-
-  /* Conteneur des photos */
-  .photos_container {
-    columns: 1; /* Affiche les photos en une seule colonne */
-    width: 100%; /* Définit la largeur à 100% du conteneur parent */
-    column-gap: 15px; /* Réduit l'espace entre les colonnes à 15px */
-  }
-
-  /* Images des posts */
-  .post_img {
-    width: 100%; /* Définit la largeur à 100% du conteneur parent */
-    height: auto; /* Ajuste la hauteur automatiquement */
-    margin: 0; /* Réinitialise les marges */
-  }
-
-  .post-img {
-    width: 100%; /* Définit la largeur à 100% du conteneur parent */
-    height: auto; /* Ajuste la hauteur automatiquement */
-    margin: 0; /* Réinitialise les marges */
-    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne suivante */
-    right: 0; /* Aligne à droite */
+  .hero {
+    position: relative;
+    /* Positionne la section hero de manière relative */
+    text-align: center;
+    /* Centre le texte dans la section hero */
+    color: rgb(19, 18, 18);
+    /* Définit la couleur du texte dans la section hero */
   }
 
   .hero-area img {
-    width: 83%;
-    margin-left: -30px;
+    margin: auto;
     object-fit: cover;
     object-position: 50% 50%;
-}
-  .evento {
-    max-width: 540px;
-    max-height: 900px;
-    position: absolute;
-    margin: -482px 0px 0px 176px;
-    object-fit: contain;
-}
-
-
-  /* Titre et catégorie des posts */
-  .title,
-  .categorie {
-    font-size: 16px; /* Réduit légèrement la taille de la police à 16px */
-    margin: 200px 0px 0px -10px; /* Ajuste les marges */
+    width: 100%;
+    height: 962px;
+    max-height: 966px;
   }
 
-  /* Icônes (œil et fullscreen) */
-  .oeil,
-  .fullscreen {
-    width: 28px; /* Réduit la taille des icônes à 28px */
-    height: 28px; /* Réduit la hauteur des icônes à 28px */
-  }
-
-  /* Bouton de galerie */
-  .galbtn {
-    width: 100%; /* La largeur du bouton prend 100% de celle du conteneur */
-  }
-
-  /* Conteneur d'un seul post */
-  .container.single_post {
-    width: 100%; /* La largeur prend 100% du conteneur parent */
-    height: auto; /* La hauteur ajuste automatiquement */
-    margin: auto; /* Centre le conteneur horizontalement */
-  }
-
-  /* Informations sur le post */
-  .post-info {
-    display: flex; /* Utilise Flexbox pour l'affichage */
-    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne suivante */
-  }
-
-  /* Titre d'un seul post */
-  .single_title {
-    font-size: 36px; /* Définit la taille de la police du titre à 36 pixels */
-    width: 100%; /* La largeur du titre prend 100% du conteneur */
-  }
-
-  /* Bouton de contact */
-  .contact-button {
-    width: 100%; /* La largeur du bouton prend 100% de celle du conteneur */
-  }
-
-  /* Conteneur des filtres et options de tri */
   .filters-and-sort {
+    flex-direction: column;
+    width: 500px;
+    margin: 0;
+    text-align: center;
+    padding-top: 46px;
+    margin-left: 400px;
+    padding-bottom: 40px;
+    display: flex;
+    position: relative;
+    z-index: 12;
     align-items: center;
   }
 
-  /* Sélecteurs dans les filtres et options de tri */
-  #category-filter,
-  #format-filter,
-  #date-sort {
-    width: 100%;  /* Ajuste la largeur des filtres */
-    margin: 10px 0;  /* Ajuste les marges */
-  }
-
-  /* Sélecteur de date de tri */
-  #date-sort {
-    margin-left: 0;  /* Supprime la marge à gauche */
-  }
-
-  /* Bloc de navigation du menu */
-  .bloc-menu-nav {
-    width: 100%; /* Largeur ajustée à 100% */
-    height: auto; /* Hauteur ajustée automatiquement */
-    display: none; /* Masque le menu de navigation */
-  }
-
-  /* Menu */
-  .menu {
-    width: 100%; /* Largeur ajustée à 100% */
-    padding-right: 0; /* Réduit le padding à droite */
-    display: none; /* Masque le menu */
-  }
-
-  /* Menu footer */
-  #menu-footer {
-    width: 100%; /* Largeur ajustée à 100% */
-    padding-left: 0; /* Réduit le padding à gauche */
-    gap: 30px; /* Réduit l'espace entre les éléments */
-  }
-
-  /* En-tête */
-  header {
-    text-align: center; /* Centre le texte dans l'en-tête */
-    background-color: #f8f8f8f8; /* Définit la couleur de fond de l'en-tête */
-    width: auto; /* Définit la largeur de l'en-tête */
-    height: 70px; /* Définit la hauteur de l'en-tête */
-    margin: auto; /* Centre l'en-tête horizontalement */
-  }
-
-  /* Événement */
-  .evento {
-    max-width: 800px; /* Définit la largeur maximale */
-    max-height: 900px; /* Définit la hauteur maximale */
-    position: absolute; /* Positionne l'élément de manière absolue */
-    margin: -600px 0px 0px 150px; /* Ajuste les marges */
-    object-fit: contain; /* Ajuste la taille de l'objet pour le contenir */
-  }
-
-  /* Contenu d'un seul post */
-  .single_post {
-    flex-direction: column; /* Aligne les éléments en colonne */
-    text-align: center; /* Centre le texte */
-  }
-
-  /* Informations et image du post */
-  .post-info,
-  .post-image {
-    width: 100%; /* La largeur prend 100% du conteneur */
-  }
-
-  /* Ligne de contact */
-  .contact_line {
-    flex-direction: column; /* Aligne les éléments en colonne */
-    align-items: center; /* Centre les éléments horizontalement */
-  }
-
-  /* Avatar de navigation */
-  .navigation-avatar {
-    flex-direction: column; /* Aligne les éléments en colonne */
-    align-items: center; /* Centre les éléments horizontalement */
-  }
-
-  /* Images en bas du post */
-  .img-bas img {
-    max-width: 70%; /* Limite la largeur maximale des images */
-  }
-}
-
-
-/*  **********************************  */
-/*    Media query : max-width: 1023px   */
-/*  **********************************  */
-@media (max-width: 1023px) {
-
-  /* Conteneur des photos */
-  .photos_container {
-    columns: 1; /* Affiche les photos en deux colonnes */
-    width: 75%; /* Définit la largeur à 100% du conteneur parent */
-  }
-
-  /* En-tête */
-  header {
-    text-align: center; /* Centre le texte dans l'en-tête */
-    background-color: #f8f8f8f8; /* Définit la couleur de fond de l'en-tête */
-    width: auto; /* Définit la largeur de l'en-tête */
-    height: 80px; /* Définit la hauteur de l'en-tête */
-    margin: auto; /* Centre l'en-tête horizontalement */
-  }
-/* Hero*/
-  .hero-area img {
-    width: 83%;
-    margin-left: -57px;
-}
-/* Photos Photograph event */
-  .evento {
-      max-width: 640px;
-      max-height: 919px;
-      position: absolute;
-      margin: -543px 0px 0px 156px;
-      object-fit: contain;
-  }
-  /* Image des posts */
-  .post_img {
-    width: 100%; /* Ajuste la largeur de l'image */
-    height: auto; /* Ajuste la hauteur de l'image */
-    margin: 0; /* Réinitialise les marges */
-  }
-
-  /* Titre et catégorie */
-  .title,
-  .categorie {
-    font-size: 15px; /* Réduit légèrement la taille de la police */
-    margin: 400px 0px 0px -10px; /* Ajuste les marges */
-  }
-
-  /* Icônes */
-  .oeil,
-  .fullscreen {
-    width: 35px; /* Réduit la taille des icônes */
-    height: 35px; /* Réduit la hauteur des icônes */
-  }
-
-  /* Bouton de galerie */
-  .galbtn {
-    width: 32%; /* La largeur du bouton prend 100% de la largeur du conteneur */
-  }
-
-  /* Conteneur de post unique */
-  .container.single_post {
-    width: 100%; /* La largeur du conteneur prend 100% de la largeur du conteneur parent */
-    height: auto; /* La hauteur du conteneur s'ajuste automatiquement */
-  }
-
-  /* Titre du post */
-  .single_title {
-    font-size: 50px; /* Réduit la taille de la police du titre à 50 pixels */
-    width: 100%; /* La largeur du titre prend 100% de la largeur du conteneur */
-  }
-
-  /* Bouton de contact */
-  .contact-button {
-    width: 100%; /* La largeur du bouton prend 100% de la largeur du conteneur */
-  }
-
-  /* Filtres et tri */
-  .filters-and-sort {
-    padding-right: 20px; /* Réduit le padding à droite */
-    padding-left: 20px; /* Réduit le padding à gauche */
-    padding: 62px 0px 63px 325px;
-  }
-
-  .nice-select {
-    max-width: 260px;
-    max-height: 42px;
-    margin-left: 74px;
-}
-
-
-  #category-filter {
-    margin-right: 30px; /* Ajuste la marge à droite */
-  }
-
-  #date-sort {
-    margin-left: 20px; /* Ajuste la marge à gauche */
-  }
-
-  /* Menu de navigation */
-  .bloc-menu-nav {
-    max-width: 934px;
-    margin-left: 53px;
-}
-
-  .menu {
-    width: 100%; /* Largeur du menu ajustée à 100% */
-    padding-right: 0; /* Réduit le padding à droite */
-    font-size: 14px; /* Réduit la taille de la police */
-  }
-
-  #menu-footer {
-    padding-left: -2px;
-  }
-
-  /* Post unique */
-  .single_post {
-    padding: 15px; /* Ajoute du padding autour du post */
-  }
-
-  /* Informations du post */
-  .post-info {
-    width: 60%; /* Ajuste la largeur des informations du post */
-  }
-
-  /* Image du post */
-  .post-image {
-    width: 100%; /* Ajuste la largeur de l'image du post */
-  }
-
-  /* Images en bas */
-  .img-bas img {
-    max-width: 90%; /* Ajuste la largeur maximale des images en bas */
-  }
-
-  /* Avatar de navigation */
-  .navigation-avatar img {
-    max-width: 65px; /* Réduit la largeur maximale des images d'avatar */
-  }
-}
-
-
-/*  **********************************  */
-/*    Media query : max-width: 1200px    */
-/*  **********************************  */
-@media (max-width: 1200px) {
-/* contenair photos */
   .photos_container {
     columns: 1;
-    width: 75%;
     overflow: hidden;
-    column-gap: 10px;
+    column-gap: 15px;
     width: 1148px;
     margin: 0 auto;
     padding: 5px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
   }
-  /* Photos Photograph event */
+
   .evento {
-    max-width: 640px;
-    max-height: 919px;
+    max-width: 973px;
+    max-height: 1024px;
     position: absolute;
-    margin: -543px 0px 0px 156px;
+    margin: -838px 0px 0px 233px;
     object-fit: contain;
-}
-/* Hero*/
-  .hero-area .hero-thumbnail {
-    position: relative;
+  }
+
+
+  /* ---------------------------------------------------------------------Styles menu burger  -------------------------------------------------------*/
+
+
+  .bandeau {
+    display: block !important;
+    z-index: 20;
+    height: 250px;
+    align-content: center;
+  }
+
+  .logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: 15px 106px 0 263px;
+    width: 1448px;
+  }
+
+  .logoburger {
+    width: 547px;
+    height: 60px;
+  }
+
+  .nav-toggler {
+    background: none;
+    /* Aucune couleur de fond pour le bouton burger */
+    border: none;
+    /* Aucun bord */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* Le bouton burger est visible uniquement en mobile */
+  }
+
+  .line {
+    position: absolute;
+    display: block;
+    top: 102px;
+    width: 150px;
+    height: 8px;
+    margin-right: 0;
+    background-color: #000000;
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+  }
+
+  .l2 {
+    transform: translateY(-35px)
+  }
+
+  .l3 {
+    transform: translateY(35px)
+  }
+
+  .nav-toggler.active .l2 {
+    transform: translateY(0px) rotate(135deg);
+    /* Ligne supérieure se croise */
+  }
+
+  .nav-toggler.active .l1 {
+    opacity: 0;
+    /* Ligne du milieu disparait */
+  }
+
+  .nav-toggler.active .l3 {
+    transform: translateY(0px) rotate(-135deg);
+    /* Ligne inférieure se croise */
+  }
+
+  #menuToggle {
+    position: fixed;
+    top: 255px;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.5s ease;
+  }
+
+  #menuToggle.active {
+    right: 0;
+    /* Le menu glisse vers l'intérieur depuis la droite */
+    z-index: 16;
+    /*Assure que le menu est au-dessus de tout */
+  }
+
+  #menuToggle ul {
+    list-style: none;
+    /* Suppression des puces */
+    text-align: center;
+    /* Texte centré */
+    padding: 0;
+    /* Pas d'espacement interne */
+    z-index: 17;
+    /*Assure que le menu est au-dessus de tout */
+  }
+
+  #menuToggle ul li {
+    font-size: 13rem;
+    margin: 60px 0px;
+    color: white;
+    padding-right: 550px;
+    width: auto;
+    /* Change la couleur du texte en blanc */
+  }
+
+  /*------------------------------------------------------------single.php---------------------------------------------------------------------*/
+
+  .post-image img {
+    width: 100%;
+    /* L'image prend toute la largeur de l'écran */
+    height: auto;
+    /* La hauteur s'ajuste automatiquement */
     margin: 0;
-    width: 66%;
-    overflow: hidden;
-    background-size: contain;
-  }
-  /* Btn charger plus */
-  .galerie_btn {
-      display: flex;
-      align-items: center;
-      width: 930px;
-      margin: 0;
-      padding: 40px 0;
-      justify-content: center;
-  }
-  /* Overlay galerie photos */
-  .lightbox-trigger:hover .overlay {
-    opacity: 1;
-    margin-left: 40px;
-}
-
- /* Filtres et tri */
- .filters-and-sort {
-  width: 20em;
-  height: 43px;
-  margin: 0px 0 0px -40px;
-  padding: 63px 0px 63px 147px;
-}
-.lightbox {
-  left: -237px;
-}
-
-  /* Image des posts */
-  .post_img {
-    width: 564px; /* Ajuste la largeur de l'image */
-    height: 495px; /* Ajuste la hauteur de l'image */
-    margin: 0; /* Réinitialise les marges */
+    /* Réinitialise les marges */
+    object-fit: cover;
+    /* Ou contain selon l'effet désiré */
   }
 
-  /* Titre et catégorie */
-  .title,
-  .categorie {
-    font-size: 16px; /* Réduit légèrement la taille de la police */
-    margin: 400px 0px 0px -10px; /* Ajuste les marges */
-  }
-
-  /* Icônes */
-  .oeil,
-  .fullscreen {
-    width: 35px; /* Ajuste la taille des icônes */
-    height: 35px; /* Ajuste la hauteur des icônes */
-  }
-
-  /* Conteneur de post unique */
-  .container.single_post {
-    width: 1148px; /* Réinitialise la largeur du conteneur à 1148 pixels */
-    height: 844px; /* Réinitialise la hauteur du conteneur à 844 pixels */
-  }
-
-  /* Titre du post */
-  .single_title {
-    font-size: 66px; /* Réinitialise la taille de la police du titre à 66 pixels */
-    width: 560px; /* Réinitialise la largeur du titre à 560 pixels */
-  }
-
-  /* Bouton de contact */
-  .contact-button {
-    width: 272px; /* Réinitialise la largeur du bouton à 272 pixels */
-  }
-  
-  /* Menu de navigation */
-  .bloc-menu-nav {
-    width: 1050px; /* Réajuste la largeur du menu */
-    height: 80px; /* Réajuste la hauteur du menu */
-  }
-
-  .menu {
-    width: 509px; /* Réajuste la largeur du menu */
-    padding-right: 115px; /* Réajuste le padding à droite */
-    font-size: 16px; /* Réajuste la taille de la police */
-  }
-
-  /* Footer */
-  #menu-footer {
-    width: 910px; /* Réajuste la largeur du footer */
-    gap: 100px; /* Réajuste l'espace entre les éléments */
-    margin: 0;/*  Ajuste les marges */
-  }
-
-  /* Post unique */
-  .single_post {
-    padding: 20px; /* Ajoute du padding autour du post */
-  }
-
-  /* Informations du post */
   .post-info {
-    width: 70%; /* Ajuste la largeur des informations du post */
+    width: 100%;
+    text-align: center;
+    /* Ou left selon le style que tu préfères */
+    padding: 10px 20px;
+    margin: 0;
   }
 
-  /* Image du post */
-  .post-image {
-    width: 100%; /* Ajuste la largeur de l'image du post */
+  .single_title {
+    position: absolute;
+    /* Le titre est positionné de manière absolue */
+    width: 450px;
+    /* Largeur fixe du titre */
+    height: 100px;
+    /* Hauteur fixe du titre */
+    text-transform: uppercase;
+    /* Met le texte du titre en majuscules */
+    top: 450px;
+    /* Place le titre à 450px du haut */
+    left: 900px;
+    /* Place le titre à 900px du bord gauche */
   }
 
-  /* Images en bas */
-  .img-bas img {
-    max-width: 100%; /* Ajuste la largeur maximale des images en bas */
+  .contact-section {
+    position: absolute;
+    /* La section de contact est positionnée de manière absolue */
+    top: 2698px;
+    /* Place la section à 2698px du haut de la page */
+    display: flex;
+    /* Utilise le modèle de boîte flex pour les enfants */
+    width: 2531px;
+    /* Largeur fixe de la section */
+    padding-left: 105px;
+    /* Ajoute un padding à gauche de 105px */
+    border-top: 2px solid black;
+    /* Ajoute une bordure noire en haut de 2px */
+    flex-direction: column;
+    /* Organise les éléments en colonne */
+    align-items: center;
+    /* Centre les éléments horizontalement */
   }
 
-  /* Avatar de navigation */
-  .navigation-avatar img {
-    max-width: 70px; /* Réduit la largeur maximale des images d'avatar */
+  .contact_line {
+    position: absolute;
+    /* La ligne de contact est positionnée de manière absolue */
+    width: 1148px;
+    /* Largeur fixe de la ligne */
+    height: 120px;
+    /* Hauteur fixe de la ligne */
+    margin: auto;
+    /* Centre la ligne horizontalement */
+    top: -152px;
+    /* Place la ligne 152px au-dessus de son conteneur */
   }
+
+  .img-bas {
+    position: absolute;
+    /* Position absolue pour cette section */
+    top: 2970px;
+    /* Place cette section à 2970px du haut */
+    flex-direction: column;
+    /* Organise les éléments en colonne */
+    width: 1450px;
+    /* Largeur fixe */
+    align-items: center;
+    /* Centre les éléments horizontalement */
+    margin-left: 615px;
+    /* Décale la section de 615px vers la droite */
+    gap: 15px;
+    /* Espace de 15px entre les éléments */
+  }
+
+  .post-img {
+    width: 1550px;
+    /* Largeur fixe de l'image */
+    height: 1316px;
+    /* Hauteur fixe de l'image */
+    object-fit: cover;
+    /* L'image couvre toute la zone sans distorsion */
+  }
+
+  h3 {
+    text-align: start;
+    /* Le texte commence à gauche (alignement de début) */
+    position: absolute;
+    /* Le titre H3 est positionné de manière absolue */
+    margin-bottom: 20px;
+    /* Ajoute une marge inférieure de 20px */
+    top: 2800px;
+    /* Place le titre à 2800px du haut */
+    font-size: 36px;
+    /* Taille de la police de 36px */
+    font-weight: normal;
+    /* Poids de police normal */
+    border-top: 3px solid #23282d;
+    /* Ajoute une bordure supérieure noire de 3px */
+    padding: 45px 0 0 930px;
+    /* Padding intérieur avec décalage de 930px à gauche */
+    width: 1600px;
+    /* Largeur fixe du titre */
+  }
+
+  .navigation-prev {
+    display: none;
+    /*Cache la navigation précédente*/
+  }
+
+  .container.single_post {
+    display: block;
+    /* Évite le flex si cela cause des décalages */
+    width: 100%;
+    /* Pour s'adapter à la largeur de l'écran */
+    margin: 0;
+    padding: 10px;
+    /* Pour éviter que le contenu colle trop aux bords */
+  }
+
+  .event-meta ul {
+    position: absolute;
+    /* Position absolue de la liste ul */
+    top: 715px;
+    /* Place la liste à 715px du haut */
+    margin-left: 10px;
+    /* Décale la liste de 10px vers la droite */
+  }
+
+  .event-meta li {
+    font-size: 50px;
+    /* Taille de police des éléments de liste de 50px */
+    font-weight: 400;
+    /* Poids de police normal */
+    margin: 25px 0 35px 36px;
+    /* Marges autour de l'élément de liste */
+    width: 850px;
+    /* Largeur fixe de l'élément */
+    height: 42px;
+    /* Hauteur fixe de l'élément */
+  }
+
+  p {
+    font-family: "Poppins", sans-serif;
+    /* Police Poppins */
+    width: 460px;
+    /* Largeur du paragraphe */
+    height: 26px;
+    /* Hauteur du paragraphe */
+    margin: 50px 0 34px -373px;
+    /* Marges pour positionner le paragraphe */
+    font-size: 20px;
+    /* Taille de la police de 20px */
+    font-weight: 400;
+    /* Poids de police normal */
+  }
+
+  .contact-button {
+    font-size: 25px;
+    /* Taille de la police du bouton de contact */
+    font-weight: 400;
+    /* Poids de police normal */
+    display: inline-flex;
+    /* Le bouton est en flex mais en ligne */
+    justify-content: center;
+    /* Centre le contenu du bouton horizontalement */
+    flex-direction: row;
+    /* Aligne le contenu en ligne */
+    align-items: center;
+    /* Centre le contenu verticalement */
+    width: 372px;
+    /* Largeur fixe du bouton */
+    height: 72px;
+    /* Hauteur fixe du bouton */
+    margin-left: -500px;
+    /* Décale le bouton de 500px vers la gauche */
+    background-color: #D8D8D8;
+    /* Couleur de fond gris clair */
+    color: black;
+    /* Texte en noir */
+    text-decoration: none;
+    /* Retire la décoration du lien (soulignement) */
+    border-radius: 2px;
+    /* Coins arrondis de 2px */
+    transition: background-color 0.3s ease;
+    /* Transition douce pour le changement de couleur de fond */
+  }
+
+  #menu-footer {
+    position: absolute;
+    top: 5700px;
+    width: 2500px;
+    padding: 291px 130px 23px 0px;
+    flex-direction: column;
+    gap: 0;
+    line-height: 121.7px;
+    font-size: 70px;
+  }
+
+
 }

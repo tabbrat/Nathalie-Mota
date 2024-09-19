@@ -1,22 +1,25 @@
 <?php
 // Vérifie si la fonction wp_body_open n'existe pas (pour compatibilité avec les versions antérieures à WordPress 6.6.1)
-if ( ! function_exists( 'wp_body_open' ) ) {
-    function wp_body_open() {
+if (! function_exists('wp_body_open')) {
+    function wp_body_open()
+    {
         // Permet d'ajouter des actions à wp_body_open via les hooks
-        do_action( 'wp_body_open' );
+        do_action('wp_body_open');
     }
 }
 
 //-----------------------------------------Fonction pour charger le style du thème,js-------------------------------------
-function nathalie_mota_theme() {
+function nathalie_mota_theme()
+{
     // Enfile le fichier CSS principal du thème
-    wp_enqueue_style( 'Nathalie-Mota-style', get_stylesheet_uri(), array(), '1.0' );
+    wp_enqueue_style('Nathalie-Mota-style', get_stylesheet_uri(), array(), '1.0');
     // fichier du extension Nice-select-2 css
-    wp_enqueue_style('nice-select-2', get_template_directory_uri() . '/assets/css/nice-select2.css' );
+    wp_enqueue_style('nice-select-2', get_template_directory_uri() . '/assets/css/nice-select2.css');
 }
 
 // Fonction pour charger les scripts JS personnalisés
-function enqueue_my_scripts() {
+function enqueue_my_scripts()
+{
     // Enfile le script JS principal du thème
     wp_enqueue_script('my-scripts', get_template_directory_uri() . '/assets/js/scripts.js', array('jquery'), null, true);
 
@@ -24,7 +27,7 @@ function enqueue_my_scripts() {
     wp_enqueue_script('nice-select-2-js', get_template_directory_uri() .  '/assets/js/nice-select2.js', array(), null, true);
     // script pour modifier les select filtre on html
     wp_enqueue_script('select-js', get_template_directory_uri() .  '/assets/js/select.js', array('nice-select-2-js'), null, true);
-    
+
     // Passe l'URL du template (chemin du thème) au script JS
     wp_localize_script('my-scripts', 'myTheme', array(
         'templateUrl' => get_template_directory_uri()
@@ -38,11 +41,12 @@ function enqueue_my_scripts() {
 
 //----------------------------------------fonction chargement plus de photos----------------------------------------------
 // Fonction pour charger plus de photos via AJAX
-function load_more_photos() {
+function load_more_photos()
+{
     // Récupère la page actuelle envoyée par l'appel AJAX
     // 'page' est la donnée envoyée via AJAX pour savoir quelle page de photos charger
     $paged = $_POST['page'];
-    
+
     // Définition des arguments pour la requête WP_Query
     $args = array(
         'post_type' => 'photo', // Type de contenu 'photo' (le type d'article personnalisé que vous avez défini pour les photos)
@@ -63,7 +67,7 @@ function load_more_photos() {
             $reference = get_field('reference'); // 'reference' est le nom du champ personnalisé que vous avez défini
             // Récupération de la catégorie (taxonomie 'categorie') associée à l'image
             $category = get_the_terms(get_the_ID(), 'categorie')[0]->name; // Récupère le nom de la première catégorie associée
-            ?>
+?>
             <!-- Structure HTML pour chaque photo -->
             <article class="card">
                 <!-- Affiche le titre de la photo -->
@@ -71,38 +75,39 @@ function load_more_photos() {
                 <!-- Affiche la catégorie de la photo -->
                 <h2 class="categorie"><?php echo esc_html($category); ?></h2>
                 <span
-                    class="lightbox-trigger" 
-                    data-category="<?php echo esc_attr($category); // Catégorie de l'image ?>" 
-                    data-reference="<?php echo esc_attr($reference); // Référence de l'image ?>" 
-                >
-                        <!-- Affiche l'image de la carte -->
-                        <img class="post_img" src="<?php echo esc_url(get_the_post_thumbnail_url()); ?>" alt="<?php the_title(); ?>" />
-                        <!-- Affiche l'icône pour la lightbox -->
-                        <!---  lien vers la page single.php la page du photo     ----->
-                        <a href="<?php the_permalink(); ?>">
+                    class="lightbox-trigger"
+                    data-category="<?php echo esc_attr($category); // Catégorie de l'image 
+                                    ?>"
+                    data-reference="<?php echo esc_attr($reference); // Référence de l'image 
+                                    ?>">
+                    <!-- Affiche l'image de la carte -->
+                    <img class="post_img" src="<?php echo esc_url(get_the_post_thumbnail_url()); ?>" alt="<?php the_title(); ?>" />
 
-                            <img class="oeil" src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/eye.png'); ?>" alt="Oeil" />
-                        </a>
-                        <!-- Affiche l'icône pour le plein écran -->
-                        <img class="fullscreen" src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/fullscreen.png'); ?>" alt="Plein écran" />
-                        <!-- Contenu de l'overlay caché par défaut -->
-                        <div class="overlay">
-                            <div class="info">
-                                <!-- Affiche la référence de l'image dans l'overlay -->
-                                <div class="reference"><?php echo esc_html($reference); ?></div>
-                                <!-- Affiche la catégorie de l'image dans l'overlay -->
-                                <div class="category"><?php echo esc_html($category); ?></div>
-                            </div>
+                    <!---  lien vers la page single.php la page du photo     ----->
+                    <a href="<?php the_permalink(); ?>">
+
+                        <img class="oeil" src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/eye.png'); ?>" alt="Oeil" />
+                    </a>
+                    <!-- Affiche l'icône pour le plein écran -->
+                    <img class="fullscreen" src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/fullscreen.png'); ?>" alt="Plein écran" />
+                    <!-- Contenu de l'overlay caché par défaut -->
+                    <div class="overlay">
+                        <div class="info">
+                            <!-- Affiche la référence de l'image dans l'overlay -->
+                            <div class="reference"><?php echo esc_html($reference); ?></div>
+                            <!-- Affiche la catégorie de l'image dans l'overlay -->
+                            <div class="category"><?php echo esc_html($category); ?></div>
                         </div>
+                    </div>
                 </span>
             </article>
-            <?php
+<?php
         endwhile;
     endif;
 
     // Réinitialise les données du post pour restaurer l'état global des requêtes WordPress
     wp_reset_postdata();
-    
+
     // Termine correctement l'appel AJAX
     // 'die()' est utilisé pour s'assurer que le script s'arrête ici après avoir envoyé la réponse AJAX
     die();
@@ -112,7 +117,8 @@ function load_more_photos() {
 // Créer un lien pour la gestion des menus dans l'administration
 // et activer un menu pour le header et un autre pour le footer
 // Ces menus seront ensuite visibles dans Apparence / Menus (after_setup_theme)
-function register_my_menu() {
+function register_my_menu()
+{
     // Enregistre un menu de navigation pour le header
     // Le premier paramètre 'header' est l'identifiant unique du menu
     // Le deuxième paramètre est le nom affiché dans l'administration de WordPress
@@ -125,7 +131,8 @@ function register_my_menu() {
 }
 
 //------------------------------------Liens bouton contact page d accuril-------------------------------------------------
-function modify_menu_item($items, $args) {
+function modify_menu_item($items, $args)
+{
     // Vérifie si nous sommes sur le menu principal
     if ($args->theme_location == 'primary') {
         // URL de la page de contact
@@ -133,10 +140,10 @@ function modify_menu_item($items, $args) {
 
         // Cible l'élément avec l'ID spécifique "menu-item-189"
         $search = 'id="menu-item-189"';
-        
+
         // Remplace l'élément par un lien vers la page de contact
         $replace = 'id="menu-item-189" class="menu-item-189"><a href="' . $contact_url . '" class="contact-button">Contact</a>';
-        
+
         // Remplace dans les éléments du menu
         $items = str_replace($search, $replace, $items);
     }
@@ -145,7 +152,8 @@ function modify_menu_item($items, $args) {
 //------------------------------------fonctions filtrage arguments--------------------------------------------------------
 
 // Fonction pour filtrer les photos selon la catégorie, le format, et l'ordre
-function filter_photos() {
+function filter_photos()
+{
     // Récupère les filtres envoyés par l'appel AJAX
     $category = isset($_POST['category']) ? sanitize_text_field($_POST['category']) : '';
     $format = isset($_POST['format']) ? sanitize_text_field($_POST['format']) : '';
@@ -197,7 +205,7 @@ function filter_photos() {
 
     // Réinitialise les données du post
     wp_reset_postdata();
-    
+
     // Termine correctement l'appel AJAX
     wp_die();
 }

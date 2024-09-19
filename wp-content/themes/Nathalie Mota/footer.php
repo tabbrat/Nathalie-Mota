@@ -1,8 +1,8 @@
 <footer>
-<?php
-// Affichage du menu main déclaré dans functions.php
-wp_nav_menu(array('theme_location' => 'footer'));
-?>        
+    <?php
+    // Affichage du menu main déclaré dans functions.php
+    wp_nav_menu(array('theme_location' => 'footer'));
+    ?>
 </footer>
 <!-- Lance la popup contact page single.php -->
 <?php

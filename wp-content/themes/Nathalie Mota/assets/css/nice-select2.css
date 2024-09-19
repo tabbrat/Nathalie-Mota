@@ -20,8 +20,8 @@
   transition: all 0.2s ease-in-out;
   user-select: none;
   white-space: nowrap;
-  width: 260px;
-height: 42px;
+  width: 270px;
+height: 43px;
 }
 
 .nice-select:hover {

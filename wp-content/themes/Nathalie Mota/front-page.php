@@ -28,10 +28,11 @@
                 <?php endwhile; ?>
             </div>
         </div>
-        <?php wp_reset_postdata(); // Réinitialise les données post pour la requête principale ?>
+        <?php wp_reset_postdata(); // Réinitialise les données post pour la requête principale 
+        ?>
     </section>
 
-<!---   -------------------------------------section filtres--------------------------------------------------------------------   --->
+    <!---   -------------------------------------section filtres--------------------------------------------------------------------   --->
 
     <!-- Filtres -->
     <div class="filters-and-sort">
@@ -40,8 +41,8 @@
             <option value="ALL">CATÉGORIE</option>
             <?php
             // Récupère les termes de la taxonomie 'categorie'
-            $photo_categories = get_terms('categorie'); 
-             // Affiche chaque catégorie comme option du menu déroulant
+            $photo_categories = get_terms('categorie');
+            // Affiche chaque catégorie comme option du menu déroulant
             foreach ($photo_categories as $category) {
                 echo '<option value="' . $category->slug . '">' . $category->name . '</option>';
             }
@@ -52,7 +53,7 @@
         <select name="format-filter" class="selectize" id="format-filter">
             <option value="ALL">FORMAT</option>
             <?php
-            $photo_formats = get_terms('format');// Récupère les termes de la taxonomie 'format'
+            $photo_formats = get_terms('format'); // Récupère les termes de la taxonomie 'format'
             // Affiche chaque format comme option du menu déroulant
             foreach ($photo_formats as $format) {
                 echo '<option value="' . $format->slug . '">' . $format->name . '</option>';
@@ -75,65 +76,74 @@
         <img class="evento" src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/Titre header.png'); ?>" alt="" />
     </div>
 
-<!---   -------------------------------------section charger plus---------------------------------------------------------------   --->
+    <!---   -------------------------------------section charger plus---------------------------------------------------------------   --->
 
     <!-- Section | Photos avec Lightbox et Bouton Charger Plus -->
     <section class="photos_container">
         <?php
-        // Arguments pour la requête principale des photos
+        // Définir les arguments pour récupérer les photos
         $args = array(
-            'post_type' => 'photo',        // Type de contenu 'photo'
-            'posts_per_page' => 8,         // Nombre de photos à afficher initialement
+            'post_type' => 'photo',        // On récupère les posts du type 'photo'
+            'posts_per_page' => 8,         // Limite à 8 le nombre de photos affichées initialement
         );
+
+        // Exécute la requête pour obtenir les photos
         $query = new WP_Query($args);
 
+        // Si des photos sont trouvées
         if ($query->have_posts()) :
-            // Boucle pour afficher chaque photo sous forme de carte
+
+            // Boucle à travers chaque photo
             while ($query->have_posts()) : $query->the_post();
                 $post_id = get_the_ID();  // Récupère l'ID du post actuel
         ?>
-               <!-- Carte individuelle pour chaque photo -->
- <article class="card">
-    <h2 class="title"><?php the_title(); ?></h2>
-    <h2 class="categorie"><?php the_terms(get_the_ID(), 'categorie'); ?></h2>
-    <?php
-    // Récupération de la référence via ACF
-    $reference = get_field('reference'); // Remplace 'reference' par le nom de champ personnalisé
-    ?>
+                <!-- Carte individuelle pour chaque photo -->
+                <article class="card">
+                    <h2 class="title"><?php the_title(); ?></h2> <!-- Titre de la photo -->
+                    <h2 class="categorie"><?php the_terms(get_the_ID(), 'categorie'); ?></h2> <!-- Récupère et affiche les termes associés à la taxonomie 'categorie' -->
 
-   <!-- Carte individuelle pour chaque photo -->
-    <span 
-        class="lightbox-trigger" 
-        data-category="<?php echo esc_attr(get_the_terms(get_the_ID(), 'categorie')[0]->name); // Catégorie de l'image ?>" 
-        data-reference="<?php echo esc_attr($reference); //Référence de la photo ?>" 
-    >
-        <!-- photo de la carte -->
-        <img class="post_img" src="<?php echo esc_url(get_the_post_thumbnail_url()); ?>" alt="<?php the_title(); ?>" />
-        
-<!----   ------------------------------------------ Icônes photos galerie ---------------------------------------------------   ----->
-         <!---lien vers la page single.php la page des photo --->
-         <a href="<?php the_permalink(); ?>">
+                    <?php
+                    // Récupérer la référence via le champ personnalisé ACF (Advanced Custom Fields)
+                    $reference = get_field('reference'); // On récupère le champ personnalisé 'reference'
+                    ?>
 
-             <img class="oeil" src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/eye.png'); ?>" alt="Oeil" />
-         </a>
-        <img class="fullscreen" src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/fullscreen.png'); ?>" alt="Plein écran" />
-        
-        <!-- Contenu de l'overlay caché par défaut -->
-        <div class="overlay">
-            <div class="info">
-                <div class="reference"></div> <!-- Référence de l'image -->
-                <div class="category"></div> <!-- Catégorie de l'image -->
-            </div>
-        </div>
-    </span>
-</article>
-        <?php endwhile;
-        endif;
-        wp_reset_postdata(); // Réinitialise les données post pour la requête principale ?>
-       
+                    <!-- Élément pour afficher la lightbox et les informations de l'image -->
+                    <span
+                        class="lightbox-trigger"
+                        data-category="<?php echo esc_attr(get_the_terms(get_the_ID(), 'categorie')[0]->name); // On récupère et échappe la catégorie associée 
+                                        ?>"
+                        data-reference="<?php echo esc_attr($reference); // On échappe la référence 
+                                        ?>">
+                        <!-- Image de la carte -->
+                        <img class="post_img" src="<?php echo esc_url(get_the_post_thumbnail_url()); ?>" alt="<?php the_title(); ?>" /> <!-- On affiche l'image principale de la photo -->
+
+                        <!-- Icône pour ouvrir la page single.php de la photo -->
+                        <a href="<?php the_permalink(); ?>">
+                            <img class="oeil" src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/eye.png'); ?>" alt="Oeil" /> <!-- Icône de l'œil (pour accéder à la page de la photo) -->
+                        </a>
+
+                        <!-- Icône pour afficher l'image en plein écran -->
+                        <img class="fullscreen" src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/fullscreen.png'); ?>" alt="Plein écran" /> <!-- Icône plein écran -->
+
+                        <!-- Overlay caché par défaut, s'affiche au survol -->
+                        <div class="overlay">
+                            <div class="info">
+                                <div class="reference"></div> <!-- Zone pour afficher la référence de la photo dans l'overlay -->
+                                <div class="category"></div> <!-- Zone pour afficher la catégorie de la photo dans l'overlay -->
+                            </div>
+                        </div>
+                    </span>
+                </article>
+        <?php endwhile;  // Fin de la boucle des photos
+        endif;  // Fin de la vérification si des photos existent
+
+        wp_reset_postdata(); // Réinitialise les données de post après la boucle pour ne pas interférer avec d'autres requêtes 
+        ?>
     </section>
 
-<!---   -------------------------------------bouton charger plus----------------------------------------------------------------   --->
+
+
+    <!---   -------------------------------------bouton charger plus----------------------------------------------------------------   --->
 
     <!-- "Charger Plus" -->
     <div class="galerie_btn">
@@ -142,4 +152,4 @@
 
 </main>
 
-<?php get_footer(); ?> 
+<?php get_footer(); ?>

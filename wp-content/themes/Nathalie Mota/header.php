@@ -8,6 +8,7 @@
 
     <!-- Assure un rendu correct sur les appareils mobiles, avec un zoom initial de 100%. -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
     <!-- Balises meta pour le SEO (mots-clés et description du site). -->
     <meta name="keywords" content="photographe événementiel, photographe event, nathalie mota, photo format hd" />
     <meta name="description" content="Nathalie Mota - Site personnel pour la vente de mes photos en impression HD." />
@@ -35,13 +36,15 @@
         <div class="bloc-menu-nav">
             <!--On utilise la fonction get_template_directory_uri() afin d’obtenir l’adresse absolue du logo
     (c’est à dire complète). Sans ça,notre logo ne s’affichera pas.-->
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo_nathalie_mota.png" alt="Logo <?php echo bloginfo('name'); ?>">
+            <img class="logo1" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo_nathalie_mota.png" alt="Logo <?php echo bloginfo('name'); ?>">
             <nav id="navigation">
                 <?php
                 // Affichage du menu main déclaré dans functions.php
                 wp_nav_menu(array('theme_location' => 'header'));
                 ?>
-                <!-----   ---------------------------------------- Menu Burger-------------------------------------------------------------------   --->
+                
+<!-----   ---------------------------------------- Menu Burger-------------------------------------------------------------------   --->
+
                 <div class="bandeau">
                     <div class="logo">
                         <!-- Affiche le logo du site -->
@@ -60,15 +63,15 @@
                     <div class="nav-burger" id="menuToggle">
                         <ul>
                             <!-- Liens du menu burger -->
-                            <a href="#">
+                            <a href="ACCUEIL">
                                 <li>Accueil</li>
                             </a>
-                            <a href="#">
+                            <a href="À PROPOS">
                                 <li>À propos</li>
                             </a>
-                            <a href="#">
-                                <li>Contact</li>
-                            </a>
+                            <a href="#" id="contact-popup-trigger"> <!-- Utilise un href="#" pour un bouton de popup -->
+    <li>Contact</li>
+</a>
                         </ul>
                     </div>
                 </div>

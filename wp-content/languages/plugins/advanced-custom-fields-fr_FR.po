@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Advanced Custom Fields (ACF) - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-08-01 15:32:11+0000\n"
+"PO-Revision-Date: 2024-09-26 13:59:51+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -10,6 +10,52 @@ msgstr ""
 "X-Generator: GlotPress/4.0.1\n"
 "Language: fr\n"
 "Project-Id-Version: Plugins - Advanced Custom Fields (ACF) - Stable (latest release)\n"
+
+#: includes/validation.php:136
+msgid "ACF was unable to perform validation due to an invalid security nonce being provided."
+msgstr "ACF n’a pas pu effectuer la validation en raison d’un nonce de sécurité invalide."
+
+#: includes/fields/class-acf-field.php:359
+msgid "Allow Access to Value in Editor UI"
+msgstr "Autoriser l’accès à la valeur dans l’interface de l’éditeur"
+
+#: includes/fields/class-acf-field.php:341
+msgid "Learn more."
+msgstr "En savoir plus."
+
+#: includes/Blocks/Bindings.php:64
+msgid "The requested ACF field type does not support output in Block Bindings or the ACF shortcode."
+msgstr "Le type de champ ACF demandé ne prend pas en charge la sortie via les Block Bindings ou le code court ACF."
+
+#: includes/api/api-template.php:1085 includes/Blocks/Bindings.php:72
+msgid "The requested ACF field is not allowed to be output in bindings or the ACF Shortcode."
+msgstr "Le champ ACF demandé n’est pas autorisé à être affiché via les bindings ou le code court ACF."
+
+#: includes/api/api-template.php:1077
+msgid "The requested ACF field type does not support output in bindings or the ACF Shortcode."
+msgstr "Le type de champ ACF demandé ne prend pas en charge l’affichage via les bindings ou le code court ACF."
+
+#. translators: %s A "Learn More" link to documentation explaining the setting
+#. further.
+#: includes/fields/class-acf-field.php:340
+msgid "Allow content editors to access and display the field value in the editor UI using Block Bindings or the ACF Shortcode. %s"
+msgstr "Autoriser aux éditeurs et éditrices de contenu d’accéder à la valeur du champ et de l’afficher dans l’interface de l’éditeur en utilisant les blocs bindings ou le code court ACF. %s"
+
+#: includes/api/api-template.php:1054
+msgid "[The ACF shortcode cannot display fields from non-public posts]"
+msgstr "[Le code court ACF ne peut pas afficher les champs des publications non publiques]"
+
+#: includes/api/api-template.php:1011
+msgid "[The ACF shortcode is disabled on this site]"
+msgstr "[Le code court ACF est désactivé sur ce site]"
+
+#: includes/fields/class-acf-field-icon_picker.php:443
+msgid "Forums Icon"
+msgstr "Icône de forums"
+
+#: includes/fields/class-acf-field-icon_picker.php:451
+msgid "Businessman Icon"
+msgstr "Icône d’homme d’affaires"
 
 #: includes/fields/class-acf-field-icon_picker.php:722
 msgid "YouTube Icon"
@@ -35,9 +81,966 @@ msgstr "Icône Rédaction de blog"
 msgid "WordPress (alt) Icon"
 msgstr "Icône WordPress (alt)"
 
+#: includes/fields/class-acf-field-icon_picker.php:713
+msgid "View Site Icon"
+msgstr "Voir l’icône du site"
+
+#: includes/fields/class-acf-field-icon_picker.php:694
+msgid "Twitch Icon"
+msgstr "Icône Twitch"
+
+#: includes/fields/class-acf-field-icon_picker.php:691
+msgid "Tide Icon"
+msgstr "Icône de marée"
+
+#: includes/fields/class-acf-field-icon_picker.php:673
+msgid "Superhero Icon"
+msgstr "Icône de super-héros"
+
+#: includes/fields/class-acf-field-icon_picker.php:667
+msgid "Spotify Icon"
+msgstr "Icône Spotify"
+
+#: includes/fields/class-acf-field-icon_picker.php:661
+msgid "Shortcode Icon"
+msgstr "Icône de code court"
+
+#: includes/fields/class-acf-field-icon_picker.php:652
+msgid "Saved Icon"
+msgstr "Icône enregistrée"
+
+#: includes/fields/class-acf-field-icon_picker.php:651
+msgid "RSS Icon"
+msgstr "Icône RSS"
+
+#: includes/fields/class-acf-field-icon_picker.php:649
+msgid "Remove Icon"
+msgstr "Retirer l’icône"
+
+#: includes/fields/class-acf-field-icon_picker.php:647
+msgid "Reddit Icon"
+msgstr "Icône Reddit"
+
+#: includes/fields/class-acf-field-icon_picker.php:644
+msgid "Privacy Icon"
+msgstr "Icône de confidentialité"
+
+#: includes/fields/class-acf-field-icon_picker.php:643
+msgid "Printer Icon"
+msgstr "Icône d’imprimante"
+
+#: includes/fields/class-acf-field-icon_picker.php:639
+msgid "Podio Icon"
+msgstr "Icône Podio"
+
+#: includes/fields/class-acf-field-icon_picker.php:632
+msgid "Pinterest Icon"
+msgstr "Icône Pinterest"
+
+#: includes/fields/class-acf-field-icon_picker.php:630
+msgid "Pets Icon"
+msgstr "Icône d’animaux"
+
+#: includes/fields/class-acf-field-icon_picker.php:714
+msgid "Widgets Menus Icon"
+msgstr "Icône de widgets de menus"
+
+#: includes/fields/class-acf-field-icon_picker.php:712
+msgid "Learn More Icon"
+msgstr "Icône En savoir plus"
+
+#: includes/fields/class-acf-field-icon_picker.php:707
+msgid "Video (alt3) Icon"
+msgstr "Icône Vidéo (alt3)"
+
+#: includes/fields/class-acf-field-icon_picker.php:706
+msgid "Video (alt2) Icon"
+msgstr "Icône vidéo (alt2)"
+
+#: includes/fields/class-acf-field-icon_picker.php:705
+msgid "Video (alt) Icon"
+msgstr "Icône vidéo (alt)"
+
+#: includes/fields/class-acf-field-icon_picker.php:702
+msgid "Update (alt) Icon"
+msgstr "Icône de mise à jour (alt)"
+
+#: includes/fields/class-acf-field-icon_picker.php:696
+msgid "Twitter (alt) Icon"
+msgstr "Icône Twitter (alt)"
+
+#: includes/fields/class-acf-field-icon_picker.php:690
+msgid "Tickets (alt) Icon"
+msgstr "Icône de billets (alt)"
+
+#: includes/fields/class-acf-field-icon_picker.php:686
+msgid "Text Page Icon"
+msgstr "Icône de page de texte"
+
+#: includes/fields/class-acf-field-icon_picker.php:660
+msgid "Shield (alt) Icon"
+msgstr "Icône de bouclier (alt)"
+
+#: includes/fields/class-acf-field-icon_picker.php:658
+msgid "Share (alt2) Icon"
+msgstr "Icône de partage (alt2)"
+
+#: includes/fields/class-acf-field-icon_picker.php:657
+msgid "Share (alt) Icon"
+msgstr "Icône de partage (alt)"
+
+#: includes/fields/class-acf-field-icon_picker.php:650
+msgid "REST API Icon"
+msgstr "Icône d’API REST"
+
+#: includes/fields/class-acf-field-icon_picker.php:638
+msgid "Plus (alt2) Icon"
+msgstr "Icône Plus (alt2)"
+
+#: includes/fields/class-acf-field-icon_picker.php:637
+msgid "Plus (alt) Icon"
+msgstr "Icône Plus (alt)"
+
+#: includes/fields/class-acf-field-icon_picker.php:635
+msgid "Plugins Checked Icon"
+msgstr "Icône d’extensions cochée"
+
+#: includes/fields/class-acf-field-icon_picker.php:710
+msgid "Add Page Icon"
+msgstr "Icône Ajouter une page"
+
+#: includes/fields/class-acf-field-icon_picker.php:628
+msgid "PDF Icon"
+msgstr "Icône de PDF"
+
+#: includes/fields/class-acf-field-icon_picker.php:607
+msgid "Spreadsheet Icon"
+msgstr "Icône de feuille de calcul"
+
+#: includes/fields/class-acf-field-icon_picker.php:606
+msgid "Interactive Icon"
+msgstr "Icône interactive"
+
+#: includes/fields/class-acf-field-icon_picker.php:605
+msgid "Document Icon"
+msgstr "Icône de document"
+
+#: includes/fields/class-acf-field-icon_picker.php:604
+msgid "Default Icon"
+msgstr "Icône par défaut"
+
+#: includes/fields/class-acf-field-icon_picker.php:595
+msgid "LinkedIn Icon"
+msgstr "Icône LinkedIn"
+
+#: includes/fields/class-acf-field-icon_picker.php:590
+msgid "Instagram Icon"
+msgstr "Icône Instagram"
+
+#: includes/fields/class-acf-field-icon_picker.php:564
+msgid "Google Icon"
+msgstr "Icône Google"
+
+#: includes/fields/class-acf-field-icon_picker.php:563
+msgid "Games Icon"
+msgstr "Icône de jeux"
+
+#: includes/fields/class-acf-field-icon_picker.php:553
+#: includes/fields/class-acf-field-icon_picker.php:602
+msgid "Audio Icon"
+msgstr "Icône audio"
+
+#: includes/fields/class-acf-field-icon_picker.php:551
+msgid "Food Icon"
+msgstr "Icône d’alimentation"
+
+#: includes/fields/class-acf-field-icon_picker.php:534
+msgid "Ellipsis Icon"
+msgstr "Icône de points de suspension"
+
+#: includes/fields/class-acf-field-icon_picker.php:626
+msgid "Palm Tree Icon"
+msgstr "Icône de palmier"
+
+#: includes/fields/class-acf-field-icon_picker.php:625
+msgid "Open Folder Icon"
+msgstr "Icône d’ouverture du dossier"
+
+#: includes/fields/class-acf-field-icon_picker.php:624
+msgid "No (alt) Icon"
+msgstr "Pas d’icône (alt)"
+
+#: includes/fields/class-acf-field-icon_picker.php:619
+msgid "Money (alt) Icon"
+msgstr "Icône d’argent (alt)"
+
+#: includes/fields/class-acf-field-icon_picker.php:587
+msgid "Insert Icon"
+msgstr "Insérer un icône"
+
+#: includes/fields/class-acf-field-icon_picker.php:579
+msgid "Rotate Icon"
+msgstr "Icône de rotation"
+
+#: includes/fields/class-acf-field-icon_picker.php:575
+msgid "Crop Icon"
+msgstr "Icône de recadrage"
+
+#: includes/fields/class-acf-field-icon_picker.php:574
+msgid "ID (alt) Icon"
+msgstr "Icône d’ID (alt)"
+
+#: includes/fields/class-acf-field-icon_picker.php:572
+msgid "HTML Icon"
+msgstr "Icône HTML"
+
+#: includes/fields/class-acf-field-icon_picker.php:571
+msgid "Hourglass Icon"
+msgstr "Icône de sablier"
+
+#: includes/fields/class-acf-field-icon_picker.php:561
+msgid "Fullscreen (alt) Icon"
+msgstr "Icône plein écran (alt)"
+
+#: includes/fields/class-acf-field-icon_picker.php:558
+msgid "Status Icon"
+msgstr "Icône d’état"
+
+#: includes/fields/class-acf-field-icon_picker.php:556
+msgid "Image Icon"
+msgstr "Icône d’image"
+
+#: includes/fields/class-acf-field-icon_picker.php:555
+msgid "Gallery Icon"
+msgstr "Icône de galerie"
+
+#: includes/fields/class-acf-field-icon_picker.php:554
+msgid "Chat Icon"
+msgstr "Icône de chat"
+
+#: includes/fields/class-acf-field-icon_picker.php:552
+msgid "Aside Icon"
+msgstr "Icône Aparté"
+
+#: includes/fields/class-acf-field-icon_picker.php:544
+msgid "Exit Icon"
+msgstr "Icône de sortie"
+
+#: includes/fields/class-acf-field-icon_picker.php:525
+msgid "RTL Icon"
+msgstr "Icône RTL"
+
+#: includes/fields/class-acf-field-icon_picker.php:516
+msgid "LTR Icon"
+msgstr "Icône LTR"
+
+#: includes/fields/class-acf-field-icon_picker.php:568
+msgid "Heading Icon"
+msgstr "Icône de titre"
+
 #: includes/fields/class-acf-field-icon_picker.php:488
 msgid "Database Icon"
 msgstr "Icône de base de données"
+
+#: includes/fields/class-acf-field-icon_picker.php:497
+msgid "Drumstick Icon"
+msgstr "Icône de pilon"
+
+#: includes/fields/class-acf-field-icon_picker.php:480
+msgid "Play Icon"
+msgstr "Icône de lecture"
+
+#: includes/fields/class-acf-field-icon_picker.php:479
+msgid "Pause Icon"
+msgstr "Icône de pause"
+
+#: includes/fields/class-acf-field-icon_picker.php:477
+msgid "Back Icon"
+msgstr "Icône de retour"
+
+#: includes/fields/class-acf-field-icon_picker.php:476
+msgid "Columns Icon"
+msgstr "Icône de colonnes"
+
+#: includes/fields/class-acf-field-icon_picker.php:474
+msgid "Coffee Icon"
+msgstr "Icône de café"
+
+#: includes/fields/class-acf-field-icon_picker.php:460
+msgid "Car Icon"
+msgstr "Icône de voiture"
+
+#: includes/fields/class-acf-field-icon_picker.php:455
+msgid "Calculator Icon"
+msgstr "Icône de calculatrice"
+
+#: includes/fields/class-acf-field-icon_picker.php:449
+msgid "Tracking Icon"
+msgstr "Icône de suivi"
+
+#: includes/fields/class-acf-field-icon_picker.php:448
+msgid "Topics Icon"
+msgstr "Icône de sujets"
+
+#: includes/fields/class-acf-field-icon_picker.php:447
+msgid "Replies Icon"
+msgstr "Icône de réponses"
+
+#: includes/fields/class-acf-field-icon_picker.php:446
+msgid "PM Icon"
+msgstr "Icône Pm"
+
+#: includes/fields/class-acf-field-icon_picker.php:444
+msgid "Friends Icon"
+msgstr "Icône d’amis"
+
+#: includes/fields/class-acf-field-icon_picker.php:442
+msgid "Community Icon"
+msgstr "Icône de communauté"
+
+#: includes/fields/class-acf-field-icon_picker.php:441
+msgid "BuddyPress Icon"
+msgstr "Icône BuddyPress"
+
+#: includes/fields/class-acf-field-icon_picker.php:439
+msgid "Activity Icon"
+msgstr "Icône d’activité"
+
+#: includes/fields/class-acf-field-icon_picker.php:435
+msgid "Bell Icon"
+msgstr "Icône de cloche"
+
+#: includes/fields/class-acf-field-icon_picker.php:434
+msgid "Beer Icon"
+msgstr "Icône de bière"
+
+#: includes/fields/class-acf-field-icon_picker.php:433
+msgid "Bank Icon"
+msgstr "Icône de banque"
+
+#: includes/fields/class-acf-field-icon_picker.php:415
+msgid "Amazon Icon"
+msgstr "Icône Amazon"
+
+#: includes/fields/class-acf-field-icon_picker.php:405
+msgid "Airplane Icon"
+msgstr "Icône d’avion"
+
+#: includes/fields/class-acf-field-icon_picker.php:508
+msgid "Custom Character Icon"
+msgstr "Icône de caractère personnalisé"
+
+#: includes/fields/class-acf-field-icon_picker.php:481
+msgid "Repeat Icon"
+msgstr "Icône de répétition"
+
+#: includes/fields/class-acf-field-icon_picker.php:478
+msgid "Forward Icon"
+msgstr "Icône de transfert"
+
+#: includes/fields/class-acf-field-icon_picker.php:475
+msgid "Color Picker Icon"
+msgstr "Icône de sélecteur de couleurs"
+
+#: includes/fields/class-acf-field-icon_picker.php:459
+msgid "Camera (alt) Icon"
+msgstr "Icône d’appareil photo (alt)"
+
+#: includes/fields/class-acf-field-icon_picker.php:454
+msgid "Button Icon"
+msgstr "Icône de bouton"
+
+#: includes/fields/class-acf-field-icon_picker.php:438
+msgid "Book (alt) Icon"
+msgstr "Icône de livre (alt)"
+
+#: includes/fields/class-acf-field-icon_picker.php:436
+msgid "Block Default Icon"
+msgstr "Icône de bloc par défaut"
+
+#: includes/fields/class-acf-field-icon_picker.php:440
+msgid "bbPress Icon"
+msgstr "Icône bbPress"
+
+#: includes/fields/class-acf-field-icon_picker.php:402
+msgid "Site (alt3) Icon"
+msgstr "Icône de site (alt3)"
+
+#: includes/fields/class-acf-field-icon_picker.php:401
+msgid "Site (alt2) Icon"
+msgstr "Icône de site (alt2)"
+
+#: includes/fields/class-acf-field-icon_picker.php:400
+msgid "Site (alt) Icon"
+msgstr "Icône de site (alt)"
+
+#: includes/ajax/class-acf-ajax-query-users.php:24
+msgid "Invalid request args."
+msgstr "Arguments de requête invalides."
+
+#: includes/admin/views/acf-field-group/pro-features.php:25
+#: includes/admin/views/acf-field-group/pro-features.php:27
+#: includes/admin/views/global/header.php:27
+msgid "ACF PRO logo"
+msgstr "Logo ACF PRO"
+
+#: includes/admin/views/acf-field-group/field.php:37
+msgid "ACF PRO Logo"
+msgstr "Logo ACF PRO"
+
+#: includes/fields/class-acf-field-icon_picker.php:717
+msgid "WordPress Icon"
+msgstr "Icône WordPress"
+
+#: includes/fields/class-acf-field-icon_picker.php:709
+msgid "Warning Icon"
+msgstr "Icône d’avertissement"
+
+#: includes/fields/class-acf-field-icon_picker.php:708
+msgid "Visibility Icon"
+msgstr "Icône de visibilité"
+
+#: includes/fields/class-acf-field-icon_picker.php:704
+msgid "Vault Icon"
+msgstr "Icône de coffre-fort"
+
+#: includes/fields/class-acf-field-icon_picker.php:703
+msgid "Upload Icon"
+msgstr "Icône de téléversement"
+
+#: includes/fields/class-acf-field-icon_picker.php:700
+msgid "Unlock Icon"
+msgstr "Icône de déverrouillage"
+
+#: includes/fields/class-acf-field-icon_picker.php:697
+msgid "Undo Icon"
+msgstr "Icône d’annulation"
+
+#: includes/fields/class-acf-field-icon_picker.php:695
+msgid "Twitter Icon"
+msgstr "Icône Twitter"
+
+#: includes/fields/class-acf-field-icon_picker.php:693
+msgid "Trash Icon"
+msgstr "Icône de corbeille"
+
+#: includes/fields/class-acf-field-icon_picker.php:608
+#: includes/fields/class-acf-field-icon_picker.php:685
+msgid "Text Icon"
+msgstr "Icône de texte"
+
+#: includes/fields/class-acf-field-icon_picker.php:684
+msgid "Testimonial Icon"
+msgstr "Icône de témoignage"
+
+#: includes/fields/class-acf-field-icon_picker.php:683
+msgid "Tagcloud Icon"
+msgstr "Icône Tagcloud"
+
+#: includes/fields/class-acf-field-icon_picker.php:682
+msgid "Tag Icon"
+msgstr "Icône de balise"
+
+#: includes/fields/class-acf-field-icon_picker.php:681
+msgid "Tablet Icon"
+msgstr "Icône de tablette"
+
+#: includes/fields/class-acf-field-icon_picker.php:672
+msgid "Store Icon"
+msgstr "Icône de boutique"
+
+#: includes/fields/class-acf-field-icon_picker.php:666
+msgid "Sos Icon"
+msgstr "Icône Sos"
+
+#: includes/fields/class-acf-field-icon_picker.php:665
+msgid "Sort Icon"
+msgstr "Icône de tri"
+
+#: includes/fields/class-acf-field-icon_picker.php:664
+msgid "Smiley Icon"
+msgstr "Icône Smiley"
+
+#: includes/fields/class-acf-field-icon_picker.php:656
+msgid "Share Icon"
+msgstr "Icône de partage"
+
+#: includes/fields/class-acf-field-icon_picker.php:655
+msgid "Search Icon"
+msgstr "Icône de recherche"
+
+#: includes/fields/class-acf-field-icon_picker.php:653
+msgid "Schedule Icon"
+msgstr "Icône de calendrier"
+
+#: includes/fields/class-acf-field-icon_picker.php:648
+msgid "Redo Icon"
+msgstr "Icône de rétablissement"
+
+#: includes/fields/class-acf-field-icon_picker.php:645
+msgid "Products Icon"
+msgstr "Icône de produits"
+
+#: includes/fields/class-acf-field-icon_picker.php:631
+msgid "Phone Icon"
+msgstr "Icône de téléphone"
+
+#: includes/fields/class-acf-field-icon_picker.php:627
+msgid "Paperclip Icon"
+msgstr "Icône de trombone"
+
+#: includes/fields/class-acf-field-icon_picker.php:623
+msgid "No Icon"
+msgstr "Pas d'icône"
+
+#: includes/fields/class-acf-field-icon_picker.php:620
+msgid "Move Icon"
+msgstr "Icône de déplacement"
+
+#: includes/fields/class-acf-field-icon_picker.php:618
+msgid "Money Icon"
+msgstr "Icône d’argent"
+
+#: includes/fields/class-acf-field-icon_picker.php:617
+msgid "Minus Icon"
+msgstr "Icône Moins"
+
+#: includes/fields/class-acf-field-icon_picker.php:616
+msgid "Migrate Icon"
+msgstr "Icône de migration"
+
+#: includes/fields/class-acf-field-icon_picker.php:615
+msgid "Microphone Icon"
+msgstr "Icône de micro"
+
+#: includes/fields/class-acf-field-icon_picker.php:610
+msgid "Megaphone Icon"
+msgstr "Icône de mégaphone"
+
+#: includes/fields/class-acf-field-icon_picker.php:599
+msgid "Lock Icon"
+msgstr "Icône de verrouillage"
+
+#: includes/fields/class-acf-field-icon_picker.php:597
+msgid "Location Icon"
+msgstr "Icône d’emplacement"
+
+#: includes/fields/class-acf-field-icon_picker.php:594
+msgid "Lightbulb Icon"
+msgstr "Icône d’ampoule"
+
+#: includes/fields/class-acf-field-icon_picker.php:591
+msgid "Laptop Icon"
+msgstr "Icône de portable"
+
+#: includes/fields/class-acf-field-icon_picker.php:585
+msgid "Info Icon"
+msgstr "Icône d’information"
+
+#: includes/fields/class-acf-field-icon_picker.php:569
+msgid "Heart Icon"
+msgstr "Icône de coeur"
+
+#: includes/fields/class-acf-field-icon_picker.php:445
+#: includes/fields/class-acf-field-icon_picker.php:566
+msgid "Groups Icon"
+msgstr "Icône de groupes"
+
+#: includes/fields/class-acf-field-icon_picker.php:560
+msgid "Forms Icon"
+msgstr "Icône de formulaires"
+
+#: includes/fields/class-acf-field-icon_picker.php:546
+msgid "Facebook Icon"
+msgstr "Icône Facebook"
+
+#: includes/fields/class-acf-field-icon_picker.php:535
+msgid "Email Icon"
+msgstr "Icône d’e-mail"
+
+#: includes/fields/class-acf-field-icon_picker.php:528
+msgid "Table Icon"
+msgstr "Icône de tableau"
+
+#: includes/fields/class-acf-field-icon_picker.php:523
+#: includes/fields/class-acf-field-icon_picker.php:557
+msgid "Quote Icon"
+msgstr "Icône de citation"
+
+#: includes/fields/class-acf-field-icon_picker.php:519
+msgid "Outdent Icon"
+msgstr "Icône de retrait"
+
+#: includes/fields/class-acf-field-icon_picker.php:514
+msgid "Justify Icon"
+msgstr "Justifier l’icône"
+
+#: includes/fields/class-acf-field-icon_picker.php:513
+msgid "Italic Icon"
+msgstr "Icône italique"
+
+#: includes/fields/class-acf-field-icon_picker.php:510
+msgid "Help Icon"
+msgstr "Icône d’aide"
+
+#: includes/fields/class-acf-field-icon_picker.php:506
+#: includes/fields/class-acf-field-icon_picker.php:603
+msgid "Code Icon"
+msgstr "Icône de code"
+
+#: includes/fields/class-acf-field-icon_picker.php:498
+msgid "Edit Icon"
+msgstr "Modifier l’icône"
+
+#: includes/fields/class-acf-field-icon_picker.php:496
+msgid "Download Icon"
+msgstr "Icône de téléchargement"
+
+#: includes/fields/class-acf-field-icon_picker.php:487
+msgid "Dashboard Icon"
+msgstr "Icône de tableau de bord"
+
+#: includes/fields/class-acf-field-icon_picker.php:470
+msgid "Cloud Icon"
+msgstr "Icône de nuage"
+
+#: includes/fields/class-acf-field-icon_picker.php:469
+msgid "Clock Icon"
+msgstr "Icône d’horloge"
+
+#: includes/fields/class-acf-field-icon_picker.php:468
+msgid "Clipboard Icon"
+msgstr "Icône de presse-papiers"
+
+#: includes/fields/class-acf-field-icon_picker.php:463
+msgid "Category Icon"
+msgstr "Icône de catégorie"
+
+#: includes/fields/class-acf-field-icon_picker.php:462
+msgid "Cart Icon"
+msgstr "Icône de panier"
+
+#: includes/fields/class-acf-field-icon_picker.php:461
+msgid "Carrot Icon"
+msgstr "Icône de carotte"
+
+#: includes/fields/class-acf-field-icon_picker.php:456
+msgid "Calendar Icon"
+msgstr "Icône de calendrier"
+
+#: includes/fields/class-acf-field-icon_picker.php:453
+msgid "Businesswoman Icon"
+msgstr "Icône de femme d’affaires"
+
+#: includes/fields/class-acf-field-icon_picker.php:437
+msgid "Book Icon"
+msgstr "Icône de livre"
+
+#: includes/fields/class-acf-field-icon_picker.php:432
+msgid "Backup Icon"
+msgstr "Icône de sauvegarde"
+
+#: includes/fields/class-acf-field-icon_picker.php:430
+msgid "Art Icon"
+msgstr "Icône d’art"
+
+#: includes/fields/class-acf-field-icon_picker.php:417
+#: includes/fields/class-acf-field-icon_picker.php:601
+msgid "Archive Icon"
+msgstr "Icône d’archive"
+
+#: includes/fields/class-acf-field-icon_picker.php:416
+msgid "Analytics Icon"
+msgstr "Icône de statistiques"
+
+#: includes/fields/class-acf-field-icon_picker.php:406
+msgid "Album Icon"
+msgstr "Icône d’album"
+
+#: includes/fields/class-acf-field-icon_picker.php:404
+msgid "Users Icon"
+msgstr "Icône d’utilisateurs/utilisatrices"
+
+#: includes/fields/class-acf-field-icon_picker.php:403
+msgid "Tools Icon"
+msgstr "Icône d’outils"
+
+#: includes/fields/class-acf-field-icon_picker.php:399
+msgid "Site Icon"
+msgstr "Icône de site"
+
+#: includes/fields/class-acf-field-icon_picker.php:398
+msgid "Settings Icon"
+msgstr "Icône de réglages"
+
+#: includes/fields/class-acf-field-icon_picker.php:397
+msgid "Post Icon"
+msgstr "Icône de publication"
+
+#: includes/fields/class-acf-field-icon_picker.php:396
+msgid "Plugins Icon"
+msgstr "Icône d’extensions"
+
+#: includes/fields/class-acf-field-icon_picker.php:395
+msgid "Page Icon"
+msgstr "Icône de page"
+
+#: includes/fields/class-acf-field-icon_picker.php:394
+msgid "Network Icon"
+msgstr "Icône de réseau"
+
+#: includes/fields/class-acf-field-icon_picker.php:393
+msgid "Multisite Icon"
+msgstr "Icône multisite"
+
+#: includes/fields/class-acf-field-icon_picker.php:392
+msgid "Media Icon"
+msgstr "Icône de média"
+
+#: includes/fields/class-acf-field-icon_picker.php:391
+msgid "Links Icon"
+msgstr "Icône de liens"
+
+#: includes/fields/class-acf-field-icon_picker.php:388
+msgid "Customizer Icon"
+msgstr "Icône de personnalisation"
+
+#: includes/fields/class-acf-field-icon_picker.php:387
+#: includes/fields/class-acf-field-icon_picker.php:711
+msgid "Comments Icon"
+msgstr "Icône de commentaires"
+
+#: includes/fields/class-acf-field-icon_picker.php:386
+msgid "Collapse Icon"
+msgstr "Icône de réduction"
+
+#: includes/fields/class-acf-field-icon_picker.php:389
+msgid "Generic Icon"
+msgstr "Icône générique"
+
+#: includes/fields/class-acf-field-icon_picker.php:284
+msgid "No results found for that search term"
+msgstr "Aucun résultat trouvé pour ce terme de recherche"
+
+#: includes/fields/class-acf-field-icon_picker.php:265
+msgid "String"
+msgstr "Chaîne"
+
+#: includes/fields/class-acf-field-icon_picker.php:194
+msgid "Browse Media Library"
+msgstr "Parcourir la médiathèque"
+
+#: includes/fields/class-acf-field-icon_picker.php:53
+msgid "Media Library"
+msgstr "Médiathèque"
+
+#: includes/fields/class-acf-field-icon_picker.php:49
+msgid "Dashicons"
+msgstr "Dashicons"
+
+#: includes/fields/class-acf-field-icon_picker.php:23
+msgid "Icon Picker"
+msgstr "Sélecteur d’icône"
+
+#: includes/class-acf-site-health.php:683
+msgid "Shortcode Enabled"
+msgstr "Code court activé"
+
+#: includes/class-acf-site-health.php:600
+msgid "Standard"
+msgstr "Normal"
+
+#: includes/class-acf-site-health.php:599
+msgid "REST API Format"
+msgstr "Format de l’API REST"
+
+#: includes/class-acf-site-health.php:379
+msgid "Active Plugins"
+msgstr "Extensions actives"
+
+#: includes/class-acf-site-health.php:353
+msgid "Parent Theme"
+msgstr "Thème parent"
+
+#: includes/class-acf-site-health.php:342
+msgid "Active Theme"
+msgstr "Thème actif"
+
+#: includes/class-acf-site-health.php:333
+msgid "Is Multisite"
+msgstr "Est un multisite"
+
+#: includes/class-acf-site-health.php:328
+msgid "MySQL Version"
+msgstr "Version MySQL"
+
+#: includes/class-acf-site-health.php:323
+msgid "WordPress Version"
+msgstr "Version de WordPress"
+
+#: includes/class-acf-site-health.php:308
+msgid "License Status"
+msgstr "État de la licence"
+
+#: includes/class-acf-site-health.php:303
+msgid "License Type"
+msgstr "Type de licence"
+
+#: includes/class-acf-site-health.php:286
+msgid "Free"
+msgstr "Gratuit"
+
+#: includes/admin/post-types/admin-field-group.php:141
+#: assets/build/js/acf-input.js:1413 assets/build/js/acf-input.js:1508
+msgid "Terms do not contain"
+msgstr "Les termes ne contiennent pas"
+
+#: includes/admin/post-types/admin-field-group.php:140
+#: assets/build/js/acf-input.js:1388 assets/build/js/acf-input.js:1482
+msgid "Terms contain"
+msgstr "Les termes contiennent"
+
+#: includes/admin/post-types/admin-field-group.php:134
+#: assets/build/js/acf-input.js:977 assets/build/js/acf-input.js:1036
+msgid "Users contain"
+msgstr "Les utilisateurs contiennent"
+
+#: includes/admin/post-types/admin-field-group.php:131
+#: assets/build/js/acf-input.js:916 assets/build/js/acf-input.js:972
+msgid "Has no page selected"
+msgstr "N’a pas de page sélectionnée"
+
+#: includes/admin/post-types/admin-field-group.php:128
+#: assets/build/js/acf-input.js:839 assets/build/js/acf-input.js:890
+msgid "Pages contain"
+msgstr "Les pages contiennent"
+
+#: includes/fields/class-acf-field-icon_picker.php:701
+msgid "Update Icon"
+msgstr "Mettre à jour l’icône"
+
+#: includes/fields/class-acf-field-icon_picker.php:698
+msgid "Universal Access Icon"
+msgstr "Icône d’accès universel"
+
+#: includes/fields/class-acf-field-icon_picker.php:692
+msgid "Translation Icon"
+msgstr "Icône de traduction"
+
+#: includes/fields/class-acf-field-icon_picker.php:671
+msgid "Sticky Icon"
+msgstr "Icône d’épinglage"
+
+#: includes/fields/class-acf-field-icon_picker.php:662
+msgid "Slides Icon"
+msgstr "Icône de diapositives"
+
+#: includes/fields/class-acf-field-icon_picker.php:659
+msgid "Shield Icon"
+msgstr "Icône de bouclier"
+
+#: includes/fields/class-acf-field-icon_picker.php:642
+msgid "Pressthis Icon"
+msgstr "Icône Pressthis"
+
+#: includes/fields/class-acf-field-icon_picker.php:640
+msgid "Portfolio Icon"
+msgstr "Icône de portfolio"
+
+#: includes/fields/class-acf-field-icon_picker.php:636
+msgid "Plus Icon"
+msgstr "Icône Plus"
+
+#: includes/fields/class-acf-field-icon_picker.php:600
+msgid "Marker Icon"
+msgstr "Icône de marqueur"
+
+#: includes/fields/class-acf-field-icon_picker.php:550
+msgid "Flag Icon"
+msgstr "Icône de drapeau"
+
+#: includes/fields/class-acf-field-icon_picker.php:549
+#: includes/fields/class-acf-field-icon_picker.php:576
+msgid "Filter Icon"
+msgstr "Icône de filtre"
+
+#: includes/fields/class-acf-field-icon_picker.php:545
+msgid "External Icon"
+msgstr "Icône externe"
+
+#: includes/fields/class-acf-field-icon_picker.php:533
+#: includes/fields/class-acf-field-icon_picker.php:559
+#: includes/fields/class-acf-field-icon_picker.php:609
+msgid "Video Icon"
+msgstr "Icône de vidéo"
+
+#: includes/fields/class-acf-field-icon_picker.php:532
+msgid "Unlink Icon"
+msgstr "Icône de dissociation"
+
+#: includes/fields/class-acf-field-icon_picker.php:531
+msgid "Underline Icon"
+msgstr "Icône de soulignement"
+
+#: includes/fields/class-acf-field-icon_picker.php:529
+msgid "Text Color Icon"
+msgstr "Icône de couleur de texte"
+
+#: includes/fields/class-acf-field-icon_picker.php:526
+msgid "Spellcheck Icon"
+msgstr "Icône de vérification orthographique"
+
+#: includes/fields/class-acf-field-icon_picker.php:494
+msgid "Desktop Icon"
+msgstr "Icône d’ordinateur"
+
+#: includes/fields/class-acf-field-icon_picker.php:385
+msgid "Appearance Icon"
+msgstr "Icône d’apparence"
+
+#: includes/fields/class-acf-field-icon_picker.php:266
+msgid "Array"
+msgstr "Tableau"
+
+#: includes/class-acf-site-health.php:600
+msgid "Light"
+msgstr "Clair"
+
+#: includes/class-acf-site-health.php:298
+msgid "Licensed URL"
+msgstr "URL sous licence"
+
+#: includes/class-acf-site-health.php:292
+msgid "License Activated"
+msgstr "Licence activée"
+
+#: includes/class-acf-site-health.php:285
+msgid "Plugin Type"
+msgstr "Type d’extension"
+
+#: includes/admin/post-types/admin-field-group.php:143
+#: assets/build/js/acf-input.js:1461 assets/build/js/acf-input.js:1559
+msgid "Has no term selected"
+msgstr "N’a aucun terme sélectionné"
+
+#: includes/admin/post-types/admin-field-group.php:125
+#: assets/build/js/acf-input.js:1189 assets/build/js/acf-input.js:1260
+msgid "Has no relationship selected"
+msgstr "N’a aucune relation sélectionnée"
+
+#: includes/admin/post-types/admin-field-group.php:123
+#: assets/build/js/acf-input.js:1327 assets/build/js/acf-input.js:1416
+msgid "Has no post selected"
+msgstr "N’a aucune publication sélectionnée"
+
+#: includes/admin/post-types/admin-field-group.php:120
+#: assets/build/js/acf-input.js:1250 assets/build/js/acf-input.js:1328
+msgid "Posts contain"
+msgstr "Les publications contiennent"
+
+#: includes/class-acf-site-health.php:280
+msgid "Plugin Version"
+msgstr "Version de l’extension"
 
 #: includes/Blocks/Bindings.php:35
 msgctxt "The core ACF block binding source name for fields on the current page"
@@ -142,8 +1145,8 @@ msgid "Add fields"
 msgstr "Ajouter des champs"
 
 #: includes/admin/post-types/admin-field-group.php:147
-#: assets/build/js/acf-field-group.js:2803
-#: assets/build/js/acf-field-group.js:3298
+#: assets/build/js/acf-field-group.js:2804
+#: assets/build/js/acf-field-group.js:3220
 msgid "This Field"
 msgstr "Ce champ"
 
@@ -234,7 +1237,7 @@ msgstr "Sélectionnee le(s) champ(s) pour stocker la référence à l’élémen
 
 #: includes/fields/class-acf-field-page_link.php:498
 #: includes/fields/class-acf-field-post_object.php:411
-#: includes/fields/class-acf-field-select.php:380
+#: includes/fields/class-acf-field-select.php:372
 #: includes/fields/class-acf-field-user.php:111
 msgid "Select Multiple"
 msgstr "Sélection multiple"
@@ -1632,7 +2635,7 @@ msgstr "Type de publication supprimé."
 
 #: includes/admin/post-types/admin-field-group.php:146
 #: assets/build/js/acf-field-group.js:1159
-#: assets/build/js/acf-field-group.js:1383
+#: assets/build/js/acf-field-group.js:1369
 msgid "Type to search..."
 msgstr "Type à rechercher…"
 
@@ -1791,9 +2794,9 @@ msgstr "Cette taxonomie n’a pas pu être enregistrée car sa clé est utilisé
 
 #: includes/admin/post-types/admin-field-group.php:101
 #: assets/build/js/acf-field-group.js:1186
-#: assets/build/js/acf-field-group.js:2349
-#: assets/build/js/acf-field-group.js:1429
-#: assets/build/js/acf-field-group.js:2761
+#: assets/build/js/acf-field-group.js:2350
+#: assets/build/js/acf-field-group.js:1404
+#: assets/build/js/acf-field-group.js:2683
 msgid "PRO Only"
 msgstr "Uniquement sur PRO"
 
@@ -2465,8 +3468,8 @@ msgid "Field Settings Tabs"
 msgstr "Onglets des réglages du champ"
 
 #: includes/admin/post-types/admin-field-group.php:92
-#: assets/build/js/acf-field-group.js:1701
-#: assets/build/js/acf-field-group.js:2032
+#: assets/build/js/acf-field-group.js:1702
+#: assets/build/js/acf-field-group.js:1972
 msgid "Field moved to other group"
 msgstr "Champ déplacé vers un autre groupe"
 
@@ -2501,15 +3504,15 @@ msgstr "Validation"
 msgid "Presentation"
 msgstr "Présentation"
 
-#: includes/fields/class-acf-field-tab.php:119
+#: includes/fields/class-acf-field-tab.php:122
 msgid "Start a new group of tabs at this tab."
 msgstr "Commencez un nouveau groupe d’onglets dans cet onglet."
 
-#: includes/fields/class-acf-field-tab.php:118
+#: includes/fields/class-acf-field-tab.php:121
 msgid "New Tab Group"
 msgstr "Nouveau groupe d’onglets"
 
-#: includes/fields/class-acf-field-select.php:423
+#: includes/fields/class-acf-field-select.php:415
 #: includes/fields/class-acf-field-true_false.php:188
 msgid "Use a stylized checkbox using select2"
 msgstr "Utiliser une case à cocher stylisée avec select2"
@@ -2688,8 +3691,8 @@ msgid "Activate this item"
 msgstr "Activer cet élément"
 
 #: includes/admin/post-types/admin-field-group.php:88
-#: assets/build/js/acf-field-group.js:2862
-#: assets/build/js/acf-field-group.js:3375
+#: assets/build/js/acf-field-group.js:2863
+#: assets/build/js/acf-field-group.js:3297
 msgid "Move field group to trash?"
 msgstr "Déplacer le groupe de champs vers la corbeille ?"
 
@@ -2723,7 +3726,7 @@ msgstr "<strong>%1$s</strong> - Nous avons détecté un ou plusieurs appels pou
 msgid "Invalid request."
 msgstr "Demande invalide."
 
-#: includes/fields/class-acf-field-select.php:637
+#: includes/fields/class-acf-field-select.php:629
 msgid "%1$s is not one of %2$s"
 msgstr "%1$s n’est pas l’un des %2$s"
 
@@ -3082,21 +4085,21 @@ msgstr "Non"
 msgid "Yes"
 msgstr "Oui"
 
-#: includes/fields/class-acf-field-group.php:412
+#: includes/fields/class-acf-field-group.php:415
 msgid "Row"
 msgstr "Ligne"
 
-#: includes/fields/class-acf-field-group.php:411
+#: includes/fields/class-acf-field-group.php:414
 msgid "Table"
 msgstr "Tableau"
 
 #: includes/admin/post-types/admin-field-group.php:158
-#: includes/fields/class-acf-field-group.php:410
+#: includes/fields/class-acf-field-group.php:413
 msgid "Block"
 msgstr "Bloc"
 
 #: includes/fields/class-acf-field-message.php:23
-#: includes/fields/class-acf-field-message.php:84
+#: includes/fields/class-acf-field-message.php:87
 #: includes/fields/class-acf-field-true_false.php:125
 msgid "Message"
 msgstr "Message"
@@ -3108,7 +4111,7 @@ msgstr "Message"
 #: includes/fields/class-acf-field-number.php:113
 #: includes/fields/class-acf-field-radio.php:192
 #: includes/fields/class-acf-field-range.php:153
-#: includes/fields/class-acf-field-select.php:353
+#: includes/fields/class-acf-field-select.php:345
 #: includes/fields/class-acf-field-text.php:95
 #: includes/fields/class-acf-field-textarea.php:93
 #: includes/fields/class-acf-field-true_false.php:135
@@ -3121,7 +4124,7 @@ msgstr "Valeur par défaut"
 msgid "Date Picker"
 msgstr "Sélecteur de date"
 
-#: includes/fields/class-acf-field-message.php:94
+#: includes/fields/class-acf-field-message.php:97
 #: includes/fields/class-acf-field-textarea.php:155
 msgid "New Lines"
 msgstr "Nouvelles lignes"
@@ -3232,7 +4235,7 @@ msgid "Value must not exceed %d characters"
 msgstr "La valeur ne doit pas excéder %d caractères"
 
 #: includes/admin/views/acf-field-group/options.php:130
-#: includes/fields/class-acf-field-tab.php:109
+#: includes/fields/class-acf-field-tab.php:112
 msgid "Left aligned"
 msgstr "Aligné à gauche"
 
@@ -3240,7 +4243,7 @@ msgstr "Aligné à gauche"
 msgid "Link"
 msgstr "Lien"
 
-#: includes/fields/class-acf-field-accordion.php:102
+#: includes/fields/class-acf-field-accordion.php:105
 msgid "Endpoint"
 msgstr "Point de terminaison"
 
@@ -3256,17 +4259,20 @@ msgstr "Sélectionner une couleur"
 msgid "Color Picker"
 msgstr "Sélecteur de couleur"
 
-#: includes/fields/class-acf-field-select.php:104
+#. translators: %d - number of characters that should be removed from select
+#. field
+#: includes/fields/class-acf-field-select.php:95
 msgctxt "Select2 JS input_too_long_n"
 msgid "Please delete %d characters"
 msgstr "Veuillez supprimer %d caractères"
 
-#: includes/fields/class-acf-field-select.php:103
+#: includes/fields/class-acf-field-select.php:93
 msgctxt "Select2 JS input_too_long_1"
 msgid "Please delete 1 character"
 msgstr "Veuillez supprimer 1 caractère"
 
-#: includes/fields/class-acf-field-select.php:102
+#. translators: %d - number of characters to enter into select field input
+#: includes/fields/class-acf-field-select.php:92
 msgctxt "Select2 JS input_too_short_n"
 msgid "Please enter %d or more characters"
 msgstr "Veuillez saisir %d caractères ou plus"
@@ -3495,8 +4501,8 @@ msgstr "Modifier le champ"
 
 #: includes/admin/post-types/admin-field-group.php:99
 #: includes/admin/views/acf-field-group/location-group.php:3
-#: assets/build/js/acf-field-group.js:2387
-#: assets/build/js/acf-field-group.js:2812
+#: assets/build/js/acf-field-group.js:2388
+#: assets/build/js/acf-field-group.js:2734
 msgid "Show this field group if"
 msgstr "Afficher ce groupe de champs si"
 
@@ -3700,7 +4706,7 @@ msgstr "La valeur est égale à"
 #: includes/acf-field-functions.php:854
 #: includes/admin/post-types/admin-field-group.php:95
 #: assets/build/js/acf-field-group.js:1090
-#: assets/build/js/acf-field-group.js:1277
+#: assets/build/js/acf-field-group.js:1274
 msgid "(no label)"
 msgstr "(aucun libellé)"
 
@@ -3768,14 +4774,14 @@ msgstr "Visuel"
 #: includes/fields/class-acf-field-button-group.php:164
 #: includes/fields/class-acf-field-checkbox.php:349
 #: includes/fields/class-acf-field-radio.php:209
-#: includes/fields/class-acf-field-select.php:371
+#: includes/fields/class-acf-field-select.php:363
 msgid "Label"
 msgstr "Libellé"
 
 #: includes/fields/class-acf-field-button-group.php:163
 #: includes/fields/class-acf-field-checkbox.php:348
 #: includes/fields/class-acf-field-radio.php:208
-#: includes/fields/class-acf-field-select.php:370
+#: includes/fields/class-acf-field-select.php:362
 msgid "Value"
 msgstr "Valeur"
 
@@ -3794,7 +4800,7 @@ msgstr "Horizontal"
 #: includes/fields/class-acf-field-button-group.php:137
 #: includes/fields/class-acf-field-checkbox.php:322
 #: includes/fields/class-acf-field-radio.php:182
-#: includes/fields/class-acf-field-select.php:342
+#: includes/fields/class-acf-field-select.php:334
 msgid "Choices"
 msgstr "Choix"
 
@@ -4058,8 +5064,8 @@ msgstr "Null"
 #: includes/admin/post-types/admin-field-group.php:97
 #: includes/class-acf-internal-post-type.php:728
 #: includes/post-types/class-acf-field-group.php:345
-#: assets/build/js/acf-field-group.js:1541
-#: assets/build/js/acf-field-group.js:1860
+#: assets/build/js/acf-field-group.js:1542
+#: assets/build/js/acf-field-group.js:1805
 msgid "copy"
 msgstr "copier"
 
@@ -4076,8 +5082,8 @@ msgid "Checked"
 msgstr "Coché"
 
 #: includes/admin/post-types/admin-field-group.php:90
-#: assets/build/js/acf-field-group.js:1646
-#: assets/build/js/acf-field-group.js:1972
+#: assets/build/js/acf-field-group.js:1647
+#: assets/build/js/acf-field-group.js:1913
 msgid "Move Custom Field"
 msgstr "Déplacer le champ personnalisé"
 
@@ -4144,9 +5150,9 @@ msgstr "Le type de fichier doit être %s."
 #: includes/admin/views/acf-field-group/location-group.php:3
 #: includes/admin/views/acf-field-group/locations.php:35
 #: includes/api/api-helpers.php:2981 assets/build/js/acf-field-group.js:781
-#: assets/build/js/acf-field-group.js:2427
+#: assets/build/js/acf-field-group.js:2428
 #: assets/build/js/acf-field-group.js:946
-#: assets/build/js/acf-field-group.js:2859
+#: assets/build/js/acf-field-group.js:2781
 msgid "or"
 msgstr "ou"
 
@@ -4173,7 +5179,7 @@ msgstr "Valeur unique"
 msgid "Other"
 msgstr "Autre"
 
-#: includes/fields/class-acf-field-accordion.php:80
+#: includes/fields/class-acf-field-accordion.php:83
 msgid "Open"
 msgstr "Ouvrir"
 
@@ -4237,7 +5243,7 @@ msgid "Date Time Picker"
 msgstr "Sélecteur de date et heure"
 
 #: includes/admin/views/acf-field-group/options.php:129
-#: includes/fields/class-acf-field-tab.php:108
+#: includes/fields/class-acf-field-tab.php:111
 msgid "Top aligned"
 msgstr "Aligné en haut"
 
@@ -4248,7 +5254,7 @@ msgstr "URL du lien"
 #: includes/fields/class-acf-field-button-group.php:165
 #: includes/fields/class-acf-field-checkbox.php:350
 #: includes/fields/class-acf-field-radio.php:210
-#: includes/fields/class-acf-field-select.php:372
+#: includes/fields/class-acf-field-select.php:364
 msgid "Both (Array)"
 msgstr "Les deux (tableau)"
 
@@ -4327,7 +5333,7 @@ msgstr "Texte affiché lorsque actif"
 msgid "Displays text alongside the checkbox"
 msgstr "Affiche le texte à côté de la case à cocher"
 
-#: includes/fields/class-acf-field-group.php:388
+#: includes/fields/class-acf-field-group.php:391
 msgid "Sub Fields"
 msgstr "Sous-champs"
 
@@ -4350,7 +5356,7 @@ msgstr "Google Map"
 #: includes/fields/class-acf-field-image.php:177
 #: includes/fields/class-acf-field-post_object.php:396
 #: includes/fields/class-acf-field-relationship.php:610
-#: includes/fields/class-acf-field-select.php:364
+#: includes/fields/class-acf-field-select.php:356
 #: includes/fields/class-acf-field-time_picker.php:121
 #: includes/fields/class-acf-field-user.php:95
 msgid "Return Format"
@@ -4389,7 +5395,8 @@ msgstr "Modifier le groupe de champs"
 msgid "Customize WordPress with powerful, professional and intuitive fields."
 msgstr "Personnalisez WordPress avec des champs intuitifs, puissants et professionnels."
 
-#: includes/fields/class-acf-field-select.php:99
+#. translators: %d - number of results available in select field
+#: includes/fields/class-acf-field-select.php:88
 msgctxt "Select2 JS matches_n"
 msgid "%d results are available, use up and down arrow keys to navigate."
 msgstr "%d résultats disponibles, utilisez les flèches haut et bas pour naviguer parmi ceux-ci."
@@ -4461,7 +5468,7 @@ msgctxt "Date Picker JS currentText"
 msgid "Today"
 msgstr "Aujourd’hui"
 
-#: includes/fields/class-acf-field-message.php:110
+#: includes/fields/class-acf-field-message.php:113
 msgid "Allow HTML markup to display as visible text instead of rendering"
 msgstr "Permet l’affichage du code HTML à l’écran au lieu de l’interpréter"
 
@@ -4518,14 +5525,14 @@ msgstr "Apparaît à la création d’une nouvelle publication"
 #: includes/fields/class-acf-field-button-group.php:138
 #: includes/fields/class-acf-field-checkbox.php:323
 #: includes/fields/class-acf-field-radio.php:183
-#: includes/fields/class-acf-field-select.php:343
+#: includes/fields/class-acf-field-select.php:335
 msgid "For more control, you may specify both a value and label like this:"
 msgstr "Pour plus de contrôle, vous pouvez spécifier une valeur et un libellé de cette manière :"
 
 #: includes/fields/class-acf-field-button-group.php:138
 #: includes/fields/class-acf-field-checkbox.php:323
 #: includes/fields/class-acf-field-radio.php:183
-#: includes/fields/class-acf-field-select.php:343
+#: includes/fields/class-acf-field-select.php:335
 msgid "red : Red"
 msgstr "rouge : Rouge"
 
@@ -4534,7 +5541,7 @@ msgctxt "Date Time Picker JS timeOnlyTitle"
 msgid "Choose Time"
 msgstr "Choisir l’heure"
 
-#: includes/fields/class-acf-field-accordion.php:103
+#: includes/fields/class-acf-field-accordion.php:106
 msgid "Define an endpoint for the previous accordion to stop. This accordion will not be visible."
 msgstr "Définir un point de terminaison pour l’accordéon précédent. Cet accordéon ne sera pas visible."
 
@@ -4585,8 +5592,8 @@ msgid "is not equal to"
 msgstr "n’est pas égal à"
 
 #: includes/admin/post-types/admin-field-group.php:86
-#: assets/build/js/acf-field-group.js:1635
-#: assets/build/js/acf-field-group.js:1958
+#: assets/build/js/acf-field-group.js:1636
+#: assets/build/js/acf-field-group.js:1902
 msgid "This field cannot be moved until its changes have been saved"
 msgstr "Ce champ ne peut pas être déplacé tant que ses modifications n’ont pas été enregistrées"
 
@@ -4595,7 +5602,7 @@ msgstr "Ce champ ne peut pas être déplacé tant que ses modifications n’ont 
 msgid "Options Page"
 msgstr "Page d’options"
 
-#: includes/fields/class-acf-field-accordion.php:92
+#: includes/fields/class-acf-field-accordion.php:95
 msgid "Allow this accordion to open without closing others."
 msgstr "Autoriser l’ouverture de cet accordéon sans fermer les autres."
 
@@ -4622,8 +5629,8 @@ msgid "True / False"
 msgstr "Vrai/Faux"
 
 #: includes/admin/post-types/admin-field-group.php:85
-#: assets/build/js/acf-field-group.js:1445
-#: assets/build/js/acf-field-group.js:1755
+#: assets/build/js/acf-field-group.js:1446
+#: assets/build/js/acf-field-group.js:1703
 msgid "The string \"field_\" may not be used at the start of a field name"
 msgstr "La chaine « field_ » ne peut pas être utilisée au début du nom d’un champ"
 
@@ -4712,7 +5719,7 @@ msgstr "Créer des termes"
 msgid "Add 'other' choice to allow for custom values"
 msgstr "Ajouter le choix « Autre » pour autoriser les valeurs personnalisées"
 
-#: includes/fields/class-acf-field-accordion.php:81
+#: includes/fields/class-acf-field-accordion.php:84
 msgid "Display this accordion as open on page load."
 msgstr "Ouvrir l’accordéon au chargement de la page."
 
@@ -4855,26 +5862,26 @@ msgstr "Taille de l’incrément"
 msgid "Maximum Value"
 msgstr "Valeur maximum"
 
-#: includes/fields/class-acf-field-message.php:109
+#: includes/fields/class-acf-field-message.php:112
 msgid "Escape HTML"
 msgstr "Autoriser le code HTML"
 
-#: includes/fields/class-acf-field-message.php:101
+#: includes/fields/class-acf-field-message.php:104
 #: includes/fields/class-acf-field-textarea.php:162
 msgid "No Formatting"
 msgstr "Aucun formatage"
 
-#: includes/fields/class-acf-field-message.php:100
+#: includes/fields/class-acf-field-message.php:103
 #: includes/fields/class-acf-field-textarea.php:161
 msgid "Automatically add &lt;br&gt;"
 msgstr "Ajouter automatiquement &lt;br&gt;"
 
-#: includes/fields/class-acf-field-message.php:99
+#: includes/fields/class-acf-field-message.php:102
 #: includes/fields/class-acf-field-textarea.php:160
 msgid "Automatically add paragraphs"
 msgstr "Ajouter automatiquement des paragraphes"
 
-#: includes/fields/class-acf-field-message.php:95
+#: includes/fields/class-acf-field-message.php:98
 #: includes/fields/class-acf-field-textarea.php:156
 msgid "Controls how new lines are rendered"
 msgstr "Contrôle comment les nouvelles lignes sont rendues"
@@ -4916,27 +5923,27 @@ msgstr "Objet de terme"
 msgid "Load value from posts terms"
 msgstr "Charger une valeur depuis les termes de publications"
 
-#: includes/fields/class-acf-field-select.php:109
+#: includes/fields/class-acf-field-select.php:101
 msgctxt "Select2 JS load_fail"
 msgid "Loading failed"
 msgstr "Le chargement a échoué"
 
-#: includes/fields/class-acf-field-select.php:108
+#: includes/fields/class-acf-field-select.php:100
 msgctxt "Select2 JS searching"
 msgid "Searching&hellip;"
 msgstr "Recherche en cours..."
 
-#: includes/fields/class-acf-field-select.php:107
+#: includes/fields/class-acf-field-select.php:99
 msgctxt "Select2 JS load_more"
 msgid "Loading more results&hellip;"
 msgstr "Chargement de résultats supplémentaires…"
 
-#: includes/fields/class-acf-field-select.php:101
+#: includes/fields/class-acf-field-select.php:90
 msgctxt "Select2 JS input_too_short_1"
 msgid "Please enter 1 or more characters"
 msgstr "Veuillez saisir au minimum 1 caractère"
 
-#: includes/fields/class-acf-field-select.php:100
+#: includes/fields/class-acf-field-select.php:89
 msgctxt "Select2 JS matches_0"
 msgid "No matches found"
 msgstr "Aucun résultat"
@@ -4980,15 +5987,15 @@ msgstr "Liste déroulante à multiple choix"
 msgid "Multiple Values"
 msgstr "Valeurs multiples"
 
-#: includes/fields/class-acf-field-tab.php:104
+#: includes/fields/class-acf-field-tab.php:107
 msgid "Placement"
 msgstr "Positionnement"
 
-#: includes/fields/class-acf-field-select.php:365
+#: includes/fields/class-acf-field-select.php:357
 msgid "Specify the value returned"
 msgstr "Spécifier la valeur retournée"
 
-#: includes/fields/class-acf-field-select.php:433
+#: includes/fields/class-acf-field-select.php:425
 msgid "Use AJAX to lazy load choices?"
 msgstr "Utiliser AJAX pour un chargement différé des choix ?"
 
@@ -5000,7 +6007,7 @@ msgstr "Contenu oEmbed"
 msgid "Link Array"
 msgstr "Tableau de liens"
 
-#: includes/fields/class-acf-field-group.php:405
+#: includes/fields/class-acf-field-group.php:408
 msgid "Specify the style used to render the selected fields"
 msgstr "Spécifier le style utilisé pour afficher les champs sélectionnés"
 
@@ -5079,11 +6086,6 @@ msgstr "Le format affiché lors de la modification d’une publication"
 msgid "Display Format"
 msgstr "Format d’affichage"
 
-#: includes/fields/class-acf-field-date_picker.php:61
-msgctxt "Date Picker JS weekHeader"
-msgid "Wk"
-msgstr "Sem."
-
 #: includes/fields/class-acf-field-date_picker.php:59
 msgctxt "Date Picker JS nextText"
 msgid "Next"
@@ -5095,7 +6097,7 @@ msgid "Done"
 msgstr "Terminé"
 
 #: includes/fields/class-acf-field-checkbox.php:333
-#: includes/fields/class-acf-field-select.php:354
+#: includes/fields/class-acf-field-select.php:346
 msgid "Enter each default value on a new line"
 msgstr "Saisir chaque valeur par défaut sur une nouvelle ligne"
 
@@ -5114,13 +6116,13 @@ msgstr "Spécifier la valeur renvoyée publiquement"
 #: includes/fields/class-acf-field-button-group.php:138
 #: includes/fields/class-acf-field-checkbox.php:323
 #: includes/fields/class-acf-field-radio.php:183
-#: includes/fields/class-acf-field-select.php:343
+#: includes/fields/class-acf-field-select.php:335
 msgid "Enter each choice on a new line."
 msgstr "Saisir chaque choix sur une nouvelle ligne."
 
 #: includes/fields.php:330 includes/fields/class-acf-field-button-group.php:204
 #: includes/fields/class-acf-field-checkbox.php:405
-#: includes/fields/class-acf-field-group.php:404
+#: includes/fields/class-acf-field-group.php:407
 #: includes/fields/class-acf-field-radio.php:276
 msgid "Layout"
 msgstr "Mise en page"
@@ -5234,7 +6236,7 @@ msgstr "Type de champ"
 msgid "Single word, no spaces. Underscores and dashes allowed"
 msgstr "Un seul mot. Aucun espace. Les tirets bas et les tirets sont autorisés."
 
-#: includes/fields/class-acf-field.php:311
+#: includes/fields/class-acf-field.php:312
 msgid "Required"
 msgstr "Obligatoire"
 
@@ -5243,7 +6245,7 @@ msgctxt "No Terms"
 msgid "No %s"
 msgstr "N° %s"
 
-#: includes/fields/class-acf-field-select.php:422
+#: includes/fields/class-acf-field-select.php:414
 #: includes/fields/class-acf-field-true_false.php:187
 msgid "Stylized UI"
 msgstr "Interface (UI) stylisée"
@@ -5271,7 +6273,7 @@ msgstr "Ceci est le nom qui apparaîtra sur la page de modification"
 msgid "Create a set of rules to determine which edit screens will use these advanced custom fields"
 msgstr "Créer un ensemble de règles pour déterminer quels écrans de modification utiliseront ces champs personnalisés avancés"
 
-#: includes/fields/class-acf-field-select.php:229 includes/media.php:48
+#: includes/fields/class-acf-field-select.php:221 includes/media.php:48
 #: assets/build/js/acf-input.js:7822 assets/build/js/acf-input.js:8484
 msgctxt "verb"
 msgid "Select"
@@ -5307,12 +6309,14 @@ msgstr "Validation réussie"
 msgid "Prepend an extra checkbox to toggle all choices"
 msgstr "Ajouter une case à cocher pour basculer tous les choix"
 
-#: includes/fields/class-acf-field-select.php:106
+#. translators: %d - maximum number of items that can be selected in the select
+#. field
+#: includes/fields/class-acf-field-select.php:98
 msgctxt "Select2 JS selection_too_long_n"
 msgid "You can only select %d items"
 msgstr "Vous ne pouvez choisir que %d éléments"
 
-#: includes/fields/class-acf-field-select.php:105
+#: includes/fields/class-acf-field-select.php:96
 msgctxt "Select2 JS selection_too_long_1"
 msgid "You can only select 1 item"
 msgstr "Vous ne pouvez choisir qu’un seul élément"
@@ -5347,7 +6351,7 @@ msgstr "Tout (dé)sélectionner"
 #: includes/fields/class-acf-field-page_link.php:519
 #: includes/fields/class-acf-field-post_object.php:432
 #: includes/fields/class-acf-field-radio.php:228
-#: includes/fields/class-acf-field-select.php:401
+#: includes/fields/class-acf-field-select.php:393
 #: includes/fields/class-acf-field-taxonomy.php:705
 #: includes/fields/class-acf-field-user.php:132
 msgid "Allow Null"
@@ -5382,11 +6386,7 @@ msgstr "Maximum de publications"
 msgid "Minimum Posts"
 msgstr "Minimum de publications"
 
-#: includes/fields/class-acf-field-wysiwyg.php:355
-msgid "Show Media Upload Buttons"
-msgstr "Afficher les boutons de téléversement de médias ?"
-
-#: includes/fields/class-acf-field-select.php:98
+#: includes/fields/class-acf-field-select.php:86
 msgctxt "Select2 JS matches_1"
 msgid "One result is available, press enter to select it."
 msgstr "Un résultat est disponible, appuyez sur « Entrée » pour le sélectionner."
@@ -5395,9 +6395,18 @@ msgstr "Un résultat est disponible, appuyez sur « Entrée » pour le sélect
 msgid "Order No."
 msgstr "N° d’ordre."
 
-#: includes/fields/class-acf-field-accordion.php:91
+#: includes/fields/class-acf-field-accordion.php:94
 msgid "Multi-Expand"
 msgstr "Ouverture multiple"
+
+#: includes/fields/class-acf-field-date_picker.php:61
+msgctxt "Date Picker JS weekHeader"
+msgid "Wk"
+msgstr "Wk"
+
+#: includes/fields/class-acf-field-wysiwyg.php:355
+msgid "Show Media Upload Buttons"
+msgstr "Afficher les boutons de téléversement de média"
 
 #. Plugin Name of the plugin
 #: acf.php acf.php:93

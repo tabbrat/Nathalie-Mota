@@ -210,3 +210,35 @@ height: 43px;
   outline: 0 !important;
   font-size: 14px;
 }
+
+
+/*  **********************************  */
+/*    Media query : max-width: 768px    */
+/*  **********************************  */
+@media screen and (max-width: 768px) {
+.nice-select {
+  border-radius: 8px;
+  border: solid 1px #B8BBC2;
+  box-sizing: border-box;
+  clear: both;
+  cursor: pointer;
+  display: block;
+  float: left;
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 50px;
+  outline: none;
+  padding-left: 20px;
+  padding-right: 30px;
+  position: relative;
+  text-align: left !important;
+  transition: all 0.2s ease-in-out;
+  user-select: none;
+  white-space: nowrap;
+  width: 420px;
+  height: 43px;
+  margin: 0 auto;
+}
+
+  }

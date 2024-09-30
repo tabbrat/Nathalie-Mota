@@ -13,7 +13,6 @@ Text Domain: nathaliemota
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 
-
 /* Supprime la décoration des liens et utilise la couleur héritée */
 a {
   text-decoration: none;
@@ -54,14 +53,24 @@ header {
   /* Centre l'en-tête horizontalement */
 }
 
-/* Style du titre principal photos*/
+.logo1 {
+  margin-left: 140px;
+  /* Style du titre principal photos*/
+  width: 18%;
+  /* Le logo occupe 66% de la largeur disponible du conteneur parent. */
+}
 
 .evento {
   max-width: 973px;
+  /* Définit la largeur maximale de l'élément à 973 pixels */
   max-height: 1024px;
+  /* Définit la hauteur maximale de l'élément à 1024 pixels */
   position: absolute;
+  /* Positionne l'élément de manière absolue par rapport à son parent positionné */
   margin: -704px 0px 0px 233px;
+  /* Applique une marge négative de 704 pixels en haut, 0 à droite, 0 en bas, et 233 pixels à gauche */
   object-fit: contain;
+  /* Permet à l'image de conserver ses proportions tout en étant contenue dans les dimensions spécifiées */
 }
 
 /* --------------------------------------------Style pour la section hero --------------------------------------------*/
@@ -111,6 +120,10 @@ header {
 
 /* --------------------------------------------Style pour le conteneur des photos --------------------------------------------*/
 .photos_container {
+  flex: 1 1 300px;
+  /* Flexibilité des éléments */
+  margin: 10px;
+  /* Marge entre les éléments */
   columns: 2;
   /* Affiche les photos en deux colonnes */
   overflow: hidden;
@@ -127,6 +140,10 @@ header {
 
 /* Style pour les images des posts */
 .post_img {
+  flex: 1 1 300px;
+  /* Flexibilité des éléments */
+  margin: 10px;
+  /* Marge entre les éléments */
   object-fit: cover;
   /* Recadre l'image pour couvrir tout le conteneur */
   width: 564px;
@@ -143,8 +160,8 @@ header {
 .title {
   position: absolute;
   /* Positionne le titre de manière absolue */
-  float: left;
-  /* Aligne le titre à gauche */
+  text-align: left;
+  /* Aligne le texte à gauche */
   margin: 449px 0px 0px -20px;
   /* Ajuste les marges autour du titre */
   color: #ffffff;
@@ -171,8 +188,8 @@ header {
 .categorie {
   position: absolute;
   /* Positionne la catégorie de manière absolue */
-  float: left;
-  /* Aligne la catégorie à gauche */
+  text-align: left;
+  /* Aligne le texte à gauche */
   margin: 449px 0px 0px -20px;
   /* Ajuste les marges autour de la catégorie */
   color: #ffffff;
@@ -233,7 +250,7 @@ header {
   /* Caché par défaut */
   transition: opacity 0.3s ease;
   /* Transition douce pour l'apparition de l'overlay */
-  z-index: 10;
+  z-index: 5;
   /* Assure que l'overlay est au-dessus de l'image */
 }
 
@@ -274,7 +291,7 @@ header {
 .fullscreen {
   position: absolute;
   /* Positionnement absolu pour placer les icônes précisément */
-  z-index: 11;
+  z-index: 6;
   /* Assure que les icônes sont au-dessus de l'overlay */
   cursor: pointer;
   /* Change le curseur au survol pour indiquer que c'est cliquable */
@@ -656,6 +673,10 @@ h3 {
   /* Ajoute un espace de 10em en bas du conteneur */
 }
 
+.hidden {
+  display: none;
+}
+
 /*------------------------------------------------------------------- Filtres -----------------------------------------------------------------*/
 
 .filters-and-sort {
@@ -667,7 +688,7 @@ h3 {
   padding-bottom: 40px;
   display: flex;
   position: relative;
-  z-index: 12;
+  z-index: 1;
   justify-content: space-between;
 }
 
@@ -742,7 +763,7 @@ h3 {
   /* Centre le contenu horizontalement */
   align-items: center;
   justify-content: center;
-  z-index: 20;
+  z-index: 7;
   /* Assure que la lightbox est au-dessus des autres éléments */
 }
 
@@ -805,7 +826,7 @@ img {
 
 .Suivant,
 img {
-  margin: 0px 17px 0px 0px;
+  margin: 0 auto;
   /* décalage a gauche */
 }
 
@@ -923,7 +944,7 @@ img {
   /* Centre verticalement */
   background-color: rgba(0, 0, 0, 0.5);
   /* Ajoute un fond semi-transparent noir */
-  z-index: 15;
+  z-index: 6;
   /* Place l'élément au-dessus de presque tous les autres */
   opacity: 1;
   /* Opacité par défaut */
@@ -957,6 +978,8 @@ img {
   /* Fond blanc */
   transform: scale(0.87);
   /* Optionnel : réduit la taille de la modale */
+  z-index: 9999;
+
 }
 
 /*------------------------------------------------------------------Titre CONTACT --------------------------------------------------------*/
@@ -1130,13 +1153,23 @@ input[type=submit]:hover {
 
 .menu {
   list-style-type: none;
+  /* Supprime les puces de la liste */
   display: flex;
+  /* Utilise le modèle de boîte flexible pour aligner les éléments horizontalement */
   justify-content: space-around;
-  padding-right: 0px;
+  /* Distribue l'espace disponible entre les éléments */
+  padding-right: 125px;
+  /* Ajoute un remplissage de 125 pixels à droite */
+  padding-left: 100px;
+  /* Ajoute un remplissage de 100 pixels à gauche */
   font-size: 16px;
+  /* Définit la taille de la police à 16 pixels */
   font-weight: 400;
+  /* Définit le poids de la police à normal (400) */
   line-height: 23.7px;
-  width: 480px;
+  /* Définit la hauteur de ligne à 23.7 pixels pour l'espacement vertical */
+  width: 580px;
+  /* Définit la largeur du menu à 580 pixels */
 }
 
 #navigation {
@@ -1188,407 +1221,544 @@ input[type=submit]:hover {
   /* Texte noir */
 }
 
+.popup {
+  display: none;
+  /* Styles pour la popup */
+}
+
+/* Pour afficher la popup quand le lien est cliqué */
+:target {
+  display: block;
+}
 
 /* ------------------------------------------------Styles de base pour le menu burger ----------------------------------------------------*/
 
 .bandeau {
-  position: fixed;
+  position: absolute;
+  /* Positionne le bandeau de manière absolue par rapport à son parent positionné */
   height: 72px;
+  /* Définit la hauteur du bandeau à 72 pixels */
   top: 60px;
-  left: -32px;
+  /* Place le bandeau à 60 pixels du haut de son parent */
+  left: 10px;
+  /* Place le bandeau à 10 pixels de la gauche de son parent */
   width: 100%;
+  /* Le bandeau prend toute la largeur de son parent */
   background-color: white;
+  /* Définit la couleur de fond du bandeau en blanc */
   display: none;
   /* Par défaut, le bandeau est caché sur les écrans plus larges */
 }
 
 /* ---------------------------------------------------------Styles @media query screen 768px ---------------------------------------------------*/
-
 /*  **********************************  */
 /*    Media query : max-width: 768px    */
 /*  **********************************  */
-@media screen and (max-width: 768px) {
+@media ALL and (max-width: 768px) {
 
-  .site-main {
-    columns: 1;
-    width: 100%;
-    margin: 0 auto;
-    padding: 5px;
-    width: 1440px;
-  }
-
-  .hero {
-    position: relative;
-    /* Positionne la section hero de manière relative */
-    text-align: center;
-    /* Centre le texte dans la section hero */
-    color: rgb(19, 18, 18);
-    /* Définit la couleur du texte dans la section hero */
-  }
-
-  .hero-area img {
+  /* ---------------------------------------------------------------------Styles menu berger  -------------------------------------------------------*/
+  body {
     margin: auto;
-    object-fit: cover;
-    object-position: 50% 50%;
-    width: 100%;
-    height: 962px;
-    max-height: 966px;
   }
-
-  .filters-and-sort {
-    flex-direction: column;
-    width: 500px;
-    margin: 0;
-    text-align: center;
-    padding-top: 46px;
-    margin-left: 400px;
-    padding-bottom: 40px;
-    display: flex;
-    position: relative;
-    z-index: 12;
-    align-items: center;
-  }
-
-  .photos_container {
-    columns: 1;
-    overflow: hidden;
-    column-gap: 15px;
-    width: 1148px;
-    margin: 0 auto;
-    padding: 5px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-
-  .evento {
-    max-width: 973px;
-    max-height: 1024px;
-    position: absolute;
-    margin: -838px 0px 0px 233px;
-    object-fit: contain;
-  }
-
-
-  /* ---------------------------------------------------------------------Styles menu burger  -------------------------------------------------------*/
-
 
   .bandeau {
-    display: block !important;
-    z-index: 20;
-    height: 250px;
-    align-content: center;
+    display: flex;
+    /* Utilisation de flexbox pour organiser les éléments dans la bande. */
+    z-index: 7;
+    /* Positionnement sur l'axe z, avec une priorité d'affichage par rapport aux éléments ayant un z-index inférieur. */
+    height: 185px;
+    /* Hauteur fixe du bandeau. */
+    justify-content: space-around;
+    /* Distribution uniforme des éléments enfants avec des espaces égaux entre eux. */
+    top: 0;
+    /* Le bandeau est fixé en haut de la page. */
+    position: fixed;
+    /* Le bandeau reste fixe en haut même lors du défilement de la page. */
+    margin-left: -10px;
+    /* Décalage du bandeau vers la gauche de 10px. */
   }
 
   .logo {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    /* Utilisation de flexbox pour l'alignement interne du logo. */
     flex-wrap: nowrap;
-    margin: 15px 106px 0 263px;
-    width: 1448px;
+    /* Les éléments enfants ne sont pas autorisés à passer à la ligne, même s'ils dépassent leur conteneur. */
+    width: 65%;
+    /* Le logo occupe 66% de la largeur disponible du conteneur parent. */
   }
 
   .logoburger {
-    width: 547px;
-    height: 60px;
+    height: 22px;
+    /* Hauteur du logo burger. */
+    margin: 105px 355px 0 70px;
+    /* Marges autour du logo : en haut 85px, à droite 355px, pas de marge en bas, et à gauche 70px. */
   }
 
   .nav-toggler {
     background: none;
-    /* Aucune couleur de fond pour le bouton burger */
+    /* Pas de fond pour le bouton de navigation (toggler). */
     border: none;
-    /* Aucun bord */
+    /* Pas de bordure. */
     display: flex;
+    /* Flexbox pour organiser les éléments internes. */
     flex-direction: column;
+    /* Les éléments enfants sont empilés verticalement (en colonne). */
+    margin-left: 100px;
+    /* Décalage de 100px à gauche. */
+    margin-top: 30px;
+    /* Décalage vers le bas de 30px. */
     justify-content: center;
-    align-items: center;
-    /* Le bouton burger est visible uniquement en mobile */
+    /* Les éléments enfants sont centrés verticalement dans le conteneur. */
   }
 
   .line {
-    position: absolute;
-    display: block;
-    top: 102px;
-    width: 150px;
-    height: 8px;
+    width: 100px;
+    /* Largeur des lignes du burger (barres horizontales). */
+    height: 10px;
+    /* Hauteur de chaque ligne du burger. */
     margin-right: 0;
+    /* Pas de marge à droite. */
     background-color: #000000;
+    /* Les lignes du burger sont de couleur noire. */
     transition: all 0.3s ease-out;
+    /* Animation fluide pour toutes les propriétés sur une durée de 0,3 secondes. */
     cursor: pointer;
+    /* Le curseur devient une main lorsqu'on survole le toggler. */
   }
 
-  .l2 {
-    transform: translateY(-35px)
+  .l1 {
+    transform: translateY(-13px);
+    /* Décale la première ligne du burger vers le haut de 13px. */
   }
 
   .l3 {
-    transform: translateY(35px)
-  }
-
-  .nav-toggler.active .l2 {
-    transform: translateY(0px) rotate(135deg);
-    /* Ligne supérieure se croise */
+    transform: translateY(13px);
+    /* Décale la troisième ligne du burger vers le bas de 13px. */
   }
 
   .nav-toggler.active .l1 {
+    transform: translateY(15px) rotate(135deg);
+    /* Translation et rotation de la première ligne lors de l'activation du toggler (croisement). */
+    /* Ligne supérieure se croise */
+  }
+
+  .nav-toggler.active .l2 {
     opacity: 0;
+    /* La ligne du milieu devient invisible lorsqu'on active le toggler. */
     /* Ligne du milieu disparait */
   }
 
   .nav-toggler.active .l3 {
-    transform: translateY(0px) rotate(-135deg);
+    transform: translateY(-3px) rotate(-135deg);
+    /* Translation et rotation de la troisième ligne lors de l'activation du toggler (croisement). */
     /* Ligne inférieure se croise */
   }
 
+  /* Bandeau rouge */
   #menuToggle {
     position: fixed;
-    top: 255px;
+    /* Le menu reste fixe lors du défilement de la page. */
+    top: 185px;
+    /* Le menu commence juste en dessous du bandeau de 185px de hauteur. */
     right: -100%;
+    /* Le menu est initialement positionné hors de l'écran, à droite. */
     width: 100%;
+    /* Le menu prend toute la largeur de l'écran. */
     height: 100%;
+    /* Le menu occupe toute la hauteur de l'écran. */
     background-color: red;
+    /* Le fond du menu est rouge. */
     display: flex;
+    /* Utilisation de flexbox pour centrer le contenu du menu. */
     justify-content: center;
+    /* Les éléments du menu sont centrés horizontalement. */
     align-items: center;
+    /* Les éléments du menu sont centrés verticalement. */
     transition: right 0.5s ease;
+    /* Animation fluide lors de l'ouverture et la fermeture du menu (0,5 secondes). */
+    z-index: 8;
+    /* Le menu apparaît au-dessus des autres éléments (z-index supérieur à celui du bandeau). */
+  }
+
+  #menuToggle.retracted {
+    right: -100%;
+    /* Le menu reste rétracté à droite (hors écran) quand cette classe est appliquée. */
+    /* Garde le menu rétracté à droite */
   }
 
   #menuToggle.active {
     right: 0;
-    /* Le menu glisse vers l'intérieur depuis la droite */
-    z-index: 16;
-    /*Assure que le menu est au-dessus de tout */
+    /* Le menu est entièrement visible à droite lorsqu'il est actif. */
+    top: 185px;
+    /* Le menu reste aligné juste sous le bandeau. */
+    position: fixed;
+    /* Le menu est fixe et reste à sa position lors du défilement. */
+    margin-right: 0px;
+    /* Aucune marge à droite. */
   }
 
   #menuToggle ul {
     list-style: none;
-    /* Suppression des puces */
-    text-align: center;
-    /* Texte centré */
+    /* Supprime les puces des éléments de liste dans le menu. */
     padding: 0;
-    /* Pas d'espacement interne */
-    z-index: 17;
-    /*Assure que le menu est au-dessus de tout */
+    /* Supprime le padding par défaut des éléments de liste. */
   }
 
   #menuToggle ul li {
-    font-size: 13rem;
-    margin: 60px 0px;
+    font-size: 10rem;
+    /* Définit la taille du texte des éléments de la liste du menu à 10rem (très grand) */
+    margin: 19px 0;
+    /* Ajoute une marge verticale de 19px autour de chaque élément de la liste */
     color: white;
-    padding-right: 550px;
-    width: auto;
     /* Change la couleur du texte en blanc */
   }
 
-  /*------------------------------------------------------------single.php---------------------------------------------------------------------*/
-
-  .post-image img {
-    width: 100%;
-    /* L'image prend toute la largeur de l'écran */
-    height: auto;
-    /* La hauteur s'ajuste automatiquement */
-    margin: 0;
-    /* Réinitialise les marges */
-    object-fit: cover;
-    /* Ou contain selon l'effet désiré */
+  #menu-footer {
+    flex-direction: column;
+    /* Dispose les éléments enfants en colonne */
+    gap: 0;
+    /* Pas d'espace entre les éléments */
+    line-height: 142.7px;
+    /* Définit la hauteur de ligne */
+    font-size: 78px;
+    /* Définit la taille de la police */
+    height: 500px;
+    /* Hauteur du footer */
+    margin-left: 85px;
+    /* Décale à gauche */
   }
 
-  .post-info {
-    width: 100%;
-    text-align: center;
-    /* Ou left selon le style que tu préfères */
-    padding: 10px 20px;
-    margin: 0;
+  .post_img {
+    width: 550px;
+    /* Largeur de l'image */
+    height: 580px;
+    /* Hauteur de l'image */
+    overflow: hidden;
+    /* Cache tout débordement */
+    margin: 190px 0 238px 0px;
+    /* Marges en haut, bas et aucune à gauche/droite */
+    scale: 1.7;
+    /* Agrandit l'image */
   }
 
-  .single_title {
-    position: absolute;
-    /* Le titre est positionné de manière absolue */
-    width: 450px;
-    /* Largeur fixe du titre */
-    height: 100px;
-    /* Hauteur fixe du titre */
-    text-transform: uppercase;
-    /* Met le texte du titre en majuscules */
-    top: 450px;
-    /* Place le titre à 450px du haut */
-    left: 900px;
-    /* Place le titre à 900px du bord gauche */
-  }
-
-  .contact-section {
-    position: absolute;
-    /* La section de contact est positionnée de manière absolue */
-    top: 2698px;
-    /* Place la section à 2698px du haut de la page */
+  .photos_container {
+    columns: 1;
+    /* Définit une colonne pour le texte */
     display: flex;
-    /* Utilise le modèle de boîte flex pour les enfants */
-    width: 2531px;
-    /* Largeur fixe de la section */
-    padding-left: 105px;
-    /* Ajoute un padding à gauche de 105px */
-    border-top: 2px solid black;
-    /* Ajoute une bordure noire en haut de 2px */
-    flex-direction: column;
-    /* Organise les éléments en colonne */
+    /* Utilise Flexbox pour le conteneur */
     align-items: center;
-    /* Centre les éléments horizontalement */
-  }
-
-  .contact_line {
-    position: absolute;
-    /* La ligne de contact est positionnée de manière absolue */
-    width: 1148px;
-    /* Largeur fixe de la ligne */
-    height: 120px;
-    /* Hauteur fixe de la ligne */
-    margin: auto;
-    /* Centre la ligne horizontalement */
-    top: -152px;
-    /* Place la ligne 152px au-dessus de son conteneur */
-  }
-
-  .img-bas {
-    position: absolute;
-    /* Position absolue pour cette section */
-    top: 2970px;
-    /* Place cette section à 2970px du haut */
+    /* Centre les éléments enfants verticalement */
     flex-direction: column;
-    /* Organise les éléments en colonne */
-    width: 1450px;
-    /* Largeur fixe */
-    align-items: center;
-    /* Centre les éléments horizontalement */
-    margin-left: 615px;
-    /* Décale la section de 615px vers la droite */
-    gap: 15px;
-    /* Espace de 15px entre les éléments */
+    /* Aligne les éléments en colonne */
+    padding-top: 50px;
+    /* Ajoute un espace en haut */
+    margin: 0 auto;
+    /* Centre horizontalement le conteneur */
   }
 
-  .post-img {
-    width: 1550px;
-    /* Largeur fixe de l'image */
-    height: 1316px;
-    /* Hauteur fixe de l'image */
-    object-fit: cover;
-    /* L'image couvre toute la zone sans distorsion */
-  }
-
-  h3 {
-    text-align: start;
-    /* Le texte commence à gauche (alignement de début) */
+  .lightbox-trigger .overlay {
     position: absolute;
-    /* Le titre H3 est positionné de manière absolue */
-    margin-bottom: 20px;
-    /* Ajoute une marge inférieure de 20px */
-    top: 2800px;
-    /* Place le titre à 2800px du haut */
-    font-size: 36px;
-    /* Taille de la police de 36px */
-    font-weight: normal;
-    /* Poids de police normal */
-    border-top: 3px solid #23282d;
-    /* Ajoute une bordure supérieure noire de 3px */
-    padding: 45px 0 0 930px;
-    /* Padding intérieur avec décalage de 930px à gauche */
-    width: 1600px;
-    /* Largeur fixe du titre */
+    /* Positionne de manière absolue par rapport au parent */
+    margin: 189px 0 0 43px;
+    /* Marges pour positionner l'overlay */
+    width: 548px;
+    /* Largeur de l'overlay */
+    height: 580px;
+    /* Hauteur de l'overlay */
+    opacity: 0;
+    /* Invisible par défaut */
+    scale: 1.7;
+    /* Agrandit l'overlay */
   }
 
-  .navigation-prev {
-    display: none;
-    /*Cache la navigation précédente*/
+  .fullscreen {
+    top: 20px;
+    /* Positionne à 20px du haut */
+    right: -150px;
+    /* Positionne 150px à droite du conteneur */
+    width: 110px;
+    /* Largeur du bouton fullscreen */
+  }
+
+  .oeil {
+    width: 25%;
+    /* Largeur de l'élément */
+    height: 15%;
+    /* Hauteur de l'élément */
+  }
+
+  .overlay .info {
+    width: 67%;
+    /* Largeur de l'information dans l'overlay */
+    scale: 1.4;
+    /* Agrandit l'info */
+  }
+
+  .filters-and-sort {
+    flex-direction: column;
+    /* Aligne les filtres en colonne */
+    width: 380px;
+    /* Largeur du conteneur de filtres */
+    text-align: center;
+    /* Centre le texte */
+    padding-top: 46px;
+    /* Espace en haut */
+    margin-left: 470px;
+    /* Décale le conteneur à gauche */
+    padding-bottom: 40px;
+    /* Espace en bas */
+    display: flex;
+    /* Utilise Flexbox */
+    position: relative;
+    /* Position relative pour les enfants positionnés */
+    z-index: 1;
+    /* Assure que l'élément est au-dessus des autres */
+    align-items: center;
+    /* Centre les éléments enfants */
+    scale: 1.6;
+    /* Agrandit le conteneur de filtres */
+  }
+
+  .nice-select.open .nice-select-dropdown {
+    opacity: 1;
+    /* Rend le dropdown visible */
+    pointer-events: auto;
+    /* Permet l'interaction */
+    transform: scale(1) translateY(0);
+    /* Réinitialise la transformation */
+    width: 100%;
+    /* Largeur à 100% */
+  }
+
+  span.current {
+    font-size: 20px;
+    /* Taille de police pour l'élément actuel */
+  }
+
+  .galbtn {
+    width: 70%;
+    /* Largeur du bouton */
+    height: 102px;
+    /* Hauteur du bouton */
+    margin: 0 auto;
+    /* Centre le bouton horizontalement */
+    font-size: 30px;
+    /* Taille de police pour le bouton */
+  }
+
+  .popup-contact {
+    width: 700px;
+    /* Largeur de la popup */
+    height: 850px;
+    /* Hauteur de la popup */
+    border: 5px solid black;
+    /* Bordure noire de 5px */
+    transform: scale(1.3);
+    /* Agrandit la popup */
+    top: 120px;
+    /* Position à 120px du haut */
+    left: -20px;
+    /* Décale à gauche de 20px */
+    z-index: 9999;
+    /* Assure que la popup est au-dessus des autres éléments */
+  }
+
+  .lightbox {
+    left: -50px;
+    /* Décale la lightbox à gauche */
+    width: 100%;
+    /* Largeur de la lightbox à 100% */
+    height: 100%;
+    /* Hauteur de la lightbox à 100% */
+    scale: 1.4;
+    /* Agrandit la lightbox */
   }
 
   .container.single_post {
-    display: block;
-    /* Évite le flex si cela cause des décalages */
-    width: 100%;
-    /* Pour s'adapter à la largeur de l'écran */
-    margin: 0;
-    padding: 10px;
-    /* Pour éviter que le contenu colle trop aux bords */
+    flex-direction: column-reverse;
+    /* Inverse l'ordre des éléments en colonne */
   }
 
-  .event-meta ul {
-    position: absolute;
-    /* Position absolue de la liste ul */
-    top: 715px;
-    /* Place la liste à 715px du haut */
-    margin-left: 10px;
-    /* Décale la liste de 10px vers la droite */
+  .post-info {
+    display: flex;
+    /* Utilise Flexbox pour les informations du post */
+    margin-top: 210px;
+    /* Espace en haut */
+    width: 1490px;
+    /* Largeur du conteneur des informations */
+    flex-wrap: wrap;
+    /* Permet aux éléments de passer à la ligne */
+    align-items: center;
+    /* Centre les éléments verticalement */
+    flex-direction: column;
+    /* Aligne les éléments en colonne */
+    margin-left: 100px;
+    /* Décale à gauche */
+    align-content: center;
+    /* Centre le contenu */
+    scale: 1.2;
+    /* Agrandit le conteneur d'infos */
   }
 
   .event-meta li {
-    font-size: 50px;
-    /* Taille de police des éléments de liste de 50px */
+    font-family: 'Space Mono', Sans-serif;
+    /* Définit la police */
+    font-size: 31px;
+    /* Taille de la police */
     font-weight: 400;
-    /* Poids de police normal */
-    margin: 25px 0 35px 36px;
-    /* Marges autour de l'élément de liste */
-    width: 850px;
-    /* Largeur fixe de l'élément */
-    height: 42px;
-    /* Hauteur fixe de l'élément */
+    /* Poids normal */
+    line-height: 32.73px;
+    /* Hauteur de ligne */
+    letter-spacing: 0.1em;
+    /* Espacement entre les lettres */
+    text-align: left;
+    /* Aligne le texte à gauche */
+    margin: 4px 0 20px 0;
+    /* Marges autour des éléments */
+    text-transform: uppercase;
+    /* Met le texte en majuscules */
+  }
+
+  .post-image img {
+    width: 557px;
+    /* Largeur de l'image */
+    height: 840px;
+    /* Hauteur de l'image */
+    object-fit: cover;
+    /* Couvre l'espace sans déformer l'image */
+    overflow: hidden;
+    /* Cache le débordement */
+    scale: 1.43;
+    /* Agrandit l'image */
+    margin: 973px 0 0 550px;
+    /* Marges pour positionner l'image */
+  }
+
+  .navigation-prev {
+    visibility: hidden;
+    /* Cache l'élément de navigation précédent */
+  }
+
+  .contact_line {
+    width: 100%;
+    /* Utilise 100% pour la largeur */
+    height: 120px;
+    /* Hauteur de la ligne de contact */
+    margin: 600px 0 0 0;
+    /* Ajuste le haut si nécessaire */
+    box-sizing: border-box;
+    /* Inclut la bordure dans la largeur totale */
+  }
+
+  .contact-section {
+    flex-direction: column;
+    /* Dispose les éléments en colonne */
+    padding-top: 300px;
+    /* Espace en haut */
+    margin-left: 180px;
+    /* Marges pour positionner l'image */
+  }
+
+
+  .img-bas {
+    margin: 50px 0 0 375px;
+    /* Marges pour positionner l'image */
+    flex-direction: column;
+    /* Aligne les éléments en colonne */
+  }
+
+  h3 {
+    margin-bottom: 20px;
+    /* Espace en bas */
+    margin-top: 430px;
+    /* Espace en haut */
+    padding: 50px 0 50px 615px;
+    /* Espacement autour de l'en-tête */
+    width: 1448px;
+    /* Largeur de l'en-tête */
+    font-size: 35px;
+    /* Taille de la police */
+  }
+
+  .single_title {
+    font-family: 'Space Mono', Sans-serif;
+    /* Définit la police */
+    font-size: 66px;
+    /* Taille de la police */
+    font-style: italic;
+    /* Style italique */
+    font-weight: 400;
+    /* Poids normal */
+    width: 490px;
+    /* Largeur de l'élément */
+    height: 100px;
+    /* Hauteur de l'élément */
+    margin-left: -197px;
+    /* Décale le bouton à gauche */
   }
 
   p {
-    font-family: "Poppins", sans-serif;
-    /* Police Poppins */
-    width: 460px;
+    width: 490px;
     /* Largeur du paragraphe */
-    height: 26px;
-    /* Hauteur du paragraphe */
-    margin: 50px 0 34px -373px;
-    /* Marges pour positionner le paragraphe */
-    font-size: 20px;
-    /* Taille de la police de 20px */
-    font-weight: 400;
-    /* Poids de police normal */
+    margin: 50px 0 30px -135px;
+    /* Marges autour du paragraphe */
+    font-size: 33px;
+    /* Taille de la police */
   }
 
   .contact-button {
-    font-size: 25px;
-    /* Taille de la police du bouton de contact */
-    font-weight: 400;
-    /* Poids de police normal */
-    display: inline-flex;
-    /* Le bouton est en flex mais en ligne */
+    font-size: 35px;
+    /* Taille de la police pour le bouton de contact */
     justify-content: center;
-    /* Centre le contenu du bouton horizontalement */
-    flex-direction: row;
-    /* Aligne le contenu en ligne */
-    align-items: center;
-    /* Centre le contenu verticalement */
-    width: 372px;
-    /* Largeur fixe du bouton */
-    height: 72px;
-    /* Hauteur fixe du bouton */
-    margin-left: -500px;
-    /* Décale le bouton de 500px vers la gauche */
-    background-color: #D8D8D8;
-    /* Couleur de fond gris clair */
-    color: black;
-    /* Texte en noir */
-    text-decoration: none;
-    /* Retire la décoration du lien (soulignement) */
-    border-radius: 2px;
-    /* Coins arrondis de 2px */
+    /* Centre le contenu du bouton */
+    width: 800px;
+    /* Largeur du bouton */
+    height: 100px;
+    /* Hauteur du bouton */
+    margin-left: 150px;
+    /* Décale le bouton à gauche */
     transition: background-color 0.3s ease;
-    /* Transition douce pour le changement de couleur de fond */
+    /* Transition pour le changement de couleur */
   }
 
-  #menu-footer {
-    position: absolute;
-    top: 5700px;
-    width: 2500px;
-    padding: 291px 130px 23px 0px;
+  .post-img {
+    width: 764px;
+    /* Largeur de l'image */
+    height: 595px;
+    /* Hauteur de l'image */
+    object-fit: cover;
+    /* Couvre l'espace sans déformer l'image */
+    margin: 100px 0 239px 100px;
+    /* Marges pour positionner l'image */
+    scale: 1.53;
+    /* Agrandit l'image */
+  }
+
+  /* Styles pour la liste des métadonnées d'événements */
+  .event-meta ul {
+    display: flex;
+    /* Utilise le modèle de boîte flexible pour aligner les éléments horizontalement */
     flex-direction: column;
-    gap: 0;
-    line-height: 121.7px;
-    font-size: 70px;
+    /* Aligne les éléments enfants en colonne */
+    list-style: none;
+    /* Supprime les puces de la liste */
+    font-size: 25px;
+    /* Définit la taille de la police à 25 pixels */
+    margin-left: -300px;
+    /* Décale la liste vers la gauche de 300 pixels */
   }
 
+}
+
+/* ---------------------------------------------------------Styles @media query screen 768px ---------------------------------------------------*/
+/*  **********************************  */
+/*    Media query : max-width: 1210px    */
+/*  **********************************  */
+@media screen and (max-width: 1210px) {
+
+  .navigation-prev {
+    display: none;
+    /* Masque l'élément de navigation précédent par défaut */
+  }
 
 }

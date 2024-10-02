@@ -19,6 +19,7 @@ $term_id  = $term ? $term->term_id : null;
         $reference = get_post_meta(get_the_ID(), 'reference', true);
         $type = get_field('type') ? get_field('type') : 'Inconnu';
         ?>
+     <section class="containersingle_php">    
         <section class="container single_post">
             <div class="post-info">
                 <!-- Affiche titre photo -->
@@ -109,7 +110,7 @@ $query = new WP_Query($args);
         wp_reset_postdata(); ?>
     </div>
 </section>
-
+</section>
 <?php
 get_footer();
 ?>

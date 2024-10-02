@@ -299,80 +299,55 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-//----------------------------------Script menu burger---------------------------------------------------------
-// Assurez-vous que le DOM est chargé avant d'exécuter le script
+//---------------------------------- Script menu burger ---------------------------------------------------------
+// Attendre que le DOM soit chargé
 document.addEventListener('DOMContentLoaded', function() {
-  // Sélectionne le bouton hamburger (bouton avec la classe 'nav-toggler')
-  const hamburgerButton = document.querySelector(".nav-toggler");
-  // Sélectionne l'élément qui contient le menu burger (avec la classe 'nav-burger')
-  const navigation = document.querySelector(".nav-burger");
-  
-  // Ajoute un événement 'click' au bouton hamburger
-  if (hamburgerButton) {
-    hamburgerButton.addEventListener("click", toggleNav);
-  }
-  
-  // Fonction pour afficher/cacher le menu burger
-  function toggleNav() {
-    hamburgerButton.classList.toggle("active");
-    navigation.classList.toggle("active");
-  }
+  const navToggler = document.querySelector('.nav-toggler'); // Sélectionne le bouton hamburger pour le menu
+  const menuToggle = document.getElementById('menuToggle'); // Sélectionne le menu burger
+  const contactButton = document.getElementById('contact-popup-trigger'); // Sélectionne le bouton de la popup de contact
+  const popupContact = document.querySelector('.popup-contact'); // Sélectionne la popup de contact
 
-  // Fonction pour afficher/cacher la popup de contact
-  function toggleMenu() {
-    const menu = document.getElementById("menuToggle");
-    const toggler = document.querySelector(".nav-toggler");
-
-    if (menu) {
-      menu.classList.toggle("active"); // Active ou désactive la classe 'active' du menu
-    }
-    if (toggler) {
-      toggler.classList.toggle("active"); // Active ou désactive la classe 'active' du bouton burger
-    }
-  }
-
-  // Ciblage des éléments
-  const popupContact = document.querySelector('.popup-contact');
-  const menuToggle = document.getElementById('menuToggle');
-  const contactButton = document.getElementById('contact-popup-trigger'); // Le lien de la popup
-
-  // Vérifie si le lien de la popup et les autres éléments existent avant d'ajouter les événements
-  if (contactButton && popupContact && menuToggle) {
-    // Lorsque le lien de la popup est cliqué
-    contactButton.addEventListener('click', function(e) {
-      e.preventDefault(); // Empêche le comportement par défaut du lien
-      popupContact.classList.toggle('active'); // Affiche ou cache la popup
-
-      // Rétracte le menu (applique la classe 'retracted')
-      if (popupContact.classList.contains('active')) {
-        menuToggle.classList.add('retracted'); // Rétracte le menu
+  // Fonction pour basculer l'état du menu burger (ouvrir/fermer)
+  function toggleMenuBurger() {
+      if (menuToggle.classList.contains('visible')) {
+          menuToggle.classList.remove('visible'); // Ferme le menu burger
+          console.log('Menu burger fermé');
       } else {
-        menuToggle.classList.remove('retracted'); // Réaffiche le menu si la popup est fermée
+          menuToggle.classList.add('visible'); // Ouvre le menu burger
+          console.log('Menu burger ouvert');
       }
-    });
+  }
+
+  // Ajoute un événement au bouton hamburger pour ouvrir/fermer le menu burger
+  if (navToggler && menuToggle) {
+      navToggler.addEventListener('click', function() {
+          toggleMenuBurger(); // Appelle la fonction pour gérer l'ouverture/fermeture
+      });
+  }
+
+  // Fonction pour fermer le menu burger
+  function closeMenuBurger() {
+      if (menuToggle.classList.contains('visible')) {
+          menuToggle.classList.remove('visible'); // Ferme le menu burger s'il est ouvert
+          console.log('Menu burger rétracté');
+      }
+  }
+
+  // Ajoute un événement au bouton de contact pour gérer la popup
+  if (contactButton && popupContact) {
+      contactButton.addEventListener('click', function(e) {
+          e.preventDefault(); // Empêche le comportement par défaut du lien
+
+          // Ferme le menu burger avant d'afficher la popup
+          if (menuToggle.classList.contains('visible')) {
+              closeMenuBurger(); // Ferme le menu s'il est ouvert
+          }
+
+          // Délai pour afficher la popup après fermeture du menu burger
+          setTimeout(function() {
+              popupContact.classList.add('active'); // Affiche la popup après fermeture du menu burger
+              //console.log('Popup affichée avec animation lente');
+          }, 500); // 500ms pour permettre au menu de se rétracter avant d'afficher la popup
+      });
   }
 });
-// Ciblage des éléments
-const contactButton = document.getElementById('contact-popup-trigger'); // Le bouton pour la popup
-const menuToggle = document.getElementById('menuToggle'); // Le menu burger
-const popupContact = document.querySelector('.popup-contact'); // La popup de contact
-
-// Ajout d'un événement lorsque le bouton de la popup est cliqué
-if (contactButton && menuToggle && popupContact) {
-  contactButton.addEventListener('click', function(e) {
-    e.preventDefault(); // Empêche le comportement par défaut du lien
-
-    // Fermer le menu burger si c'est un input checkbox
-    if (menuToggle && menuToggle.checked) {
-      menuToggle.checked = false; // Fermer le menu burger
-    }
-
-    // Si le menu burger utilise une classe CSS 'open', on la retire pour fermer le menu
-    if (menuToggle.classList.contains('open')) {
-      menuToggle.classList.remove('open'); // Fermer le menu burger
-    }
-
-    // Afficher la popup
-    popupContact.classList.add('active'); // Ouvrir la popup
-  });
-}

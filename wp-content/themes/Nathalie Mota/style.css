@@ -1231,6 +1231,37 @@ input[type=submit]:hover {
   display: block;
 }
 
+.container {
+  width: 100%;
+  /* Occupe toute la largeur */
+  text-align: left;
+  /* Texte aligné à gauche */
+  line-height: 1;
+  /* Réduit l'espace entre les lignes du texte */
+}
+
+.container>h1,
+.container>p {
+  width: 75%;
+  margin: 0 auto;
+  padding: 21px;
+}
+
+.container>h3 {
+  text-align: start;
+  margin: -35px 0 -145px 178px;
+  font-size: 1em;
+  font-weight: normal;
+  border-top: none;
+  line-height: 11;
+}
+
+.container>ul {
+  width: 75%;
+  margin: 0 auto;
+  padding: 21px;
+}
+
 /* ------------------------------------------------Styles de base pour le menu burger ----------------------------------------------------*/
 
 .bandeau {
@@ -1257,8 +1288,21 @@ input[type=submit]:hover {
 @media ALL and (max-width: 768px) {
 
   /* ---------------------------------------------------------------------Styles menu berger  -------------------------------------------------------*/
-  body {
-    margin: auto;
+  .site-main {
+    padding: 0px 10px 0 0px
+  }
+
+  .containersingle_php {
+    padding: 0 0 0 150px;
+    margin: 0 auto;
+  }
+
+  .evento {
+    max-width: 973px;
+    max-height: 1024px;
+    position: absolute;
+    margin: -835px 0px 0px 233px;
+    object-fit: contain;
   }
 
   .bandeau {
@@ -1283,7 +1327,7 @@ input[type=submit]:hover {
     /* Utilisation de flexbox pour l'alignement interne du logo. */
     flex-wrap: nowrap;
     /* Les éléments enfants ne sont pas autorisés à passer à la ligne, même s'ils dépassent leur conteneur. */
-    width: 65%;
+    width: 55%;
     /* Le logo occupe 66% de la largeur disponible du conteneur parent. */
   }
 
@@ -1354,7 +1398,7 @@ input[type=submit]:hover {
     /* Ligne inférieure se croise */
   }
 
-  /* Bandeau rouge */
+  /* Bandeau rouge  Par défaut, la popup est cachée hors de l'écran à droite */
   #menuToggle {
     position: fixed;
     /* Le menu reste fixe lors du défilement de la page. */
@@ -1376,14 +1420,21 @@ input[type=submit]:hover {
     /* Les éléments du menu sont centrés verticalement. */
     transition: right 0.5s ease;
     /* Animation fluide lors de l'ouverture et la fermeture du menu (0,5 secondes). */
-    z-index: 8;
+    z-index: 9;
     /* Le menu apparaît au-dessus des autres éléments (z-index supérieur à celui du bandeau). */
   }
 
-  #menuToggle.retracted {
+  /* Menu caché par défaut */
+  #menuToggle {
     right: -100%;
-    /* Le menu reste rétracté à droite (hors écran) quand cette classe est appliquée. */
-    /* Garde le menu rétracté à droite */
+    /* Caché hors de l'écran */
+    transition: right 0.5s ease;
+  }
+
+  /* Menu visible */
+  #menuToggle.visible {
+    right: 0;
+    /* Fait glisser le menu dans l'écran */
   }
 
   #menuToggle.active {
@@ -1413,6 +1464,14 @@ input[type=submit]:hover {
     /* Change la couleur du texte en blanc */
   }
 
+  /* Lorsque la classe 'active' est ajoutée, la popup glisse dans l'écran */
+  .popup-contact.active {
+    right: 10%;
+    /* La popup se positionne à 10% du bord droit de l'écran */
+    opacity: 1;
+    /* La popup devient visible */
+  }
+
   #menu-footer {
     flex-direction: column;
     /* Dispose les éléments enfants en colonne */
@@ -1424,8 +1483,8 @@ input[type=submit]:hover {
     /* Définit la taille de la police */
     height: 500px;
     /* Hauteur du footer */
-    margin-left: 85px;
-    /* Décale à gauche */
+    margin-left: 250px;
+    /*marge gauche */
   }
 
   .post_img {
@@ -1547,20 +1606,24 @@ input[type=submit]:hover {
   }
 
   .popup-contact {
-    width: 700px;
-    /* Largeur de la popup */
-    height: 850px;
-    /* Hauteur de la popup */
+    position: relative;
+    /* Positionne l'élément par rapport à son parent. */
+    width: 597px;
+    /* Largeur de 597 pixels. */
+    height: 769px;
+    /* Hauteur de 769 pixels. */
     border: 5px solid black;
-    /* Bordure noire de 5px */
-    transform: scale(1.3);
-    /* Agrandit la popup */
-    top: 120px;
-    /* Position à 120px du haut */
-    left: -20px;
-    /* Décale à gauche de 20px */
+    /* Bordure de 5 pixels, couleur noire. */
+    overflow: hidden;
+    /* Cache le contenu qui dépasse. */
+    background-color: white;
+    /* Arrière-plan blanc. */
+    transform: scale(0.96);
+    /* Réduction de l'élément à 96% de sa taille normale. */
     z-index: 9999;
-    /* Assure que la popup est au-dessus des autres éléments */
+    /* Place l'élément au-dessus des autres. */
+    margin: 0 auto;
+    /* Centre horizontalement l'élément. */
   }
 
   .lightbox {
@@ -1746,6 +1809,21 @@ input[type=submit]:hover {
     /* Définit la taille de la police à 25 pixels */
     margin-left: -300px;
     /* Décale la liste vers la gauche de 300 pixels */
+  }
+
+  .container>h3 {
+    text-align: start;
+    /* Aligne le texte à gauche. */
+    margin: 0px 0 -138px 0px;
+    /* Marge en bas négative pour le chevauchement. */
+    font-size: 1em;
+    /* Taille de police égale à celle de l'élément parent. */
+    font-weight: normal;
+    /* Police non grasse. */
+    border-top: none;
+    /* Retire la bordure supérieure. */
+    line-height: 11;
+    /* Hauteur de ligne très grande, causant un grand espacement. */
   }
 
 }
